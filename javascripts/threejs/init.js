@@ -1,9 +1,9 @@
-import * as THREE from '/javascripts/threejs/three.module.js';
-import * as dat from '/javascripts/threejs/modules/dat.gui.module.js'
-import { OrbitControls } from '/javascripts/threejs/modules/OrbitControls.js';
-import { GLTFLoader } from '/javascripts/threejs/modules/GLTFLoader.js';
-import { RoughnessMipmapper } from '/javascripts/threejs/modules/RoughnessMipmapper.js';
-import { Fire } from  "/javascripts/threejs/modules/Fire.js";
+import * as THREE from './javascripts/threejs/three.module.js';
+import * as dat from './javascripts/threejs/modules/dat.gui.module.js'
+import { OrbitControls } from './javascripts/threejs/modules/OrbitControls.js';
+import { GLTFLoader } from './javascripts/threejs/modules/GLTFLoader.js';
+import { RoughnessMipmapper } from './javascripts/threejs/modules/RoughnessMipmapper.js';
+import { Fire } from  "./javascripts/threejs/modules/Fire.js";
 
 // Toggle Elements //
 const loadAxis		= false;
