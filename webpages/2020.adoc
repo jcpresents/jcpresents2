@@ -1,0 +1,600 @@
+= 2020
+:doctype: article
+:imagesdir: ./images
+
+== Welcome!
+Enter, if you dare, into the world of *The Fucking Terrifying Challenge!*
+ +
+ +
+Within the hallowed halls of these interwebs rests a cinematic monstrosity umatched in the modern era!
+Can you withstand the onslaught?
+Do you have the sanity to survive?
+Would you willingly look into the darkness?
+ +
+ +
+Halloween is (obviously) the best holiday. But what if I told you it could be even *better*? All it takes is little time.
+The question is: *Can you do it*?
+ +
+ +
+*The Challenge* is simple. Pick a few movies off the list and mix them into your Halloween season. Then rank yourself on the following chart: +
+
+[.text-center]
+image:skull20.webp[] [underline]#The Zombie# image:skull20.webp[] +
+Watch three movies
+ +
+ +
+image:skull20.webp[] [underline]#The Ghoul# image:skull20.webp[] +
+Watch six movies, then one Mystery Movie
+ +
+ +
+image:skull20.webp[] [underline]#The Vampire# image:skull20.webp[] +
+Watch nine movies, then two Mystery Movies
+ +
+ +
+image:skull20.webp[] [underline]#The Fiend# image:skull20.webp[] +
+Watch EVERY SINGLE movie on the list
+ +
+ +
+
+Below you will find the Entries for each list movie. Each entry will offer a peek into the dangers that await you.
+The Title of the entry links to the film's IMDB page, and the Poster will link to a stream where you can watch it.
+But take care; streaming websites are often loaded with spyware. The most terrifying thing of all is the internet itself!
+(Also some of these streams suck; you may want to try and find your own.)
+ +
+ +
+At the bottom of the page you will find the entries for the Mystery Movies.
+These films are too horrific for just any day of the month.
+As such, I'll be revealing them on October 28th... just in time for Halloween!!
+ +
+ +
+And now, prepare yourself for...
+
+'''
+
+[.text-center]
++++<h2><u>The Fucking Terrifying Challenge 2020</u></h2>+++
+
+'''
+
+== [underline hide]#Blade#
+image:posters/blade.webp[,225,,role="poster"]
++++<h2><u>Blade</u></h2>+++
+[.overflow-hidden]
+*Genre: Action / Horror* +
+*Year: 1998* +
+Badass: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Good Movie: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+ +
+ +
+If you're looking for a horror film that absolutely kicks ass, Blade is the way to go.
+We're starting the list off with a bang this year.
+ +
+ +
+Blade was made right around the same time as The Matrix, and the similarities are noticeable.
+It decidedly has that same turn-of-the-centruy action movie feel.
+And like Matrix, this film also has some surprisingly strong plot and worldbuilding elements to it as well.
+The acting is highly competent, and the action sequences only serve to add to the story.
+Classic stuff.
+ +
+ +
+Blade is a strong-ass movie, and one that I feel hasn't gotten the credit it deserves.
+Action-Horror is deceptively difficult to make, but this one stands a perfect model.
+ +
+ +
+[underline]#*How to Watch*:# +
+This one's easy. Grab a few beers and kick back.
+And get ready, because Blade hits the ground running.
+
+'''
+
+== [underline hide]#The Blair Witch Project#
+image:posters/the-blair-witch-project.webp[,225,,role="poster"]
++++<h2><u>The Blair Witch Project</u></h2>+++
+[.overflow-hidden]
+*Genre: Horror* +
+*Year: 1999* +
+Iconic: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Spooky: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+ +
+ +
+This is a movie that's very close to my heart.
+Not only is it a great film, but it's loosely based on an old Tennessee legend that took place not that far from where I grew up.
+And I'd bet it's been awhile since you've last seen it, so here it is: The Blair Witch Project.
+ +
+ +
+This movie is entirely responsible for the genre of found footage.
+Hell, it's still one of the best examples of that genre.
+This movie is driven by a constant, building tension that starts early and snowballs viciously by the end.
+It's also one of the few movies featuring a hag as its main antagonist (at least ostensibly), which is a totally under-utilized type of monster.
+Love this one.
+ +
+ +
+While The Blair Witch Project is a little slow, that's by design.
+It's built to spook you out, get you afraid of the dark for a while.
+Give it a chance.
+ +
+ +
+[underline]#*How to Watch*:# +
+Oh, I'd absolutely turn the lights out for this one.
+This movie works best in the dark, one-on-one.
+
+'''
+
+== [underline hide]#Saw#
+image:posters/saw.webp[,225,,role="poster"]
++++<h2><u>Saw</u></h2>+++
+[.overflow-hidden]
+*Genre: Psychological Horror* +
+*Year: 2004* +
+High-Concept: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Brutal: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+ +
+ +
+Saw is one of those movies--the kind that has a tendency to stick with you.
+Even years later, I've got a few scenes from this movie I can remember with crystal clarity.
+It's probably why this movie has like a billion sequels (but don't watch any of them, except maybe the second one).
+ +
+ +
+This film was a perfect storm.
+It had a novel (at the time) concept, great execution, a passable plot, and some stunning visuals.
+Saw basically kicked off a whole new sub-genre of horror that we're still living with today--I'd call it modern surrealist toture-porn.
+And again, there's a good reason for that.
+ +
+ +
+Easily the most "subtle" and atmospheric of the Saw franchise, this movie is hard to forget and even harder to shake off.
+ +
+ +
+[underline]#*How to Watch*:# +
+This is the kind of movie that should be watched in the dark.
+Get comfy and take your time, because Saw has a surprising amount of depth, and deserves a little attention.
+
+'''
+
+== [underline hide]#From Dusk Till Dawn#
+image:posters/from-dusk-till-dawn.webp[,225,,role="poster"]
++++<h2><u>From Dusk Till Dawn</u></h2>+++
+[.overflow-hidden]
+*Genre: Action / Horror* +
+*Year: 1996* +
+Tarantino: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Weird: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+ +
+ +
+Quick: name a horror movie that drips with the influence of Quentin Tarantino.
+Also, one that literally has Tarantino in it.
+And one that starts as a weird-ass crime drama or something and suddenly devolves into a guns-blazing action/horror.
+ +
+ +
+Give up? Turns out, it's From Dusk Till Dawn.
+If you've never seen this one, you're in for some shit.
+I've actually been trying to squeeze this one onto the list since the very first year, and now a slot has finally opened.
+So strap in, because this one's all over the place.
+ +
+ +
+I'll try not to spoil it any further.
+But I will say this: it takes a while to ramp up.
+So strap in.
+ +
+ +
+[underline]#*How to Watch*:# +
+There's not much you can do to prepare for this movie.
+Pairs great with alcohol.
+Easy drinking game: drink when something gross and weird and violent happens.
+
+'''
+
+== [underline hide]#Altered States#
+image:posters/altered-states.webp[,225,,role="poster"]
++++<h2><u>Altered States</u></h2>+++
+[.overflow-hidden]
+*Genre: Cosmic Horror* +
+*Year: 1980* +
+Weird: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Trippy: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+ +
+ +
+Goddam I love this movie.
+It really fires on all cylinders for me--and I hope you'll see the same magic in it that I do.
+I'm really not even sure how to describe it... but allow me give it a try.
+ +
+ +
+Altered States is basically a modern take on the old Jekyll and Hyde story.
+It's got the pacing and storytelling of a 70s film, but the visual effects and mentality of one from the 80s.
+And boy, is it unique.
+Even among other cosmic horrors, Altered States is really its own thing.
+ +
+ +
+Fair warning: this is a cerebral-ass movie.
+There won't be any slashers or jumpscares.
+But if you follow through with it, Altered States will show you some real shit.
+ +
+ +
+[underline]#*How to Watch*:# +
+First off, this one might be hard to find.
+It's a pretty fucking obscure movie.
+But if you can get ahold of it, I'd say don't watch it while sleepy.
+It's a slow and steady build to the crazy shit.
+Still, absolutely worth seeing at least once.
+
+'''
+
+== [underline hide]#From Beyond#
+image:posters/from-beyond.webp[,225,,role="poster"]
++++<h2><u>From Beyond</u></h2>+++
+[.overflow-hidden]
+*Genre: Lovecraftian Horror* +
+*Year: 1986* +
+Horrific: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Fucking Nuts: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+ +
+ +
+I'm pretty excited to debut this movie, because this is a new acquisition for me.
+And it's got a legacy behind it that makes me question why I'd never heard of it before this year.
+ +
+ +
+From Beyond is a spiritual sucessor to Re-Animator, one of my favorite movies of all time.
+It has many of the same actors, the same director, and was made only years after.
+And while the tone is a little more serious, it still stands as a pretty great entry into the Lovecraftian horror genre.
+ +
+ +
+While it's hard to follow a masterpiece like Re-Animator, this movie has a lot of merit in its own right.
+The effects are great, the story is strong, and the visuals very hard to forget.
+A wild cinematic experience.
+ +
+ +
+[underline]#*How to Watch*:# +
+This movie is pretty gory.
+And like Re-Animator it has a weird psycho-sexual vibe to it that might turn some people off.
+I wouldn't put it on in mixed company.
+
+'''
+
+== [underline hide]#House#
+image:posters/house.webp[,225,,role="poster"]
++++<h2><u>House</u></h2>+++
+[.overflow-hidden]
+*Genre: Horror / Comedy* +
+*Year: 1985* +
+Wacky: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Horror: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+ +
+ +
+House is goofy as hell, but in a good way.
+It's that rare comedy/horror that takes itself seriously, and yet still manages to be hilarious at the same time.
+ +
+ +
+It blows my mind to say this, but I'm pretty sure Evil Dead 2 (another one of my favorites) took a great deal of inspiration from House.
+Watch for it.
+But make no mistake: House is its own movie.
+There's a lot of crazy stuff in here that you won't see in a typical horror movie.
+And while the story is pretty straightforward, there's some serious twists and turns that'll really catch you off-guard.
+ +
+ +
+House is a goofy story that is executed masterfully.
+It goes off the rails very quickly--in exactly the way you'd want.
+A nice break from the extreme horror you'll find on the rest of the list.
+ +
+ +
+[underline]#*How to Watch*:# +
+Drink heavily.
+This movie is more fun than anything.
+No curveballs here.
+
+'''
+
+== [underline hide]#Battle Royale#
+image:posters/battle-royale.webp[,225,,role="poster"]
++++<h2><u>Battle Royale</u></h2>+++
+[.overflow-hidden]
+*Genre: Murder Movie* +
+*Year: 2000* +
+Insane: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Fucked Up: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+ +
+ +
+Okay, so, this is one of those movies that doesn't really count as horror.
+I mean, it's horrific as fuck.
+But technically this is more of an action film.
+And boy, is it something else.
+ +
+ +
+Battle Royale is a japanese film, making it our first forgeign film for the year.
+And it definitely has that distinct approach to blood-and-gore violence that's characteristically japanese.
+There's a great deal of super-dramatic violence in this movie that I think fits perfectly into the Challenge.
+ +
+ +
+Battle Royale is a hardcore piece that has a lot to offer.
+By year 2000 standards, it's way ahead of its time--which may explain the wild influence which it's had in recent years.
+Don't miss this one.
+ +
+ +
+[underline]#*How to Watch*:# +
+This movie is pretty black metal.
+It may be a little extreme for some audiences, but it also has a surprising amount of depth.
+Brace yourself for a wild ride.
+
+'''
+
+== [underline hide]#Night of the Living Dead#
+image:posters/night-of-the-living-dead.webp[,225,,role="poster"]
++++<h2><u>Night of the Living Dead</u></h2>+++
+[.overflow-hidden]
+*Genre: Classic Horror* +
+*Year: 1968* +
+Iconic: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Old: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+ +
+ +
+Now here's a movie whose reputation precedes it--and that reputation is deserved.
+Night of the Living Dead is one of those legendary horrors that spawned not only a genre, but a full-blown trope.
+ +
+ +
+Now, keep in mind that this movie was made in the 60s.
+It's slow, and brooding, and philosophical.
+It's really more of a character drama than anything.
+But it's most obviously notable for creating the Romero zombie, which is essentially the zombie we know today.
+Before Night of the Living Dead, pretty much the only kind of zombie was voodoo (which is objectively the most boring kind).
+ +
+ +
+Night of the Living Dead was highly influential, but it's also a great movie in its own right.
+The visuals are beautiful, and the monsters ghoulish.
+If you're willing to give it a shot, this movie will absoultely prove its own merits.
+ +
+ +
+[underline]#*How to Watch*:# +
+I'll say again, this movie is a little slow by modern standards.
+You'll want to give it a close watch and plenty of attention.
+
+'''
+
+== [underline hide]#Creepshow#
+image:posters/creepshow.webp[,225,,role="poster"]
++++<h2><u>Creepshow</u></h2>+++
+[.overflow-hidden]
+*Genre: Horror Anthology* +
+*Year: 1982* +
+Goofy: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Visual Appeal: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+ +
+ +
+Creepshow is a weird piece.
+ +
+ +
+Based on some sort of pulp comics that I've never heard of, Creepshow does some very interesting things.
+The most notable element would be the visual effects, which are very distinct and impressively done.
+Then of course, there's the acting talent.
+Some of the actors in this movie include: Leslie Nielsen, Ted Danson, Stephen King(!), Ed Harris, and more.
+It's wild stuff.
+ +
+ +
+Creepshow is not exactly a top-tier movie or anything, but it's got a lot to offer.
+If nothing else you could say it's memorable.
+It makes an impact.
+And I think you'll like it.
+ +
+ +
+[underline]#*How to Watch*:# +
+This movie is what I'd call "casual".
+Less dense and cerebral than some of the others this year, Creepshow is a fun piece that should be pretty easy to watch.
+
+'''
+
+== [underline hide]#The Exorcist 3: Legion#
+image:posters/the-exorcist-iii.webp[,225,,role="poster"]
++++<h2><u>The Exorcist 3: Legion</u></h2>+++
+[.overflow-hidden]
+*Genre: Religious Horror / Crime Drama* +
+*Year: 1990* +
+Awesome Sequel: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Cinema: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+ +
+ +
+If you've been following the list since the beginning, you'll remember that the original The Exorcist was on the first year's list.
+And this year, we're finally following it up with with the only other movie in the series that matters: The Exorcist 3: Legion.
+ +
+ +
+This movie is notable for a handful of reasons.
+First off, it's good.
+As in, arguably better than the first (though I wouldn't argue that).
+Second, it deviates heavily from the first.
+As in, it's a totally different kind of movie.
+And then third, there's some great actors in this movie--and that includes some awesome cameos.
+Keep your eyes open.
+ +
+ +
+But seriously though, Legion is a fucking great movie, and I can't emphasize that enough.
+It's that rare sequel that actually contributes to the story of the original in a worthwhile way.
+Can't recommend it enough.
+ +
+ +
+[underline]#*How to Watch*:# +
+Exorcist 3: Legion is not a drinking movie.
+Like the first it's based mostly on tension and atmosphere.
+So it needs (and deserves) a little focus.
+
+'''
+
+== [underline hide]#Train to Busan#
+image:posters/train-to-busan.webp[,225,,role="poster"]
++++<h2><u>Train to Busan</u></h2>+++
+[.overflow-hidden]
+*Genre: Horror* +
+*Year: 2016* +
+Zombies: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Aciton: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+ +
+ +
+Our second zombie movie this year is also our second foreign film.
+Train to Busan is a fairly recent film from South Korea.
+And luckily it's yet another example that demonstrates just how good they are at making movies.
+ +
+ +
+This one is a powerhouse: good pacing, excellent action, awesome characters and strong storytelling.
+The zombies are exceptional--fast zombies with some clever twists thrown in.
+And the setting is novel for a zombie movie... but not for a korean movie (those people have some sort of thing for trains).
+ +
+ +
+Anyway, Train to Busan is a must-watch this year.
+Give it a spin, you won't regret it.
+ +
+ +
+[underline]#*How to Watch*:# +
+My one warning is it's a little long.
+But that's okay, because it's packed full of action as well as character content.
+Drinking is optional but recommended.
+
+'''
+
+== [underline hide]#Hereditary#
+image:posters/hereditary.webp[,225,,role="poster"]
++++<h2><u>Hereditary</u></h2>+++
+[.overflow-hidden]
+*Genre: Horror / Drama* +
+*Year: 2018* +
+Dark: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Emotional Impact: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+ +
+ +
+Whoo! Boy.
+Hereditary is a spicy meatball.
+ +
+ +
+I can't say much about this movie for fear of spoilers.
+But what I can say is that it's a modern masterpiece.
+It blends perfectly the oldschool gravity and emotional intensity with modern filmmaking and visuals.
+Damn it's good.
+ +
+ +
+Hereditary is made by the same director of Midsommar which is an equally good movie.
+And like Midsommar, this movie contains a startling amount of actual occult shit.
+It creates a fascinating sort of "realism" and believability that you don't usually get from a horror movie.
+ +
+ +
+This film is a stick-with-you kind of piece.
+It's really beautiful in a lot of ways, and honestly gives me a lot of hope for the future of cinema.
+ +
+ +
+[underline]#*How to Watch*:# +
+This movie is best watched in the dark, and perfect silence if you can get it.
+Gird your loins for Hereditary.
+
+'''
+
+[discrete][.text-center]
+== [underline]#Mystery Movies#
+
+'''
+
+== [underline hide]#Return of the Living Dead#
+image:posters/the-return-of-the-living-dead.webp[,225,,role="poster"]
++++<h2><u>Return of the Living Dead</u></h2>+++
+[.overflow-hidden]
+*Genre: Horror* +
+*Year: 1985* +
+Philosophical Terror: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Brutal: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+ +
+ +
+And here we go! We're starting this year's Mystery Movie selections with a heavy hitter. Return of the Living Dead is a criminally unknown entry into the zombie movie genre. This one is a must-see.
+ +
+ +
+This movie has it all: great ideas, powerful writing, amazing practical effects, awesome soundtrack, strong acting, memorable characters--just about anything you could want in a movie (oh, and full-frontal). It was also written by the co-writer of another movie on this year's list: the legendary Night of the Living Dead. That said, make no mistake, Return of the Living Dead is its own unique piece.
+ +
+ +
+While this is without a doubt the most "fun" Mystery Movie of the year, it's still a dark, grisly-ass nightmare of a movie. Make sure to give it a close watch; the devil's in the details with this one.
+ +
+ +
+[underline]#*How to Watch*:# +
+Great movie, easy to watch. Might want to save this one for Halloween night, as this year's other Mystery Movies are fucking bleak. That said, it's really hard to find a good stream of this one. You might want to consider renting it from Amazon (worth every penny).
+
+'''
+
+== [underline hide]#The Evil Within#
+image:posters/the-evil-within.webp[,225,,role="poster"]
++++<h2><u>The Evil Within</u></h2>+++
+[.overflow-hidden]
+*Genre: Surrealist Horror* +
+*Year: 2017* +
+Surreal: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Nightmarish: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+ +
+ +
+Now, this is a weird one.
+I really am not even sure how to talk about it.
+Not just to avoid spoilers, but because the content is just difficult to even quantify.
+Also it has the same name as a video game which came out a few years ago, which is distracting.
+Anyway...
+ +
+ +
+Uh, this movie hits you very similar to a nightmare.
+Everything that happens seems... impermanent somehow.
+Transitory.
+The characters are flat and illogical at times, but that only serves to strengthen the bizarre tonality.
+ +
+ +
+That said, let's address the quality of this film.
+Because that's an important thing.
+The Evil Within is a little flawed.
+As in, it's not exactly a great movie.
+But the fact that I'd slot it on this list anyway should give you some indication of what you're in for.
+I won't say much more, except that it's fucking unforgettable.
+Check this one out.
+See what you can take from it.
+There's something in there--something deep and dark and alien.
+You won't regret it.
+ +
+ +
+[underline]#*How to Watch*:# +
+Okay so first off I'd try a meditative approach to this movie.
+Don't try to hard to get a grasp on it, just let it happen.
+Trust me, it all comes together in the end.
+ +
+ +
+Also: The Evil Within comes with some bonus homework.
+The backstory of this movie is fucking BIZARRE.
+Once you've watched it, go listen to the creation story here (just skip about halfway through).
+Believe me, it elevates this movie to another level.
+
+'''
+
+== [underline hide]#The House That Jack Built#
+image:posters/the-house-that-jack-built.webp[,225,,role="poster"]
++++<h2><u>The House That Jack Built</u></h2>+++
+[.overflow-hidden]
+*Genre: Murder Movie* +
+*Year: 2018* +
+Brutal: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Disturbing: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+ +
+ +
+Holy shit, I love this movie.
+Goddam.
+But fair warning: I'm a sick fucker, and that's the target audience for The House That Jack Built.
+Seriously, strap your ass in for this one.
+ +
+ +
+The director of this movie, a man named Lars von Trier, is an absolute madman.
+His movies are all the same in one important aspect: they don't care about your feelings.
+"Offensive" doesn't quite cut it--this dude's movies are outrageous.
+Don't put this on at a party.
+Screen it before you show it to your friends.
+Be careful.
+ +
+ +
+The House That Jack Built is a full-blown horror epic.
+It's (very) long, and (highly) painful, and totally unforgiving.
+It's also exquisitely beautiful at times in ways that I can't really describe here.
+I recommend going in completely dark; don't watch the trailer.
+Just watch the movie.
+ +
+ +
+[underline]#*How to Watch*:# +
+This is one of those that I can't prepare you for.
+We'll just have to see if you can tolerate it.
+Cut the lights, turn off your phone, and get ready.
+ +
+ +
+One thing I might suggest: maybe don't watch this on Halloween night, because it's not fun at all.
+Go with Return of the Living Dead on the big night.
+
+'''

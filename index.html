@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="stylesheets/asciidoctor.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="screen">
+
+		<canvas id="viewport"></canvas>
+		<div class="loader"><div class="ring"></div></div>
+
+		<script src="javascripts/threejs/init.js" type="module"></script>
+		<script src="javascripts/asciidoctor/asciidoctor.js"></script>
+		<script src="javascripts/asciidoctor/asciidoctor.nav.js"></script>
+		<script>
+			const loader = document.querySelector(".loader");
+			window.onload = function(){
+				setTimeout(function(){
+					loader.style.opacity = "0";
+					setTimeout(function(){
+						loader.style.display = "none";
+					}, 500);
+				},3000);
+			}
+		</script>
+
+		<title>The Terrifying challenge</title>
+	</head>
+	<body class="animated fadeIn">
+		<header></header>
+		<section id="nav1"><nav><ul>
+			<li>Year
+				<ul>
+					<li><a href="#" onclick="load_List( '2017' )">2017</a></li>
+					<li><a href="#" onclick="load_List( '2018' )">2018</a></li>
+					<li><a href="#" onclick="load_List( '2019' )">2019</a></li>
+					<li><a href="#" onclick="load_List( '2020' )">2020</a></li>
+					<li><a href="#" onclick="load_List( '2021' )">2021</a></li>
+				</ul>
+			</li>
+		</ul></nav></section>
+
+		<div id="content" class="content"></div>
+
+		<section id="nav2"><nav><ul>
+			<li><a href="#" onclick="ScrollPage( 'prev' );">⇑</a></li>
+			<li><a href="#" onclick="ScrollPage( 'next' );">⇓</a></li>
+		</ul></nav></section>
+	</body>
+</html>
