@@ -11,10 +11,11 @@ const loadOrbCntrl	= false;
 const loadTextures	= false;
 const loadCube		= false;
 const loadHallway	= true;
+const loadHallAni	= false;
 const loadLights	= true;
 const loadFire		= true;
 const loadGUI		= false;
-const loadLogs		= false;
+const loadLogs		= true;
 
 // Misc Globals //
 const obj = { Meshes: {}, Lights: {} }; // Object Map //
@@ -33,13 +34,22 @@ function init() {
 	obj.Scene = new THREE.Scene();
 	obj.Clock = new THREE.Clock();
 	
+
+
+	// Load Entities //
+	if(loadTextures) load_Textures();// Textures
+	if(loadCube)	 load_Cube();	 // Test Cube
+	if(loadHallway)	 load_Hallway(); // Meshes
+	if(loadLights)	 load_Lights();	 // Lights
+	if(loadFire)	 load_Fire();	 // Torch Flames
+	if(loadGUI)		 load_GUI();	 // Settings GUI
+	
 	// Load Camera //
-
 	var camera = obj.Camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 0.1, 500 ); // Parameters: (fov, aspect, near, far)
-	camera.position.set( 0.0, 1.6, 8.3 ); // (x,y,z)
+	camera.position.set( 0.0, 1.5, 8.3 ); // (x,y,z)
 	window.addEventListener( 'resize', onWindowResize ); // Run onWindowResize function when window size changes
-	onWindowResize(); // Initial camera sizing
-
+	window.setTimeout( onWindowResize, 2000 ); // Initial camera sizing
+	
 	if(loadOrbCntrl) {
 		let controls = new OrbitControls( camera, obj.Renderer.domElement ); // Set Camera Orbit Controls
 		controls.update();
@@ -53,14 +63,7 @@ function init() {
 		obj.AxisHelper.visible = true;
 		obj.Scene.add(obj.AxisHelper);
 	}
-
-	// Load Entities //
-	if(loadTextures) load_Textures();// Textures
-	if(loadCube)	 load_Cube();	 // Test Cube
-	if(loadHallway)	 load_Hallway(); // Meshes
-	if(loadLights)	 load_Lights();	 // Lights
-	if(loadFire)	 load_Fire();	 // Torch Flames
-	if(loadGUI)		 load_GUI();	 // Settings GUI
+	
 	render();						 // Render Scene
 
 	// Misc //
@@ -119,24 +122,18 @@ function load_Hallway() {
 		model.scale.set( 0.5, 0.5, 0.5 );
 		model.position.set( 0.0, 0.0, 0.0 );
 		obj.Scene.add(model);
-			obj.Hallway		= model.children[0];
-			obj.Flooring	= model.children[1];
-			obj.Cone		= model.children[2];
-			obj.Walls		= model.children[3];
-			obj.SconceL		= model.children[4];
-			obj.SconceR		= model.children[5];
-			obj.OuterFlameL = model.children[7];
-			obj.OuterFlameR = model.children[8];
-			obj.InnerFlameR = model.children[9];
-			obj.InnerFlameL = model.children[10];
-			//NOTE: major changes to the model shuffle all these children
+		obj.Meshes.Hallway.children[0].visible = true;
+		obj.Meshes.Hallway.children[1].visible = true;
+		obj.Meshes.Hallway.children[2].visible = true;
 
-		obj.Mixer = new THREE.AnimationMixer( gltf.scene );
-		gltf.animations.forEach( (clip) => {
-			obj.Mixer.clipAction(clip).play();
-		});
+		if (loadHallAni) {
+			obj.Mixer = new THREE.AnimationMixer( gltf.scene );
+			gltf.animations.forEach( (clip) => {
+				obj.Mixer.clipAction(clip).play();
+			});
 
-		obj.Animations = gltf.animations;
+			obj.Animations = gltf.animations;
+		}
 	});	
 }
 
@@ -215,13 +212,13 @@ function load_Fire() {
 
 	obj.FireA = new Fire();
 	obj.Scene.add( obj.FireA );
-	obj.FireA.scale.set( 0.15, 0.15, 0.15 );
-	obj.FireA.position.set( -0.9, 1.79, 6.17 );
+	obj.FireA.scale.set( 0.14, 0.29, 0.15 );
+	obj.FireA.position.set( -0.89, 1.88, 6.17 );
 
 	obj.FireB = new Fire();
 	obj.Scene.add( obj.FireB );
-	obj.FireB.scale.set( 0.15, 0.15, 0.15 );
-	obj.FireB.position.set( 0.9, 1.79, 6.17 );
+	obj.FireB.scale.set( 0.14, 0.29, 0.15 );
+	obj.FireB.position.set( 0.89, 1.88, 6.17 );
 }
 
 // Overlays GUI for settings tweaks /////////////////////////////////////////////////
@@ -337,7 +334,7 @@ function render(time) {
 
     }, 1000 / sceneFPS );
 	var delta = obj.Clock.getDelta();
-	if (obj.Mixer) obj.Mixer.update(delta);
+	if ( loadHallAni && obj.Mixer ) obj.Mixer.update(delta);
 	if (loadFire) {
 		obj.FireA.FireUpdate(performance.now() / 1000);
 		obj.FireB.FireUpdate(performance.now() / 1000);
@@ -347,16 +344,20 @@ function render(time) {
 
 // Resize viewport when size changes ////////////////////////////////////////////////
 function onWindowResize() {
+	// Use percentage calculation to get "FOV" and "Zoom" based on "Aspect Ratio"
+	let aspectRatio = obj.Camera.aspect = window.innerWidth / window.innerHeight;
+	let fov = ( ( window.innerWidth / window.innerHeight ) * 35 ) / 1.96;
+	//("Current Aspect Ratio" * "Base FOV") / "Base AR"
 
-	if ( obj.Camera.aspectRatio < 1 )
-	{
-		obj.Camera.aspect = 1;
-		obj.Camera.zoom = 0.65;
+	if( aspectRatio >= 1 )
+		var zoom = ( ( window.innerWidth / window.innerHeight ) * 1 ) / 1.96;
+	else if ( aspectRatio < 1 ) {
+		var zoom = ( ( window.innerWidth / window.innerHeight ) * 0.35 ) / 1.96;
 	}
-	else {
-		obj.Camera.aspect = 1.78;
-		obj.Camera.zoom = 1;
-	}
+
+	obj.Camera.fov = fov;
+	obj.Camera.zoom = zoom;
+
 	obj.Camera.updateProjectionMatrix();
 	obj.Renderer.setSize( window.innerWidth, window.innerHeight );
 }
