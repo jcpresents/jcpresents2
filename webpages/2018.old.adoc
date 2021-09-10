@@ -1,0 +1,603 @@
+= 2018
+:doctype: article
+:imagesdir: ./images
+
+++++
+<style>
+	div,p,td.hdlist1 {
+		color: red;
+		font-size: 20px;
+		font-weight: 500;
+		font-family: Helvetica, sans-serif;
+		text-shadow: 2px 2px #000000;
+		line-height: 1.2;
+	}
+	h1,h2,h3 {
+		color: red;
+		font-weight: bold;
+	}
+	div.paragraph h2 {
+		border-bottom: 5px solid red;
+	}
+	td.hdlist1 {
+		padding: 0px;
+	}
+	.poster {
+		float: left;
+		padding-right: 10px;
+	}
+	.poster-text {
+		margin-bottom: 5px;
+		height: 330px;
+		text-align: left;
+	}
+	.display-inblock {
+		display: inline-block;
+	}
+	.overflow-hidden {
+		overflow: hidden;
+	}
+</style>
+++++
+
+== Welcome!
+Enter, if you dare, into the world of *The Fucking Terrifying Challenge!*
+ +
+ +
+Within the hallowed halls of these interwebs rests a cinematic monstrosity umatched in the modern era!
+Can you withstand the onslaught?
+Do you have the sanity to survive?
+Would you willingly look into the darkness?
+ +
+ +
+Halloween is (obviously) the best holiday. But what if I told you it could be even *better*? All it takes is little time.
+The question is: *Can you do it*?
+ +
+ +
+*The Challenge* is simple. Pick a few movies off the list and mix them into your Halloween season. Then rank yourself on the following chart: +
+ +
+[.text-center]
+image:skull20.webp[] [underline bold]#*The Zombie*# image:skull20.webp[] +
+Watch three movies
+ +
+ +
+image:skull20.webp[] [underline]#*The Ghoul*# image:skull20.webp[] +
+Watch six movies, then one Mystery Movie
+ +
+ +
+image:skull20.webp[] [underline]#*The Vampire*# image:skull20.webp[] +
+Watch nine movies, then two Mystery Movies
+ +
+ +
+image:skull20.webp[] [underline]#*The Fiend*# image:skull20.webp[] +
+Watch EVERY SINGLE movie on the list
+ +
+ +
+
+Below you will find the Entries for each list movie. Each entry will offer a peek into the dangers that await you.
+The Title of the entry links to the film's IMDB page, and the Poster will link to a stream where you can watch it.
+But take care; streaming websites are often loaded with spyware. The most terrifying thing of all is the internet itself!
+(Also some of these streams suck; you may want to try and find your own.)
+ +
+ +
+At the bottom of the page you will find the entries for the Mystery Movies.
+These films are too horrific for just any day of the month.
+As such, I'll be revealing them on October 28th... just in time for Halloween!!
+ +
+
+[.text-center]
+--
+
++++<h3>And now, prepare yourself for...</h1>+++
++++<h1>The Fucking Terrifying Challenge 2018</h1>+++
+--
+
+== [hide]#Evil Dead 2#
+[.poster]
+image:posters/evil-dead-2.webp[,220]
+
+[.poster-text]
+--
++++<h2>Evil Dead 2</h2>+++
+[horizontal]
+*Genre:* :: Cult Classic
+*Year:* :: 1987
+*Comedy:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+*Cinema:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+image:buttons/IMDb.webp[window="_blank",link="https://www.imdb.com/title/tt0092991/"] ::
+--
+
+This year the list starts off with one of the best damn movies ever made.
+After making the original Evil Dead, a master-class in horror, director Sam Raimi set his sights on a sequel--or rather, the beginning of a trilogy.
+But he decided to take the second film in a different direction.
+ +
+ +
+Evil Dead 2 lies right at the intersection between horror and comedy, which is an ideal place to be.
+The director took influences from such comedic masters as the Three Stooges and the Marx Brothers to add a streak of zaniness, which pairs very well with the over-the-top violence.
+Working on a shoe-string budget with his friends and family, Raimi developed (and then mastered) several innovative special effects techniques.
+And of course, legendary lead actor Bruce Campbell takes Raimi's vision and carries the entire thing on his shoulders.
+This movie has developed a colossal cult following, and it's easy to see why.
+Anyone claiming to appreciate horror would do well to study Evil Dead 2.
+ +
+ +
+[underline]#*How to Watch*:# +
+There is no wrong way to watch this movie.
+It's wacky fun all the way through.
+It pairs well with alcohol, it's not too serious, but it compares well against any other movie you can name regardless.
+If you're only going to watch one, watch this one.
+
+
+== [hide]#Blue Velvet#
+[.poster]
+image:posters/blue-velvet.webp[,220]
+
+[.poster-text]
+--
++++<h2>Blue Velvet</h2>+++
+[horizontal]
+*Genre:* :: Mystery
+*Year:* :: 1986
+*Suspense:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+*Fucked Up:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+image:buttons/IMDb.webp[window="_blank",link=""] ::
+--
+
+Blue Velvet is truly an unforgettable movie.
+While it's not strictly speaking a horror film, the first five minutes will make obvious the sinister tone of this thrilling mystery.
+Director David Lynch has a long history of dark, weird, traumatic filmmaking and Blue Velvet is a top-teir example.
+ +
+ +
+This movie is not for everyone.
+The imagery is disturbing, and the story changes gears very quickly.
+It cycles rapidly from deep sadness to graphic psychological violence, and underneath runs a tone of gruesome suspense.
+Lead performances by Kyle MacLachlan (of Twin Peaks fame) and the manic Dennis Hopper bring Lynch's art to life in glorious detail.
+ +
+ +
+Blue Velvet is full of scenes that will stay with you for years.
+It's an emotionally charged monstrosity that cuts to the very core of human nature.
+And it's definitely worth a watch.
+ +
+ +
+[underline]#*How to Watch*:# +
+This movie is absolute black metal.
+There's a significant mental toll, so brace yourself as best you can for some real brutality.
+In my opinion, it's probably best watched alone--or at the very least, not with a casual acquaintance.
+
+
+== [hide]#1408#
+[.poster]
+image:posters/1408.webp[,220]
+
+[.poster-text]
+--
++++<h2>1408</h2>+++
+[horizontal]
+*Genre:* :: Horror
+*Year:* :: 2007
+*Heavy-Handed:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+*Traumatic:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+image:buttons/IMDb.webp[window="_blank",link=""] ::
+--
+
+The first "Hotel Horror" on this year's list, 1408 is a constant assault on the senses.
+ +
+ +
+It's hard to explain or categorize this one.
+The closest comparison would be to a haunted house movie, but it's more than that.
+1408 draws on horrific tropes from many genres and utilizes technology typically relegated to sci-fi. Made in 2007, it's also one of the more recently made movies on the list.
+ +
+ +
+1408's is a tense, personal horror.
+Lead actor John Cusack does 90% of the heavy lifting in this movie.
+In fact, barely anyone else is in it.
+An early (chilling) appearance by Samuel L. Jackson sets the stage, but after that it's almost a one-man show.
+Luckily, Cusack has the range necessary to bring this film's emotional roller-coaster to life.
+The only other real character is the hotel--a sadistic and evil villain in its own right.
+While it lacks in subtlety, 1408 is a decidedly merciless horror that moves at breakneck speed.
+ +
+ +
+[underline]#*How to Watch*:# +
+Once it gets started, this movie has no brakes.
+Every scene is some fresh nightmare and parts of it are genuinely hard to watch.
+It's at once scary, startling, sinister and depressing.
+Brace yourself for this one.
+
+
+== [hide]#Shaun of the Dead#
+[.poster]
+image:posters/shaun-of-the-dead.webp[,220]
+
+[.poster-text]
+--
++++<h2>Shaun of the Dead</h2>+++
+[horizontal]
+*Genre:* :: Comedy / Horror Parody
+*Year:* :: Comedy / Horror Parody
+*Comedy:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+*Originality:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+image:buttons/IMDb.webp[window="_blank",link=""] ::
+--
+
+The Zombie film is an ancient horror trope, first engineered in the late sixties with the seminal Night of the Living Dead.
+Since then, there have been countless zombie movies made of all different sorts.
+Given how embedded such films are in modern western culture, it's no surprise that numerous parodies have been made over the years.
+ +
+ +
+Enter Shaun of the Dead, another excellent example of the natural interplay between comedy and horror.
+Made by the talented filmmaker Edgar Wright (Hot Fuzz, Scott Pilgrim vs. the World) and acted admirably by his favorite duo (Simon Pegg and Nick Frost), Shaun of the Dead was a crossover hit.
+Both original and familiar, this movie pays beautiful homage to the zombie genre while simultaneously mocking its most recognizeable tropes.
+It's also filled with great music and loveable characters, making it a very endearing vision of modern society.
+One of the lighter movies on the list, Shaun of the Dead is still a respectable horror that deserves to be remembered.
+ +
+ +
+[underline]#*How to Watch*:# +
+It's a little grisly at times, and spans the range of emotions, but overall it's a fun and casual movie.
+It's easy to watch, great to drink with, and perfect for winding down after one of the more extreme titles on the list.
+I'd save this one for when you need it.
+
+
+== [hide]#The Host#
+image:posters/the-host.webp[,225,,role="poster"]
++++<h2>The Host</h2>+++
+[.overflow-hidden]
+*Genre: Monster Movie* +
+Korean: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Classic: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+ +
+The Host is an interesting piece.
+Made in 2006, this Korean film adheres faithfully to the traditional moster movie formula.
+Not too gory, not too brutal, but still full of action and danger.
+ +
+ +
+This movie is reminiscent of the Godzilla series with a modern twist.
+Additionally, the monster is much smaller, and so the destruction takes a very personal form.
+It's the simple story of a man fighting against powers beyond his control to protect the things he loves.
+Even with a mutated monster running around this film feels relatable and hits close to home.
+As with Godzilla, there's an underlying theme of man's delicate relationship with nature--a human problem as old as time.
+The Host is a surprisingly well-constructed horror movie that is easily worth the trouble of reading a bunch of subtitles.
+ +
+ +
+[underline]#*How to Watch*:# +
+This is a pretty easy watch.
+Settle in with some popcorn and get ready for something nearly extinct in modern America: a well-made blockbuster monster movie.
+
+
+== [hide]#The Shining#
+image:posters/the-shining.webp[,225,,role="poster"]
++++<h2>The Shining</h2>+++
+[.overflow-hidden]
+*Genre: Classic Cinema* +
+Perfect: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Iconic: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+ +
+When you talk about cinema, there's one name that can't be ignored: Stanley Kubrick.
+Truly, as a director, Kubrick is one of the best there ever was.
+And luckily for us, one of his best movies is a stunning horror.
+An adaptation of the Stephen King novel by the same name, this movie is arguably the best adaptation ever made.
+ +
+ +
+The Shining is a haunting and cerebral masterpiece.
+It's also a puzzle; by nature, it's difficult to even say exactly what it's about.
+Is it a chronicle of a family's descent into madness?
+Is it a ghost story? Or is something even more nefarious at work?
+There are infinite interpretations.
+But one thing that can almost certainly be said, is that this movie depicts something that lies outside our understanding.
+With shocking visuals and a genuinely tense atmosphere, The Shining is among the best films ever.
+ +
+ +
+[underline]#*How to Watch*:# +
+In order to appreciate this one, you really have to watch it close.
+Kubrik personally arranged each scene down to every detail and it's full of little secrets that you'd never expect.
+I'd argue we still probably don't fully understand this movie nearly forty years later.
+Watch it hard.
+
+
+== [hide]#The People Under the Stairs#
+image:posters/the-people-under-the-stairs.webp[,225,,role="poster"]
++++<h2>The People Under the Stairs</h2>+++
+[.overflow-hidden]
+*Genre: Horror* +
+Horrific: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Zany: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+ +
+This movie is a wild ride.
+I'm not generally a fan of Wes Craven's work, but there's something different about this one.
+It's wild and chaotic and really just all over the place.
+ +
+ +
+The People Under the Stairs is not one of Craven's more well-known works, but it has many of his hallmarks.
+Oppressive social systems, imprisonment, weird mutants, they're all here.
+And tying it all together is a perverse and uncanny vision of domestic America.
+ +
+ +
+This is one of those horrors that takes aim at conservative values, and it does so in a really jarring fashion.
+Some scenes are downright laughable but still very endearing.
+And while it's not the best or most influential movie, The People Under the Stairs is a memorable little horror that has some great stuff to offer.
+ +
+ +
+[underline]#*How to Watch*:# +
+I honestly don't know what to say about this one.
+It's casual and heavy at the same time.
+It's also an older movie, so give it a little time to warm up.
+
+
+== [hide]#Funny Games#
+image:posters/funny-games.webp[,225,,role="poster"]
++++<h2>Funny Games</h2>+++
+[.overflow-hidden]
+*Genre: Torture Porn* +
+Brutal: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Unpleasant: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+ +
+Funny Games is not the kind of movie you enjoy.
+You'd have to be a pretty sick fucker to take any real pleasure from this one.
+It's non-stop, absolute brutality from beginning to end.
+ +
+ +
+The premise is very simple, but Funny Games takes that premise and stretches it into the esoteric.
+More refined than the gore festivals of the 70's, this movie's torture is largely psychological.
+There's a wicked streak of predation running throughout that makes the villains feel truly evil.
+ +
+ +
+Though it seems pretty straighforward, Funny Games actually has quite a bit of philosophical depth for those that are willing to find it.
+It touches on the banality of evil, suburban isolation, and the very fabric of reality.
+It also has a self-referential theme of violence in the media.
+Naomi Watts and Tim Roth both do an excellent job portraying a hopeless family of victims, making the hapless violence all the more disturbing.
+ +
+ +
+Overall, this is a movie you put yourself through for the sake of doing it.
+It's hard to watch, even harder to think about, but a real complex piece for those with the stomach for it.
+ +
+ +
+[underline]#*How to Watch*:# +
+I wouldn't recommend this one to everybody.
+You have to have a pretty high trauma tolerance to get through this movie.
+If you showed it at a party, it would ruin that party.
+This is the kind of movie you dedicate a night to watching.
+
+
+== [hide]#Dr. Jekyll and Mr. Hyde#
+image:posters/dr-jekyll-and-mr-hyde.webp[,225,,role="poster"]
++++<h2>Dr. Jekyll and Mr. Hyde</h2>+++
+[.overflow-hidden]
+*Genre: Classic Horror* +
+Badass: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Old: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+ +
+I realize that this one is a tough sell.
+After you've seen Texas Chainsaw Massacre or The Exorcist it's pretty hard to go back.
+Made in the 30's alongside such classics as Frankenstein and Dracula, Dr. Jekyll and Mr. Hyde still manages to stand out as an excellent retelling of a horror classic.
+ +
+ +
+This movie was ahead of its time in many ways.
+Lead actor Fredric March plays both Jekyll and Hyde, and his performance was so good it won him an Oscar (exceedingly rare for a horror movie to this day).
+The makeup and practical effects were so damn good it took filmmakers decades to figure out how they were done.
+And towards the end there's an action sequence that stands up to scrutiny even now.
+ +
+ +
+Yes, it's slow and dry, just like all movies from that era.
+And yes, it's based on a story so old it's inherently cliche.
+But in cinematic terms, it's really a masterpiece.
+If you're a true movie buff, this one's a must-see.
+ +
+ +
+[underline]#*How to Watch*:# +
+Dr. Jekyll and Mr. Hyde is not a party movie.
+It's a movie you watch while sipping brandy and contemplating the human condition.
+Start it early in the evening and make an effort to absorb all the subtlety.
+It's good for unwinding a little bit after one of the more graphic or intense list movies.
+
+
+== [hide]#Bram Stoker's Dracula#
+image:posters/bram-stokers-dracula.webp[,225,,role="poster"]
++++<h2>Bram Stoker's Dracula</h2>+++
+[.overflow-hidden]
+*Genre: Horror* +
+Good Adaptation: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Star Power: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+ +
+Bram Stoker's Dracula is a modern adaptation of the classic novel by the same name.
+A 90's golden-era movie, this Dracula is a lot easier to watch than the Bela Lugosi version of the 1930's.
+ +
+ +
+Every effort was made to create a movie worthy of the Dracula name.
+Directed by a real director (Francis Ford Coppola) and acted by an unbelievable supergroup of actors, this movie was too big to fail.
+The cast includes (get this): Keanu Reeves, Winona Ryder, Anthony Hopkins, Gary Oldman, and even musician Tom Waits.
+ +
+ +
+As if that wasn't enough, every other aspect of this movie just happens to be rock-solid.
+The makeup is impressive, genuinely making Gary Oldman look like a centuries-old ghoul.
+The setwork looks like something straight out of the novel.
+And it's mostly set in a beautifully convincing reproduction of Edwardian England.
+ +
+ +
+If you're looking for a non-boring version of Dracula to watch that's even remotely faithful to the original story, this is about as close as you're going to get.
+ +
+ +
+[underline]#*How to Watch*:# +
+Bram Stoker's Dracula is a long but generally interesting movie.
+It's hard not to enjoy watching such a crazy cast of actors blast it--especially those who weren't all that famous yet.
+It benefits from being seen in the dark, as color contrast is a big visual theme in this movie.
+
+
+== [hide]#The Silence of the Lambs#
+image:posters/the-silence-of-the-lambs.webp[,225,,role="poster"]
++++<h2>The Silence of the Lambs</h2>+++
+[.overflow-hidden]
+*Genre: Mystery / Psychological Thriller* +
+Suspenseful: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Graphic: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+ +
+What can you say about a movie like this?
+It's certainly one of the more influential films in recent history.
+Everybody's heard of it, and probably knows a few quotes.
+And when you watch it, you'll see that its reputation is fully justified.
+ +
+ +
+The Silence of the Lambs follows a promising young detective (Jodie Foster) as she chases down a serial killer on the loose.
+But the real horror is derived not from the antagonist; that comes from the infamous villain Hannibal Lecter.
+Anthony Hopkins is perhaps the only actor that could capture Lecter's character so perfectly, with his performance being almost the sole reason this movie has been so fondly remembered.
+ +
+ +
+But that's not to say the rest of the movie is bad.
+In fact, just about every part of it is brilliantly done, from the creepy-but-catchy music to the opressively dark visuals.
+The Silence of the Lambs is a hard-hitting psychological masterwork that freaked out entire generations and holds up perfectly today.
+ +
+ +
+[underline]#*How to Watch*:# +
+This one's a real pleasure to watch.
+The story is perfectly balanced.
+It's not too heavy, but still grisly enough to keep you on edge.
+The absolute creepiness of this movie is infectious.
+
+
+== [hide]#The Fly#
+image:posters/the-fly.webp[,225,,role="poster"]
++++<h2>The Fly</h2>+++
+[.overflow-hidden]
+*Genre: Horror / Sci-Fi* +
+Gross: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Jeff Goldblum: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+ +
+Horror and Sci-Fi have a long history together.
+It could be argued that, at the time of its writing, Frankenstein was part sci-fi.
+And if there's anybody who understands that relationship, it's director David Cronenberg.
+ +
+ +
+Cronenberg's movies all have one thing in common: they're super gross.
+And The Fly is no exception.
+Made right at the height of the 80's special effects boom, The Fly is going to show you some really nasty stuff.
+Centered around a science experiment gone wrong, this movie (and the original 1958 version) were so influential even Pokemon copied the premise.
+Like many horrors, the cast is pretty small--but Jeff Goldblum acts the hell out of this movie.
+ +
+ +
+The Fly is a one-of-a-kind.
+You won't find any other quite like it.
+It's hard to watch, and definitely hard to forget.
+ +
+ +
+[underline]#*How to Watch*:# +
+Not much you can do to prepare for this one.
+Don't go in with a full stomach.
+
+
+== [hide]#The Rocky Horror Picture Show#
+image:posters/the-rocky-horror-picture-show.webp[,225,,role="poster"]
++++<h2>The Rocky Horror Picture Show</h2>+++
+[.overflow-hidden]
+*Genre: Cult Classic* +
+Erotic: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Musical: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+ +
+Few movies have such a devoted fanbase as Rocky Horror, and it's easy to see why.
+This movie is part comedy, part horror, part musical, and all insanity.
+ +
+ +
+It's pretty hard to describe this one with any detail.
+You have to see it to believe it.
+One thing that can be said: Tim Curry is an acting monster.
+His character is serious enough to carry the plot, but at the same time totally irreverant and hyperbolic.
+To play such a character believably, and still be in a musical scene with rocker Meatloaf, is a colossal acting feat.
+ +
+ +
+If you haven't seen it before, Rocky Horror is going to blow you away.
+Both absurd and insightful, this movie is seriously fucking nuts.
+ +
+ +
+[underline]#*How to Watch*:# +
+This is probably the least stressful movie on this year's list.
+While bizarre, the music is so catchy it's hard not to love.
+I advise drinking throughout, and maybe even finding a drinking game to go along.
+
+
+[discrete][.text-center]
+== [underline]#Mystery Movies#
+
+
+== [hide]#The Thing#
+image:posters/the-thing.webp[,225,,role="poster"]
++++<h2>The Thing</h2>+++
+[.overflow-hidden]
+*Genre: Sci-Fi Horror* +
+Gruesome: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Practical Effects: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+ +
+Strap in for this one.
+The Thing runs like a fever dream.
+It has just about every human fear you can name: isolation, imprisonment, the unknown, the uncanny, violent death, and more.
+It's a detailed view into the human psyche, visualized in a fashion that's only just barely recognizable.
+ +
+ +
+This movie is an adaptation of a novel.
+It's also a re-make of a 1950's horror/sci-fi.
+But as with many 80's remakes, The Thing is radically different in both tone and production value.
+Like The Fly, The Thing was made right on the cusp of a special effects boom.
+And of all the movies made during this period, this one is perhaps the very best.
+It's been a strong influence on the works that have come after, being featured being featured on Stranger Things and parodied by South Park (and many others).
+And after you've seen it, you'll understand why.
+ +
+ +
+[underline]#*How to Watch*:# +
+Watch this one in the pitch black.
+
+
+== [hide]#Dawn of the Dead#
+image:posters/dawn-of-the-dead.webp[,225,,role="poster"]
++++<h2>Dawn of the Dead</h2>+++
+[.overflow-hidden]
+*Genre: Horror* +
+Classic: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Influential: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+ +
+I actually haven't seen this Mystery Movie.
+I'm just as excited to see it as you are.
+ +
+ +
+This movie is part of a film legacy.
+It's the second (I think) in a long series of movies that we're all familiar with.
+Hell, they still make them today.
+In fact, this very movie was re-made recently, and even it was pretty good.
+ +
+ +
+This is a 70's movie, which comes along with certain qualities.
+It'll probably be slow in modern terms.
+The effects will likely be seen as primitive (but good for the time), and there probably aren't any super-notable actors.
+ +
+ +
+But if its impact is any indication, Dawn of the Deadis a very special piece of art.
+It plays with the horror genre without ever actually breaking from it--and in fact, shaping its future course.
+ +
+ +
+[underline]#*How to Watch*:# +
+I think this one's going to be pretty easy.
+Watch for themes, and for any stylistic hallmarks.
+
+
+== [hide]#Re-Animator#
+image:posters/re-animator.webp[,225,,role="poster"]
++++<h2>Re-Animator</h2>+++
+[.overflow-hidden]
+*Genre: Cult Horror* +
+Gory: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+Secretly Hilarious: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] +
+ +
+Re-Animator is probably one of my favorite movies, top ten easy.
+It's a distillation of forty years of horror, both reverant of the past and ahead of its time.
+If you haven't seen it, this movie is going to blow your tits off.
+ +
+ +
+Re-Animator is an adaptation of a short story.
+It deviates a lot from the source material, but it's really an update while maintaining the spirit intact.
+Another 80's film, the special effects are groundbreaking and still look awesome today.
+But instead of using the effects for dramatic effect (as with The Thing), this one injects a sense of absurdity to lighten the mood.
+ +
+ +
+And indeed, without that levity this movie would be unwatcheable.
+It's so absolutely brutal both mentally and physically that you'll want to set aside an entire night.
+This one's great as a finisher.
+ +
+ +
+[underline]#*How to Watch*:# +
+I'd get good and drunk before watching this movie, but only if you've got a strong stomach.
+
+'''
