@@ -6,9 +6,9 @@
 		<link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="screen">
 
 		<canvas id="viewport"></canvas>
-		<div class="loader"><div class="ring"></div></div>
+		<div class="loader"><div class="logo"></div><div class="ring"></div></div>
 
-		<script src="javascripts/threejs/init.js" type="module"></script>
+		<script src="javascripts/threejs/three.init.js" type="module"></script>
 		<script src="javascripts/asciidoctor/asciidoctor.js"></script>
 		<script src="javascripts/asciidoctor/asciidoctor.nav.js"></script>
 		<script>
@@ -19,7 +19,7 @@
 					setTimeout(function(){
 						loader.style.display = "none";
 					}, 500);
-				},500);
+				},3000);
 			}
 		</script>
 
@@ -28,13 +28,14 @@
 	<body class="animated fadeIn">
 		<header>
 			<section id="nav1"><nav class="nav"><ul>
-				<li>Year
+				<li>
+					<a>Year</a>
 					<ul>
-						<li><a href="#" onclick="load_List( '2017' )">2017</a></li>
-						<li><a href="#" onclick="load_List( '2018' )">2018</a></li>
-						<li><a href="#" onclick="load_List( '2019' )">2019</a></li>
-						<li><a href="#" onclick="load_List( '2020' )">2020</a></li>
-						<li><a href="#" onclick="load_List( '2021' )">2021</a></li>
+						<li><a onclick="load_List( '2017' )">2017</a></li>
+						<li><a onclick="load_List( '2018' )">2018</a></li>
+						<li><a onclick="load_List( '2019' )">2019</a></li>
+						<li><a onclick="load_List( '2020' )">2020</a></li>
+						<li><a onclick="load_List( '2021' )">2021</a></li>
 					</ul>
 				</li>
 			</ul></nav></section>
@@ -44,7 +45,9 @@
 			</ul></nav></section>
 		</header>
 
-		<div id="content"></div>
+		<div id="content">
+			Javascript is required for this site. Please enable Javascript.
+		</div>
 
 		<footer>
 			<p>Author: Hege Refsnes<br>

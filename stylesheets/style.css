@@ -5,45 +5,38 @@ canvas {
 	display: block;
 	background-color: black;
 }
-
 header {
+	width:		100%;
+	height:		400px;
+	max-width:	1920px;
+	max-height: 660px;
+	margin:		0px auto 0px auto;
+	padding:	0;
+
 	background-position:center;
 	background-repeat:	no-repeat;
 	background-size:	auto 100%;
-
-	max-width:	1920px;
-	max-height: 660px;
-	width:		100%;
-	height:		400px;
-	margin:		0px auto 0px auto;
-	padding:	0;
 }
-
 body {
 	background: black;
 }
-
-footer {
+section,footer {
 	text-align: center;
 }
-
 body,p,nav,ul,li,a,footer {
-	padding:0;
+	padding: 0;
 	margin: 0;
 }
-
 .animated {
 	-webkit-animation-duration: 5s;
 	animation-duration: 5s;
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
 }
-
 .fadeIn {
 	-webkit-animation-name: fadeIn;
 	animation-name: fadeIn;
 }
-
 #viewport {
 	top: 0;
 	left: 0;
@@ -54,175 +47,150 @@ body,p,nav,ul,li,a,footer {
 	position: fixed;
 	pointer-events: none;
 }
-
+@font-face {
+  font-family: dungeon;
+  src: url(../dungeon.ttf);
+}
+@keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
 @-webkit-keyframes fadeIn {
 	0% {opacity: 0;}
 	100% {opacity: 1;}
 }
 
-@keyframes fadeIn {
-	0% {opacity: 0;}
-	100% {opacity: 1;}
-}
 
 /* Navigation Buttons */
 section {
 	position: fixed;
 	z-index: 1002;
 }
-
-nav.nav  {
-	text-align: center;
-}
-
 nav.nav ul {
-	background: #ec1504;
 	box-shadow: 0px 0px 9px rgba(0,0,0,0.75);
-	/* border-radius: 10px; [Rounds main container corners] */
 	list-style: none;
 	position: relative;
 	display: inline-table;
 }
-
 nav.nav ul ul {
 	display: none;
 }
-
 nav.nav ul li {
-	background-position:center;
-	background-image:	url("../images/button.webp");
-	background-size:	100% 100%;
-
-	text-align:			center;
-	color:				#ffffff;
-	font:				bold normal normal 30px/normal dungeon;
+	background-position: center;
+	background-image: url("../images/button.webp");
+	background-size: 100% 100%;
+	color: #ffffff;
+	font: bold normal normal 30px/normal dungeon;
+	width: 100px;
+	height: 100px;
 }
-
 nav.nav ul li a {
-	height: 100%;
 	display: block;
 	color: inherit;
 	text-decoration: none;
+	height: 100%;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
 }
-
+nav.nav ul li ul {
+	margin: 0;
+}
 nav.nav ul ul li {
 	float: none;
 	position: relative;
 }
-
 nav.nav ul ul ul {
 	position: absolute;
 	left: 100%;
 	top: 0px;
 }
-
 nav.nav ul li:hover {
 	box-shadow: 0px 0px 9px rgba(0,0,0,0.75);
 }
-
 nav.nav ul li:hover > ul {
 	display: block;
 	position: absolute;
 }
-
 nav.nav ul li:hover > a {
 	color: #999999;
 }
-
-@font-face {
-  font-family: dungeon;
-  src: url(../dungeon.ttf);
-}
-
 #nav1 {
-	top: 1%;
-	left: 1%;
+	top: 20px;
+	left: 20px;
 }
-
 #nav2 {
 	bottom: 20px;
 	right: 20px;
 }
 
+
+/* Loading Screen */
+div.loader{
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	background: #000000;
+	transition: all 0.5s;
+	z-index: 1003;
+}
+div.loader div.logo {
+	width: 100%;
+	height: 0;
+	padding-top: 39.94%;
+	background-position:center;
+	background-repeat:	no-repeat;
+	background-image:	url("../images/banner.webp");
+}
+div.loader div.ring {
+	align-items: center;
+	position: relative;
+	width: 100px;
+	height: 100px;
+	border: 5px solid #ff3d00;
+	border-radius: 50%;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	animation: rotate 1.5s linear infinite;
+}
+@keyframes rotate {
+	100%{ transform: rotate(360deg); }
+}
+@-webkit-keyframes rotate {
+	100%{ transform: rotate(360deg); }
+}
+
+
+/* Orientaion specific styles*/
 @media only screen and (orientation: landscape) {
 
-	nav ul li {
-		width: 100px;
-		height: 50px;
-
-		max-width: 100px;
-		max-height: 100px;
-
-		line-height: 50px;
-	}
-	
 	#content {
 		width: 60%;
 		margin: 0px auto;
+	}
+
+	div.loader div.logo {
+		background-size:	70% auto;
 	}
 
 }
 
 @media only screen and (orientation: portrait) {
 
-	nav ul li {
-		width: 150px;
-		height: 75px;
-
-		max-width: 150px;
-		max-height: 150px;
-
-		line-height: 75px;
-	}
-	
 	#content {
 		width: 75%;
 		margin: 0px auto;
 	}
 
-}
-
-/* Loading Screen */
-.loader{
-	position: fixed;
-	height: 100vh;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: #000000;
-	transition: all 0.5s;
-
-	background-position:center;
-	background-repeat:	no-repeat;
-	background-image:	url("../images/banner.webp");
-	background-size:	100% auto;
-
-	z-index: 1003;
-}
-.loader .ring{
-	height: 45px;
-	width: 45px;
-	/* border: 5px solid #ddd;*/
-	border-radius: 50%;
-	position: fixed;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	top: 75%;
-}
-.loader .ring:after{
-	position: absolute;
-	content: "";
-	height: 100%;
-	width: 100%;
-	border-radius: 50%;
-	border: 5px solid #ff3d00;
-	border-top-color: transparent;
-	animation: rotate 1.5s linear infinite;
-}
-@keyframes rotate {
-	100%{
-		transform: rotate(360deg);
+	div.loader div.logo {
+		margin-bottom: 50px;
+		background-size: 100% auto;
 	}
+
 }
