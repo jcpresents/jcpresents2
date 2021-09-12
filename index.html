@@ -6,7 +6,11 @@
 		<link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="screen">
 
 		<canvas id="viewport"></canvas>
-		<div class="loader"><div class="logo"></div><div class="ring"></div></div>
+		<div class="loader">
+			<div class="logo"></div>
+			<div class="ring"></div>
+			<noscript>Javascript is required for this site. Please enable Javascript.</noscript>
+		</div>
 
 		<script src="javascripts/threejs/three.init.js" type="module"></script>
 		<script src="javascripts/asciidoctor/asciidoctor.js"></script>
@@ -31,23 +35,21 @@
 				<li>
 					<a>Year</a>
 					<ul>
-						<li><a onclick="load_List( '2017' )">2017</a></li>
-						<li><a onclick="load_List( '2018' )">2018</a></li>
-						<li><a onclick="load_List( '2019' )">2019</a></li>
-						<li><a onclick="load_List( '2020' )">2020</a></li>
-						<li><a onclick="load_List( '2021' )">2021</a></li>
+						<li><a class="navClick">2017</a></li>
+						<li><a class="navClick">2018</a></li>
+						<li><a class="navClick">2019</a></li>
+						<li><a class="navClick">2020</a></li>
+						<li><a class="navClick">2021</a></li>
 					</ul>
 				</li>
 			</ul></nav></section>
 			<section id="nav2"><nav class="nav"><ul>
-				<li><a href="#" onclick="ScrollPage( 'prev' );">⇑</a></li>
-				<li><a href="#" onclick="ScrollPage( 'next' );">⇓</a></li>
+				<li><a href="#" onclick="scroll_AsciiDoc( 'prev' );">⇑</a></li>
+				<li><a href="#" onclick="scroll_AsciiDoc( 'next' );">⇓</a></li>
 			</ul></nav></section>
 		</header>
 
-		<div id="content">
-			Javascript is required for this site. Please enable Javascript.
-		</div>
+		<div id="content"></div>
 
 		<footer>
 			<p>Author: Hege Refsnes<br>

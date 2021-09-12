@@ -5,7 +5,7 @@
 ++++
 <style>
 	header {
-		background-image: url("../images/gifs/demon.gif");
+		background-image: url("./images/gifs/demon.gif");
 	}
 
 	/* Font Settings */

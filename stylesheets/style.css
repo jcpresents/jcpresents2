@@ -159,6 +159,10 @@ div.loader div.ring {
 	border-bottom-color: transparent;
 	animation: rotate 1.5s linear infinite;
 }
+div.loader span {
+	color: white;
+	padding-top: 20px;
+}
 @keyframes rotate {
 	100%{ transform: rotate(360deg); }
 }

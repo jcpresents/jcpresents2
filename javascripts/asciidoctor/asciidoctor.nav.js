@@ -1,23 +1,43 @@
+document.body.onload = setTimeout( init_AsciiDoc, 1000);
 var List = {};
-document.body.onload = load_List( "2018" );
 
-function load_List( year ) {
+function init_AsciiDoc() {
 
+	var navButton = document.getElementsByClassName("navClick");
+	for (var i = 0; i < navButton.length; i++)
+		navButton[i].addEventListener("click", load_AsciiDoc);
+
+	load_AsciiDoc( "2018" );
+}
+
+function load_AsciiDoc( year ) {
+
+	if(event) year = event.srcElement.innerText;
 	var asciidoctor = Asciidoctor();
-	fetch('webpages/' + year + '.adoc')
-		.then(response => response.text())
+	var file = 'webpages/' + year + '.adoc';
+	fetch( file )
+		.then(response => {
+
+		    if (!response.ok && response.status == 404)
+				throw '404 File Not Found "' + year + '.adoc"';
+
+			return response.text()
+		})
 		.then((data) => {
-			var html = asciidoctor.convert(data);
+
+			let html = asciidoctor.convert( data );
 			document.getElementById('content').innerHTML = html;
 
-			var observer = new IntersectionObserver(function(entries) {
+			var observer = new IntersectionObserver( function(entries) {
 
 				switch( List.direction ) {
+
 					default:
 						if (entries[0].isIntersecting) {
 							List.index = entries[0].target.name;
 						}
 						break;
+
 					case "next":
 						let y = entries.length == 1 ? 0 : 1; //Avoids a rare error where only 1 section is detected
 						if ( entries[y].isIntersecting ) {
@@ -35,9 +55,15 @@ function load_List( year ) {
 				observer.observe( List[i] );
 			}
 	})
+	.catch(error => {
+
+		error = "[.text-center]\n== " + error + "";
+		let html = asciidoctor.convert( error );
+		document.getElementById('content').innerHTML = html;
+	});
 }
 
-function ScrollPage( IN ) {
+function scroll_AsciiDoc( IN ) {
 
 	event.preventDefault();
 	List.direction = IN;
