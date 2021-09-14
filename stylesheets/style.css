@@ -23,7 +23,7 @@ body {
 section,footer {
 	text-align: center;
 }
-body,p,nav,ul,li,a,footer {
+body,p,nav,ul,li,a,footer,#content {
 	padding: 0;
 	margin: 0;
 }
@@ -81,8 +81,8 @@ nav.nav ul li {
 	background-size: 100% 100%;
 	color: #ffffff;
 	font: bold normal normal 30px/normal dungeon;
-	width: 100px;
-	height: 100px;
+	width: 75px;
+	height: 75px;
 }
 nav.nav ul li a {
 	display: block;
@@ -128,7 +128,7 @@ nav.nav ul li:hover > a {
 
 
 /* Loading Screen */
-div.loader{
+div.loader {
 	display: flex;
 	flex-direction: column;
 	position: fixed;
@@ -171,30 +171,31 @@ div.loader span {
 }
 
 
-/* Orientaion specific styles*/
+/* Display Specific Styles */
 @media only screen and (orientation: landscape) {
-
-	#content {
-		width: 60%;
-		margin: 0px auto;
-	}
-
+	/* Desktop Styles for Landscape */
 	div.loader div.logo {
 		background-size:	70% auto;
 	}
-
 }
-
 @media only screen and (orientation: portrait) {
-
-	#content {
-		width: 75%;
-		margin: 0px auto;
-	}
-
+	/* Desktop Styles for Portrait */
 	div.loader div.logo {
 		margin-bottom: 50px;
 		background-size: 100% auto;
 	}
-
+}
+@media screen and (max-device-width: 480px) {
+	/* Mobile Styles in Both Modes */
+	nav.nav ul li {
+		font: bold normal normal 50px/normal dungeon;
+		width: 110px;
+		height:110px;
+	}
+}
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+	/* Mobile Styles in Portrait Mode */
+}
+@media screen and (max-device-width: 480px) and (orientation: landscape) {
+	/* Mobile Styles in Landscape Mode */
 }

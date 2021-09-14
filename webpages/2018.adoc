@@ -1,12 +1,20 @@
 = 2018
 :doctype: article
+:!sectids:
 :imagesdir: ./images
 
 ++++
 <style>
+	/* Main Page Settings */
 	header {
 		background-image: url("./images/gifs/demon.gif");
 	}
+	#content {
+		width: 90%;
+		max-width: 775px;
+		margin: 0px auto;
+	}
+
 
 	/* Font Settings */
 	div,p,td.hdlist1 {
@@ -23,50 +31,79 @@
 		text-align: center;
 	}
 
-	/* Movie Poster Settings */
-	div.movie div.content {
-		/* Movie Container */
-		display: flex;
+
+	/* Page Section Settings */
+	div.sect1 {
+		/* Page Sections */
+		padding: 35px 0px 35px 0px;
 	}
+	div.sect1 > h2:first-of-type {
+		/* Titles Only */
+		padding: 0;
+		margin: 0;
+	}
+	div.movie > div.content {
+		/* Movie Info Containers */
+		display: flex;
+		justify-content: center;
+		align-content: center;
+	}
+
+
+	/* Movie Info Settings */
 	div.hdlist {
-		/* Movie Info Container */
+		/* Table Parent Containers */
 		text-align: left;
-		flex: 50%;
 	}
 	div.hdlist div.title h2 {
-		/* Movie Info container title */
+		/* Table Titles */
 		margin: 0px 10px;
 		text-align: left;
+		border-bottom: 0px dotted;
 	}
 	div.hdlist table {
-		/* Movie Info container table*/
+		/* Tables */
 		margin: 0px 10px;
 	}
 	div.hdlist td {
-		/* Movie Info container table cell*/
+		/* Table Cells */
 		padding: 0px;
 	}
-	div.hdlist td.hdlist2 {
-		/* Movie Info Container table cell second column */
+	div.hdlist td.hdlist1 {
+		/* Table First Column Cells */
 		padding-left: 5px;
-		text-align: left;
+	}
+	div.hdlist td.hdlist1 p {
+		/* Table First Column Cell Pragraphs */
+	}
+	div.hdlist td.hdlist2 {
+		/* Table Second Column Cells */
+		padding-left: 5px;
 	}
 	div.hdlist td.hdlist2 p {
-		/* Movie Info Container table cell second column paragraph */
+		/* Table Second Column Cell Pragraphs */
 		color: white;
 	}
-	div.content div.paragraph {
-		width: 50%;
-		text-align: right;
-	}
 
-	.overflow-hidden {
-		overflow: hidden;
+
+	/* Device Specific Settings */
+	@media screen and (max-device-width: 480px) {
+		/* Mobile Styles in Both Modes */
+		div,p,td.hdlist1 {
+			font-size: 30px;
+		}
+	}
+	@media screen and (max-device-width: 480px) and (orientation: portrait) {
+		/* Mobile Styles in Portrait Mode */
+	}
+	@media screen and (max-device-width: 480px) and (orientation: landscape) {
+		/* Mobile Styles in Landscape Mode */
 	}
 </style>
 ++++
 
 == Welcome!
++++<br>+++
 Enter, if you dare, into the world of *The Fucking Terrifying Challenge!*
  +
  +
@@ -129,12 +166,12 @@ image:posters/evil-dead-2.webp[,220]
 .+++<h2>Evil Dead 2</h2>+++
 *Year:* :: 1987
 *Genre:* :: Cult Classic
-*Rating:* :: R
 *Length:* :: 1h 24min
 *Comedy:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 *Cinema:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 image:IMDb.webp[window="_blank",link="https://www.imdb.com/title/tt0092991/"] ::
 --
++++<br>+++
 This year the list starts off with one of the best damn movies ever made.
 After making the original Evil Dead, a master-class in horror, director Sam Raimi set his sights on a sequel--or rather, the beginning of a trilogy.
 But he decided to take the second film in a different direction.
@@ -163,12 +200,12 @@ image:posters/blue-velvet.webp[,220]
 .+++<h2>Blue Velvet</h2>+++
 *Year:* :: 1986
 *Genre:* :: Mystery
-*Rating:* :: R
-*Length:* :: 2h
+*Length:* :: 2h 0min
 *Suspense:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 *Fucked Up:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 image:IMDb.webp[window="_blank",link="https://www.imdb.com/title/tt0090756"] ::
 --
++++<br>+++
 Blue Velvet is truly an unforgettable movie.
 While it's not strictly speaking a horror film, the first five minutes will make obvious the sinister tone of this thrilling mystery.
 Director David Lynch has a long history of dark, weird, traumatic filmmaking and Blue Velvet is a top-teir example.
@@ -199,12 +236,12 @@ image:posters/1408.webp[,220]
 .+++<h2>1408</h2>+++
 *Year:* :: 2007
 *Genre:* :: Horror
-*Rating:* :: PG-13
 *Length:* :: 1h 44min
 *Heavy-Handed:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 *Traumatic:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 image:IMDb.webp[window="_blank",link="https://www.imdb.com/title/tt0450385"] ::
 --
++++<br>+++
 The first "Hotel Horror" on this year's list, 1408 is a constant assault on the senses.
  +
  +
@@ -237,12 +274,12 @@ image:posters/shaun-of-the-dead.webp[,220]
 .+++<h2>Shaun of the Dead</h2>+++
 *Year:* :: 2004
 *Genre:* :: Comedy / Horror
-*Rating:* :: R
 *Length:* :: 1h 39min
 *Comedy:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 *Originality:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 image:IMDb.webp[window="_blank",link="https://www.imdb.com/title/tt0365748"] ::
 --
++++<br>+++
 The Zombie film is an ancient horror trope, first engineered in the late sixties with the seminal Night of the Living Dead.
 Since then, there have been countless zombie movies made of all different sorts.
 Given how embedded such films are in modern western culture, it's no surprise that numerous parodies have been made over the years.
@@ -269,12 +306,12 @@ image:posters/the-host.webp[,220]
 .+++<h2>The Host</h2>+++
 *Year:* :: 2006
 *Genre:* :: Monster Movie
-*Rating:* :: R
-*Length:* :: 2h
+*Length:* :: 2h 0min
 *Korean:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 *Classic:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 image:IMDb.webp[window="_blank",link="https://www.imdb.com/title/tt0468492"] ::
 --
++++<br>+++
 The Host is an interesting piece.
 Made in 2006, this Korean film adheres faithfully to the traditional moster movie formula.
 Not too gory, not too brutal, but still full of action and danger.
@@ -301,12 +338,12 @@ image:posters/the-shining.webp[,220]
 .+++<h2>The Shining</h2>+++
 *Year:* :: 1980
 *Genre:* :: Classic Cinema
-*Rating:* :: R
 *Length:* :: 2h 26min
 *Perfect:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 *Iconic:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 image:IMDb.webp[window="_blank",link="https://www.imdb.com/title/tt0081505"] ::
 --
++++<br>+++
 When you talk about cinema, there's one name that can't be ignored: Stanley Kubrick.
 Truly, as a director, Kubrick is one of the best there ever was.
 And luckily for us, one of his best movies is a stunning horror.
@@ -337,12 +374,12 @@ image:posters/the-people-under-the-stairs.webp[,220]
 .+++<h2>The People Under the Stairs</h2>+++
 *Year:* :: 1991
 *Genre:* :: Horror
-*Rating:* :: R
 *Length:* :: 1h 42min
 *Horrific:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 *Zany:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 image:IMDb.webp[window="_blank",link="https://www.imdb.com/title/tt0105121"] ::
 --
++++<br>+++
 This movie is a wild ride.
 I'm not generally a fan of Wes Craven's work, but there's something different about this one.
 It's wild and chaotic and really just all over the place.
@@ -372,12 +409,12 @@ image:posters/funny-games.webp[,220]
 .+++<h2>Funny Games</h2>+++
 *Year:* :: 2007
 *Genre:* :: Torture Porn
-*Rating:* :: R
 *Length:* :: 1h 51min
 *Brutal:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 *Unpleasant:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 image:IMDb.webp[window="_blank",link="https://www.imdb.com/title/tt0808279"] ::
 --
++++<br>+++
 Funny Games is not the kind of movie you enjoy.
 You'd have to be a pretty sick fucker to take any real pleasure from this one.
 It's non-stop, absolute brutality from beginning to end.
@@ -413,12 +450,12 @@ image:posters/dr-jekyll-and-mr-hyde.webp[,220]
 .+++<h2>Dr. Jekyll and Mr. Hyde</h2>+++
 *Year:* :: 1931
 *Genre:* :: Classic Horror
-*Rating:* :: PG
 *Length:* :: 1h 38min
 *Badass:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 *Old:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 image:IMDb.webp[window="_blank",link="https://www.imdb.com/title/tt0022835"] ::
 --
++++<br>+++
 I realize that this one is a tough sell.
 After you've seen Texas Chainsaw Massacre or The Exorcist it's pretty hard to go back.
 Made in the 30's alongside such classics as Frankenstein and Dracula, Dr. Jekyll and Mr. Hyde still manages to stand out as an excellent retelling of a horror classic.
@@ -451,12 +488,12 @@ image:posters/bram-stokers-dracula.webp[,220]
 .+++<h2>Bram Stoker's Dracula</h2>+++
 *Year:* :: 1992
 *Genre:* :: Horror
-*Rating:* :: R
 *Length:* :: 2h 8min
 *Good Adaptation:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 *Star Power:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 image:IMDb.webp[window="_blank",link="https://www.imdb.com/title/tt0103874"] ::
 --
++++<br>+++
 Bram Stoker's Dracula is a modern adaptation of the classic novel by the same name.
 A 90's golden-era movie, this Dracula is a lot easier to watch than the Bela Lugosi version of the 1930's.
  +
@@ -489,12 +526,12 @@ image:posters/the-silence-of-the-lambs.webp[,220]
 .+++<h2>The Silence of the Lambs</h2>+++
 *Year:* :: 1991
 *Genre:* :: Mystery / Psychological Thriller
-*Rating:* :: R
 *Length:* :: 1h 58min
-*Suspenseful:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
+*Suspense:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 *Graphic:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 image:IMDb.webp[window="_blank",link="https://www.imdb.com/title/tt0102926"] ::
 --
++++<br>+++
 What can you say about a movie like this?
 It's certainly one of the more influential films in recent history.
 Everybody's heard of it, and probably knows a few quotes.
@@ -526,12 +563,12 @@ image:posters/the-fly.webp[,220]
 .+++<h2>The Fly</h2>+++
 *Year:* :: 1986
 *Genre:* :: Horror / Sci-Fi
-*Rating:* :: R
 *Length:* :: 1h 36min
 *Gross:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 *Jeff Goldblum:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 image:IMDb.webp[window="_blank",link="https://www.imdb.com/title/tt0091064"] ::
 --
++++<br>+++
 Horror and Sci-Fi have a long history together.
 It could be argued that, at the time of its writing, Frankenstein was part sci-fi.
 And if there's anybody who understands that relationship, it's director David Cronenberg.
@@ -562,12 +599,12 @@ image:posters/the-rocky-horror-picture-show.webp[,220]
 .+++<h2>The Rocky Horror Picture Show</h2>+++
 *Year:* :: 1975
 *Genre:* :: Cult Classic
-*Rating:* :: R
 *Length:* :: 1h 40min
 *Erotic:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 *Musical:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 image:IMDb.webp[window="_blank",link="https://www.imdb.com/title/tt0073629"] ::
 --
++++<br>+++
 Few movies have such a devoted fanbase as Rocky Horror, and it's easy to see why.
 This movie is part comedy, part horror, part musical, and all insanity.
  +
@@ -602,12 +639,12 @@ image:posters/the-thing.webp[,220]
 .+++<h2>The Thing</h2>+++
 *Year:* :: 1982
 *Genre:* :: Sci-Fi Horror
-*Rating:* :: R
 *Length:* :: 1h 49min
 *Gruesome:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 *Practical Effects:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 image:IMDb.webp[window="_blank",link="https://www.imdb.com/title/tt0084787"] ::
 --
++++<br>+++
 Strap in for this one.
 The Thing runs like a fever dream.
 It has just about every human fear you can name: isolation, imprisonment, the unknown, the uncanny, violent death, and more.
@@ -635,12 +672,12 @@ image:posters/dawn-of-the-dead.webp[,220]
 .+++<h2>Dawn of the Dead</h2>+++
 *Year:* :: 1978
 *Genre:* :: Horror
-*Rating:* :: Unrated
 *Length:* :: 2h 7min
 *Classic:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 *Influential:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 image:IMDb.webp[window="_blank",link="https://www.imdb.com/title/tt0077402"] ::
 --
++++<br>+++
 I actually haven't seen this Mystery Movie.
 I'm just as excited to see it as you are.
  +
@@ -673,12 +710,12 @@ image:posters/re-animator.webp[,220]
 .+++<h2>Re-Animator</h2>+++
 *Year:* :: 1985
 *Genre:* :: Cult Horror
-*Rating:* :: Unrated
 *Length:* :: 1h 44min
 *Gory:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 *Secretly Hilarious:* :: image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[] image:skull20.webp[]
 image:IMDb.webp[window="_blank",link="https://www.imdb.com/title/tt0089885"] ::
 --
++++<br>+++
 Re-Animator is probably one of my favorite movies, top ten easy.
 It's a distillation of forty years of horror, both reverant of the past and ahead of its time.
 If you haven't seen it, this movie is going to blow your tits off.

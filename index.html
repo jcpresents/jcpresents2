@@ -2,17 +2,18 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
 		<link rel="stylesheet" type="text/css" href="stylesheets/asciidoctor.css" media="screen">
 		<link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="screen">
 
-		<canvas id="viewport"></canvas>
 		<div class="loader">
 			<div class="logo"></div>
 			<div class="ring"></div>
 			<noscript>Javascript is required for this site. Please enable Javascript.</noscript>
 		</div>
 
-		<script src="javascripts/threejs/three.init.js" type="module"></script>
+		<script src="javascripts/threejs/three.load.js" type="module"></script>
 		<script src="javascripts/asciidoctor/asciidoctor.js"></script>
 		<script src="javascripts/asciidoctor/asciidoctor.nav.js"></script>
 		<script>
@@ -30,6 +31,7 @@
 		<title>The Terrifying challenge</title>
 	</head>
 	<body class="animated fadeIn">
+		<canvas id="viewport"></canvas>
 		<header>
 			<section id="nav1"><nav class="nav"><ul>
 				<li>
@@ -52,8 +54,7 @@
 		<div id="content"></div>
 
 		<footer>
-			<p>Author: Hege Refsnes<br>
-			<a href="mailto:hege@example.com">hege@example.com</a></p>
+			<p>Authors: Jim Crowly & Fooly Cooly<br>
 			<br>
 		</footer>
 	</body>

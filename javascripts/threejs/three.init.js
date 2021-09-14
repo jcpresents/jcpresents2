@@ -349,13 +349,10 @@ function onWindowResize() {
 
 	// Use percentage calculation to get "FOV" and "Zoom" based on "Aspect Ratio"
 	let aspectRatio = obj.Camera.aspect = window.innerWidth / window.innerHeight;
-	let fov = ( ( aspectRatio ) * 35 ) / 1.96; //("Current Aspect Ratio" * "Base FOV") / "Base AR"
+	let fov = 35 //( ( aspectRatio ) * 35 ) / 1.96; //("Current Aspect Ratio" * "Base FOV") / "Base AR"
+	let zoom = ( aspectRatio / 1.96 ) + 0.1;
 
-	if( aspectRatio >= 1 )
-		var zoom = ( ( aspectRatio ) * 1 ) / 1.96;
-	else if ( aspectRatio < 1 ) {
-		var zoom = ( ( aspectRatio ) * 0.35 ) / 1.96;
-	}
+	//if ( aspectRatio < 1 ) zoom = ( aspectRatio / 1.96 ) + 0.05;
 
 	obj.Camera.fov = fov;
 	obj.Camera.zoom = zoom;
