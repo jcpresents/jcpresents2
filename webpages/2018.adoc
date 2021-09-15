@@ -11,7 +11,7 @@
 	}
 	#content {
 		width: 90%;
-		max-width: 775px;
+		max-width: 750px;
 		margin: 0px auto;
 	}
 
@@ -89,8 +89,9 @@
 	/* Device Specific Settings */
 	@media screen and (max-device-width: 480px) {
 		/* Mobile Styles in Both Modes */
-		div,p,td.hdlist1 {
-			font-size: 30px;
+		div.hdlist {
+			/* Table First Column Cells */
+			font-size: 1.2em;
 		}
 	}
 	@media screen and (max-device-width: 480px) and (orientation: portrait) {

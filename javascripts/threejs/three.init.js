@@ -26,7 +26,7 @@ function init() {
 
 	// Load View-port //
 	const canvas = document.querySelector('#viewport');
-	obj.Renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: false, alpha: true });
+	obj.Renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
 	obj.Renderer.physicallyCorrectLights = true;
 	obj.Renderer.setPixelRatio( window.devicePixelRatio );
 	obj.Renderer.setSize( window.innerWidth, window.innerHeight );
@@ -349,10 +349,8 @@ function onWindowResize() {
 
 	// Use percentage calculation to get "FOV" and "Zoom" based on "Aspect Ratio"
 	let aspectRatio = obj.Camera.aspect = window.innerWidth / window.innerHeight;
-	let fov = 35 //( ( aspectRatio ) * 35 ) / 1.96; //("Current Aspect Ratio" * "Base FOV") / "Base AR"
-	let zoom = ( aspectRatio / 1.96 ) + 0.1;
-
-	//if ( aspectRatio < 1 ) zoom = ( aspectRatio / 1.96 ) + 0.05;
+	let fov = 35;
+	let zoom = ( aspectRatio / 1.96 ) + ( aspectRatio * 0.1 );
 
 	obj.Camera.fov = fov;
 	obj.Camera.zoom = zoom;

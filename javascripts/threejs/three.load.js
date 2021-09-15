@@ -6,3 +6,4 @@ window.mobileCheck = function() {
 
 if( !window.mobileCheck() )
 	import("./three.init.js");
+else {}

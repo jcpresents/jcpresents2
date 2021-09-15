@@ -4,6 +4,9 @@ canvas {
 	height: 100%;
 	display: block;
 	background-color: black;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 header {
 	width:		100%;
@@ -118,12 +121,12 @@ nav.nav ul li:hover > a {
 	color: #999999;
 }
 #nav1 {
-	top: 20px;
-	left: 20px;
+	top: 0px;
+	left: 0px;
 }
 #nav2 {
-	bottom: 20px;
-	right: 20px;
+	bottom: 0px;
+	right: 0px;
 }
 
 
@@ -195,7 +198,13 @@ div.loader span {
 }
 @media screen and (max-device-width: 480px) and (orientation: portrait) {
 	/* Mobile Styles in Portrait Mode */
+	canvas {
+		background-image: url("../images/hallway_tall.webp");
+	}
 }
-@media screen and (max-device-width: 480px) and (orientation: landscape) {
+@media screen and (max-device-height: 480px) and (orientation: landscape) {
 	/* Mobile Styles in Landscape Mode */
+	canvas {
+		background-image: url("../images/hallway_wide.webp");
+	}
 }
