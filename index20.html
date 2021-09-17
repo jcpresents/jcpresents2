@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		
+		<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="screen">
+		<canvas id="viewport"></canvas>
+		<script type="module" src="javascripts\bootstrap\bootstrap.bundle.min.js" type="text/javascript"></script>
+		<script type="module" src="javascripts/threejs/init.js" type="text/javascript"></script>		
+
+		<script type="text/javascript">			
+			function ScrollPage(ID) {
+				document.getElementById(ID).scrollIntoView(false);
+			}
+		</script>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function(){
+			var myOffcanvas = document.getElementById('offcanvasNavigator');
+			var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas);
+			document.getElementById("OpenMenu").addEventListener('click',function (e){
+				e.preventDefault();
+				e.stopPropagation();
+				bsOffcanvas.toggle();
+			});
+			});
+		</script>
+
+		<script>
+			function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+			}
+		</script>
+
+		<title>The Terrifying challenge</title>
+	</head>
+	
+	<body class="animated fadeIn">
+		
+		<main id="swup" class="transition-fade">
+									
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col"></div>
+					<div class="col">
+						<img class="fluid portrait" src="images\gifs\13ghosts.gif">
+					</div>			
+					<div class="col"></div>													
+				</div>	
+			</div>
+		
+			<div class="container-fluid content">			
+				<div class="row">
+					<div class="col"></div>
+					<div class="text-start col-12 col-md-8 col-lg-6">
+
+						<p> 
+							<h1 class="text-center">Welcome.</h1><br>
+							Enter, if you dare, into the world of <b><u>The Terrifying Challenge!</u></b><br><br> Within the hallowed halls of these interwebs rests a cinematic monstrosity umatched in the modern era! Can you withstand the onslaught? Do you have the sanity to survive? Would you willingly look into the darkness?<br><br>
+							Halloween is (obviously) the best holiday. But what if I told you it could be even <b>better</b>? All it takes is a little time. The question is: <b>Can you do it?</b> <br><br>
+							<b><u>The Challenge</u></b> is simple. Pick a few movies off the list and mix them into your Halloween season. Then rank yourself on the following chart:</p>						
+							
+							<br><br><br>
+							<div class="text-center">
+								<img class="skulls" src="images/skull20.webp"><U>The Zombie:</u><img class="skulls" src="images/skull20.webp"><br>
+								Watch three movies
+								<br><br><br><br>
+								<img class="skulls" src="images/skull20.webp"><U>The Ghoul:</u><img class="skulls" src="images/skull20.webp"><br>
+								Watch six movies,
+								then one "Mystery Movie" 
+								<br><br><br><br>
+								<img class="skulls" src="images/skull20.webp"><U>The Vampire:</u><img class="skulls" src="images/skull20.webp"><br>
+								Watch nine movies, then two "Mystery Movies"
+								<br><br><br><br>
+								<img class="skulls" src="images/skull20.webp"><U>The Fiend:</u><img class="skulls" src="images/skull20.webp"><br>
+								Watch EVERY SINGLE movie on the list
+								<br><br><br>
+							</div>
+						</p>
+							
+						<p>
+							Below you will find the <b>Entries</b> for each list movie. Each entry will offer a peek into the dangers that await you. The <b>Title</b> of the entry links to the film's IMDB page, and the <b>Poster</b> will link to a stream where you can watch it. But take care; streaming websites are often loaded with spyware. The most terrifying thing of all is <b>the internet itself</b>! (Also some of these streams suck; you may want to try and find your own.)<br><br>
+							At the bottom of the page you will find the entries for the <b>Mystery Movies</b>. These films are too horrific for just any day of the month. As such, I'll be revealing them on October 28th... just in time for Halloween!! <br><br>
+							And now, prepare yourself for the...<br><br>
+						</p>
+
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-12">
+									<img class="img-fluid" src="images/logo.png">
+								</div>															
+							</div>	
+						</div>
+										
+					</div>
+					<div class="col"></div>
+				</div>			
+			</div>
+
+			<div class="container-fluid">
+				<div class="row text-center">
+					<div class="col-12">
+						<div class="btn-group btn-group-lg" role="group">
+							<a href="/index17.html" type="button" class="btn btn btn-outline-secondary" onClick="topFunction()">2017</a>
+							<a href="/index18.html" type="button" class="btn btn-outline-secondary" onClick="topFunction()">2018</a>
+							<a href="/index19.html" type="button" class="btn btn-outline-secondary" onClick="topFunction()">2019</a>
+							<a href="/index20.html" type="button" class="btn btn-secondary" onClick="topFunction()">2020</a>
+							<a href="/index.html" type="button" class="btn btn-outline-secondary" onClick="topFunction()">2021</a>
+						</div>
+					</div>															
+				</div>	
+			</div>
+
+			<br><br><br>
+				
+			<!--Film List-->	
+			<div class="container-fluid content">
+				<div class="row justify-content-center">			
+					<div class="col-lg-6 col-sm-8 col-xsm-12">					
+						<div class="row">
+
+							<div class="col-md-6 col-xsm-12 text-center">
+								<div>
+									<img class="img-fluid poster" id="scrollspyHeading1" src="images/posters/1408.jpg"></a>
+								</div>
+							</div>
+
+							<div class="col-md-6 col-xsm-12 gy-2">
+
+								<div class="entry">
+
+									<h1>
+									Blade
+									</h1>
+									<br><b>
+									Genre: Action / Horror									</b>
+									<br><b>
+									Year: 1998
+									</b>
+									<br><b>
+									Length:
+									</b><br>																														
+									
+									<div class="ratings">
+								
+										Badass:
+										<img class="skulls" src="images/skull20.webp">
+										<img class="skulls" src="images/skull20.webp">
+										<img class="skulls" src="images/skull20.webp">
+										<img class="skulls" src="images/skull20.webp">
+										<br>
+										
+										Good Movie:
+										<img class="skulls" src="images/skull20.webp">
+										<img class="skulls" src="images/skull20.webp">
+										<img class="skulls" src="images/skull20.webp">
+										<img class="skulls" src="images/skull20.webp">				
+										<br>									
+									</div>
+								</div>
+							</div>
+
+							<div class="col-12 py-3">
+
+								<p>
+									If you're looking for a horror film that absolutely kicks ass, <i>Blade</i> is the way to go. We're starting the list off with a bang this year. <br><br>
+
+									<i>Blade</i> was made right around the same time as <i>The Matrix</i>, and the similarities are noticeable. It decidedly has that same turn-of-the-centruy action movie feel. And like <i>Matrix</i>, this film also has some surprisingly strong plot and worldbuilding elements to it as well. The acting is highly competent, and the action sequences only serve to add to the story. Classic stuff. <br><br>
+									
+									<i>Blade</i> is a strong-ass movie, and one that I feel hasn't gotten the credit it deserves. Action-Horror is deceptively difficult to make, but this one stands a perfect model. 
+									<p> 
+									<br>
+									<p> <u>How to Watch: </u>
+									<br>
+									This one's easy. Grab a few beers and kick back. And get ready, because <i>Blade</i> hits the ground running.
+								</p>							
+								<br><br><br><br>
+							</div>
+						</div>
+					</div>				
+				</div>				
+			</div>
+			
+					
+				
+			<div class="container-fluid content">
+				<div class="row justify-content-center">			
+					<div class="col-lg-6 col-sm-8 col-xsm-12">					
+						<div class="row">
+
+							<div class="col-md-6 col-xsm-12 text-center">
+								<div>
+									<img class="img-fluid poster" id="scrollspyHeading2" src="images/posters/cube.jpg"></a>
+								</div>
+							</div>
+
+							<div class="col-md-6 col-xsm-12 gy-2">
+
+								<div class="entry">
+
+									<h1>
+									The Blair Witch Project
+									</h1>
+									<br><b>
+									Genre: Horror
+									</b>
+									<br><b>
+									Year: 1999
+									</b>
+									<br><b>
+									Length:
+									</b><br>																														
+									
+									<div class="ratings">
+								
+										Iconic:
+										<img class="skulls" src="images/skull20.webp">
+										<img class="skulls" src="images/skull20.webp">
+										<img class="skulls" src="images/skull20.webp">
+										<br>
+										
+										Spooky:
+										<img class="skulls" src="images/skull20.webp">
+										<img class="skulls" src="images/skull20.webp">
+										<img class="skulls" src="images/skull20.webp">
+										<img class="skulls" src="images/skull20.webp">					
+										<br>									
+									</div>
+								</div>
+							</div>
+
+							<div class="col-12 py-3">
+
+								<p>
+									This is a movie that's very close to my heart. Not only is it a great film, but it's loosely based on an old Tennessee legend that took place not that far from where I grew up. And I'd bet it's been awhile since you've last seen it, so here it is: <i>The Blair Witch Project</i>. <BR><BR>
+
+										This movie is entirely responsible for the genre of found footage. Hell, it's still one of the best examples of that genre. This movie is driven by a constant, building tension that starts early and snowballs viciously by the end. It's also one of the few movies featuring a hag as its main antagonist (at least ostensibly), which is a totally under-utilized type of monster. Love this one. <BR><BR>
+										
+										While <i>The Blair Witch Project</i> is a little slow, that's by design. It's built to spook you out, get you afraid of the dark for a while. Give it a chance. </p>
+										<br>
+										<p> <u>How to Watch: </u>
+										<br>
+										Oh, I'd absolutely turn the lights out for this one. This movie works best in the dark, one-on-one. 
+								</p>
+								<br><br><br><br>
+							</div>
+						</div>
+					</div>				
+				</div>				
+			</div>
+
+
+
+			<div class="container-fluid content">
+				<div class="row justify-content-center">			
+					<div class="col-lg-6 col-sm-8 col-xsm-12">					
+						<div class="row">
+
+							<div class="col-md-6 col-xsm-12 text-center">
+								<div>
+									<img class="img-fluid poster" id="scrollspyHeading3" src="images/posters/mandy.jpg"></a>
+								</div>
+							</div>
+
+							<div class="col-md-6 col-xsm-12 gy-2">
+
+								<div class="entry">
+
+									<h1>
+									Saw
+									</h1>
+									<br><b>
+									Genre: Psychological Horror
+									</b>
+									<br><b>
+									Year: 2004
+									</b>
+									<br><b>
+									Length:
+									</b><br>																														
+									
+									<div class="ratings">
+								
+										High-Concept:
+										<img class="skulls" src="images/skull20.webp">
+										<img class="skulls" src="images/skull20.webp">
+										<img class="skulls" src="images/skull20.webp">
+										<img class="skulls" src="images/skull20.webp">
+										<br>
+										
+										Brutal:
+										<img class="skulls" src="images/skull20.webp">
+										<img class="skulls" src="images/skull20.webp">
+										<img class="skulls" src="images/skull20.webp">					
+										<br>									
+									</div>
+								</div>
+							</div>
+
+							<div class="col-12 py-3">
+
+								<p>
+									<p><i>Saw</i> is one of those movies--the kind that has a tendency to stick with you. Even years later, I've got a few scenes from this movie I can remember with crystal clarity. It's probably why this movie has like a billion sequels (but don't watch any of them, except maybe the second one). <br><br>
+
+										This film was a perfect storm. It had a novel (at the time) concept, great execution, a passable plot, and some stunning visuals. <i>Saw</i> basically kicked off a whole new sub-genre of horror that we're still living with today--I'd call it modern surrealist toture-porn. And again, there's a good reason for that. <br><br>
+										
+										Easily the most "subtle" and atmospheric of the <i>Saw</i> franchise, this movie is hard to forget and even harder to shake off. 
+									</p>
+									<br>
+									<p> <u>How to Watch: </u>
+									<br>
+									This is the kind of movie that should be watched in the dark. Get comfy and take your time, because <i>Saw</i> has a surprising amount of depth, and deserves a little attention. 
+									</p>
+								</p>
+								<br><br><br><br>
+							</div>
+						</div>
+					</div>				
+				</div>				
+			</div>
+		
+		
+
+		
+
+
+			
+		</main>
+		
+		<script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script> 
+		
+
+		<script type="module">
+			const options = {
+			linkSelector:
+				'a[href^="' +
+				window.location.origin +
+				'"]:not([data-no-swup]), a[href^="/"]:not([data-no-swup])'
+			};
+			const swup = new Swup(options);
+		</script>
+
+	</body>
+</html>
+
+

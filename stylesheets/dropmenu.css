@@ -1,0 +1,70 @@
+section {
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0px;
+}
+
+nav {
+	margin: 10px auto; 
+	text-align: center;
+}
+
+nav ul {
+	background: #ec1504;
+	box-shadow: 0px 0px 9px rgba(0,0,0,0.75);
+	padding: 0px;
+	/* border-radius: 10px; [Rounds main container corners] */
+	list-style: none;
+	position: relative;
+	display: inline-table;
+}
+
+nav ul ul {
+	display: none;
+	padding: 0px;
+}
+
+nav ul li {
+	float: left;
+	background-position:center;
+	background-image:	url("../images/brk.webp");
+	background-size:	100% 100%;
+}
+
+nav ul li a {
+	display: block;
+	padding: 10px 20px;
+	margin: 0px;
+	width: auto;
+
+	color: #ffffff;
+	font: bold normal normal 30px/normal dungeon;
+	text-decoration: none;
+}
+
+nav ul ul li {
+	float: none;
+	position: relative;
+}
+
+nav ul ul ul {
+	position: absolute; left: 100%; top: 0px;
+}
+
+nav ul li:hover {
+	box-shadow: 0px 0px 9px rgba(0,0,0,0.75);
+}
+
+nav ul li:hover > ul {
+	display: block;
+	position: absolute;
+}
+
+nav ul li:hover > a {
+	color: #ff0000;
+}
+
+@font-face {
+  font-family: dungeon;
+  src: url(../dungeon.ttf);
+}
