@@ -259,10 +259,20 @@ h1 {
 		height: 200px;
 		width: 175px;
 	}
+	
+	#content {
+		width: 60%;
+		margin: 0px auto;
+	}
 
 	.skulls{
 		margin-left: 1px;
 		margin-right: 1px;
+	}
+	
+	#content {
+		width: 75%;
+		margin: 0px auto;
 	}
 
 	
