@@ -7,7 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="screen">
 		<canvas id="viewport"></canvas>
 		<script type="module" src="javascripts\bootstrap\bootstrap.bundle.min.js" type="text/javascript"></script>
-		<script type="module" src="javascripts/threejs/init.js" type="text/javascript"></script>		
+		<script type="module" src="javascripts/threejs/three.load.js" type="text/javascript"></script>		
 
 		<script type="text/javascript">			
 			function ScrollPage(ID) {
@@ -42,29 +42,21 @@
 		<!-- Navbar Header -->
 		<div class="container-fluid">
 			<div class="row">
-				
-				<div class="col-6 text-end">
-					<img class="mx-2" src="images/logo.png" width="240" height="110" id="scrollspyHeading0">					
+				<div class="col-2"></div>
+
+				<div class="col-xl-4 col-md-12 text-center">
+					<img class="image-fluid" src="images/logo.png" height="130" id="scrollspyHeading0">					
 				</div>
 
-				<div class="col-3 align-self-center text-center">	
-
-					<div class="btn-group btn-group-lg btn-group-secondary w-100" role="group" aria-label="Button group with nested dropdown">
-						<button type="button" class="btn btn-outline-secondary" disabled> Year: </button>
-						
-						<div class="btn-group w-50" role="group">
-							<button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+				<div class="col-xl-3 col-md-12 align-self-center text-center">	
 							
-							</button>
-							<ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-							<li><a class="dropdown-item" href="index17.html">2017</a></li>
-							<li><a class="dropdown-item" href="index18.html">2018</a></li>
-							<li><a class="dropdown-item" href="index19.html">2019</a></li>
-							<li><a class="dropdown-item" href="index20.html">2020</a></li>
-							<li><a class="dropdown-item" href="index.html">2021</a></li>
-							</ul>
-						</div>
-					</div>						
+					<div class="btn-group btn-group-lg" role="group">
+						<a href="index17.html" type="button" class="btn btn btn-outline-secondary" onClick="topFunction()">2017</a>
+						<a href="index18.html" type="button" class="btn btn-outline-secondary" onClick="topFunction()">2018</a>
+						<a href="index19.html" type="button" class="btn btn-outline-secondary" onClick="topFunction()">2019</a>
+						<a href="index20.html" type="button" class="btn btn-secondary" onClick="topFunction()">2020</a>
+						<a href="index.html" type="button" class="btn btn-outline-secondary" onClick="topFunction()">2021</a>
+					</div>																																
 				</div>
 				
 				<!-- Offcanvas Navigator -->
@@ -136,7 +128,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<main id="swup" class="transition-fade">
 									
 			<div class="container-fluid">
