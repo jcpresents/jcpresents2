@@ -9,13 +9,13 @@ import { Fire } from  "./modules/Fire.js";
 const sceneFPS		= 30;		// FPS Cap
 const loadAxis		= false;	// Enable Axis Helper
 const loadOrbCntrl	= false;	// Enable Orbit Controls
-//const loadTextures	= false;	// Enable Textures
-//const loadCube		= false;	// Enable Test Cube
+const loadTextures	= false;	// Enable Textures
+const loadCube		= false;	// Enable Test Cube
 const loadHallway	= true;		// Enable Hallway
 const loadHallAni	= false;	// Enable Hallway Animations
 const loadLights	= true;		// Enable Lights
 const loadFire		= true;		// Enable Fire
-const loadGUI		= false;	// Enable GUI
+const loadGUI		= true;		// Enable GUI
 const loadLogs		= true;		// Enable Log
 
 const obj = { Meshes: {}, Lights: {} }; // Object Map //
@@ -33,7 +33,12 @@ function init() {
 	obj.Renderer.setClearColor( "#000000", 0 ); // Background-Color
 	obj.Scene = new THREE.Scene();
 	obj.Clock = new THREE.Clock();
-	
+
+	// Load Camera //
+	var camera = obj.Camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 0.1, 500 ); // Parameters: (fov, aspect, near, far)
+	camera.position.set( 0.0, 1.5, 8.3 ); // (x,y,z)
+	window.addEventListener( 'resize', onWindowResize ); // Run onWindowResize function when window size changes
+	window.setTimeout( onWindowResize, 2000 ); // Initial camera sizing
 
 	// Load Entities //
 //	if(loadTextures) load_Textures();
@@ -42,13 +47,7 @@ function init() {
 	if(loadLights)	 load_Lights();
 	if(loadFire)	 load_Fire();
 	if(loadGUI)		 load_GUI();
-	
-	// Load Camera //
-	var camera = obj.Camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 0.1, 500 ); // Parameters: (fov, aspect, near, far)
-	camera.position.set( 0.0, 1.5, 8.3 ); // (x,y,z)
-	window.addEventListener( 'resize', onWindowResize ); // Run onWindowResize function when window size changes
-	window.setTimeout( onWindowResize, 2000 ); // Initial camera sizing
-	
+
 	if(loadOrbCntrl) {
 		let controls = new OrbitControls( camera, obj.Renderer.domElement ); // Set Camera Orbit Controls
 		controls.update();
