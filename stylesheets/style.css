@@ -3,6 +3,9 @@ canvas {
 	height: 100%;
 	display: block;
 	background-color: black;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .offcanvas-end {
@@ -48,7 +51,6 @@ body,p {
 	padding:0;
 	margin: 0;
 }
-
 .animated {
 	-webkit-animation-duration: 5s;
 	animation-duration: 5s;
@@ -156,8 +158,7 @@ div.loader span {
 	0% {opacity: 0;}
 	100% {opacity: 1;}
 }
-
-@keyframes fadeIn {
+@-webkit-keyframes fadeIn {
 	0% {opacity: 0;}
 	100% {opacity: 1;}
 }

@@ -1,25 +1,25 @@
-import * as THREE from './javascripts/threejs/three.module.js';
-import * as dat from './javascripts/threejs/modules/dat.gui.module.js'
-import { OrbitControls } from './javascripts/threejs/modules/OrbitControls.js';
-import { GLTFLoader } from './javascripts/threejs/modules/GLTFLoader.js';
-import { RoughnessMipmapper } from './javascripts/threejs/modules/RoughnessMipmapper.js';
-import { Fire } from  "./javascripts/threejs/modules/Fire.js";
+import * as THREE from './three.module.js';
+import * as dat from './modules/dat.gui.module.js'
+import { OrbitControls } from './modules/OrbitControls.js';
+import { GLTFLoader } from './modules/GLTFLoader.js';
+import { RoughnessMipmapper } from './modules/RoughnessMipmapper.js';
+import { Fire } from  "./modules/Fire.js";
 
-// Toggle Elements //
-const loadAxis		= false;
-const loadOrbCntrl	= false;
-const loadTextures	= false;
-const loadCube		= false;
-const loadHallway	= true;
-const loadHallAni	= false;
-const loadLights	= true;
-const loadFire		= true;
-const loadGUI		= false;
-const loadLogs		= true;
+// Constants //
+const sceneFPS		= 30;		// FPS Cap
+const loadAxis		= false;	// Enable Axis Helper
+const loadOrbCntrl	= false;	// Enable Orbit Controls
+const loadTextures	= false;	// Enable Textures
+const loadCube		= false;	// Enable Test Cube
+const loadHallway	= true;		// Enable Hallway
+const loadHallAni	= false;	// Enable Hallway Animations
+const loadLights	= true;		// Enable Lights
+const loadFire		= true;		// Enable Fire
+const loadGUI		= false;	// Enable GUI
+const loadLogs		= true;		// Enable Log
 
-// Misc Globals //
 const obj = { Meshes: {}, Lights: {} }; // Object Map //
-const sceneFPS = 30;
+
 
 init();
 function init() {
@@ -31,23 +31,22 @@ function init() {
 
 	// Load View-port //
 	const canvas = document.querySelector('#viewport');
-	obj.Renderer = new THREE.WebGLRenderer({canvas, antialias: true});
+	obj.Renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
 	obj.Renderer.physicallyCorrectLights = true;
 	obj.Renderer.setPixelRatio(window.devicePixelRatio);
 	obj.Renderer.setSize( window.innerWidth, window.innerHeight );
-	obj.Renderer.setClearColor("#000000"); // Background-Color
+	obj.Renderer.setClearColor( "#000000", 0 ); // Background-Color
 	obj.Scene = new THREE.Scene();
 	obj.Clock = new THREE.Clock();
 	
 
-
 	// Load Entities //
-	if(loadTextures) load_Textures();// Textures
-	if(loadCube)	 load_Cube();	 // Test Cube
-	if(loadHallway)	 load_Hallway(); // Meshes
-	if(loadLights)	 load_Lights();	 // Lights
-	if(loadFire)	 load_Fire();	 // Torch Flames
-	if(loadGUI)		 load_GUI();	 // Settings GUI
+	if(loadTextures) load_Textures();
+	if(loadCube)	 load_Cube();
+	if(loadHallway)	 load_Hallway();
+	if(loadLights)	 load_Lights();
+	if(loadFire)	 load_Fire();
+	if(loadGUI)		 load_GUI();
 	
 	// Load Camera //
 	var camera = obj.Camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 0.1, 500 ); // Parameters: (fov, aspect, near, far)
@@ -312,16 +311,11 @@ function render(time) {
 
 // Resize viewport when size changes ////////////////////////////////////////////////
 function onWindowResize() {
+
 	// Use percentage calculation to get "FOV" and "Zoom" based on "Aspect Ratio"
 	let aspectRatio = obj.Camera.aspect = window.innerWidth / window.innerHeight;
-	let fov = ( ( window.innerWidth / window.innerHeight ) * 35 ) / 1.96;
-	//("Current Aspect Ratio" * "Base FOV") / "Base AR"
-
-	if( aspectRatio >= 1 )
-		var zoom = ( ( window.innerWidth / window.innerHeight ) * 1 ) / 1.96;
-	else if ( aspectRatio < 1 ) {
-		var zoom = ( ( window.innerWidth / window.innerHeight ) * 0.35 ) / 1.96;
-	}
+	let fov = 35;
+	let zoom = ( aspectRatio / 1.96 ) + ( aspectRatio * 0.1 );
 
 	obj.Camera.fov = fov;
 	obj.Camera.zoom = zoom;
