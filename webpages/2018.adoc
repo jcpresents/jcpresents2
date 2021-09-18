@@ -9,11 +9,6 @@
 	header {
 		background-image: url("./images/gifs/demon.gif");
 	}
-	#content {
-		width: 90%;
-		max-width: 750px;
-		margin: 0px auto;
-	}
 
 
 	/* Font Settings */
@@ -735,5 +730,3 @@ This one's great as a finisher.
  +
 [underline]#*How to Watch*:# +
 I'd get good and drunk before watching this movie, but only if you've got a strong stomach.
-
-'''

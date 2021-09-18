@@ -9,8 +9,8 @@ import { Fire } from  "./modules/Fire.js";
 const sceneFPS		= 30;		// FPS Cap
 const loadAxis		= false;	// Enable Axis Helper
 const loadOrbCntrl	= false;	// Enable Orbit Controls
-const loadTextures	= false;	// Enable Textures
-const loadCube		= false;	// Enable Test Cube
+//const loadTextures	= false;	// Enable Textures
+//const loadCube		= false;	// Enable Test Cube
 const loadHallway	= true;		// Enable Hallway
 const loadHallAni	= false;	// Enable Hallway Animations
 const loadLights	= true;		// Enable Lights
@@ -36,8 +36,8 @@ function init() {
 	
 
 	// Load Entities //
-	if(loadTextures) load_Textures();
-	if(loadCube)	 load_Cube();
+//	if(loadTextures) load_Textures();
+//	if(loadCube)	 load_Cube();
 	if(loadHallway)	 load_Hallway();
 	if(loadLights)	 load_Lights();
 	if(loadFire)	 load_Fire();
@@ -63,12 +63,13 @@ function init() {
 		obj.Scene.add(obj.AxisHelper);
 	}
 	
-	render();						 // Render Scene
+	render(); // Render Scene
 
 	// Misc //
 	if(loadLogs) window.setTimeout( load_Logs, 2000 );	// Wait 1 second then dump object map to log
 }
 
+/*
 // Load Textures - Defunct: Disabled in Toggles /////////////////////////////////////
 function load_Textures() {
 
@@ -90,56 +91,6 @@ function load_Textures() {
 	);  
 }
 
-// Generates Cube ///////////////////////////////////////////////////////////////////
-function load_Cube() {
-
-	// Load Textures //
-	const map = new THREE.TextureLoader().load( './mdls/textures/test_diff.png' );
-	const normalMap = new THREE.TextureLoader().load( './mdls/textures/test_nrml.png' );
-	const diffuse = new THREE.MeshStandardMaterial( { map: map } );
-	const normal = new THREE.MeshNormalMaterial( { normalMap } );
-	diffuse.normalMap = normalMap;
-	diffuse.wrapS = THREE.RepeatWrapping;
-	diffuse.wrapT = THREE.RepeatWrapping;
-	map.repeat.set( 0.5, 0.5 );
-	normalMap.normalScale =( 100, 100 );
-
-	const geometry = new THREE.BoxGeometry( 0.7, 0.7, 0.7, 32, 32, 32 ); // Parameters: (boxWidth, boxHeight, boxDepth)
-	load_morphProperties(geometry);
-
-	var cube = obj.Meshes.Cube = new THREE.Mesh(geometry, diffuse);
-	cube.position.set( 0.0, 2.0, 0.0 );
-	obj.Scene.add(cube);
-}
-
-function load_Hallway() {
-
-	const gltfLoader = new GLTFLoader();
-	gltfLoader.load('models/hallway7.glb', function (gltf) {
-
-		var model = obj.Meshes.Hallway = gltf.scene;
-			model.children[0].visible = true;
-			model.children[1].visible = true;
-			model.children[2].visible = true;
-			model.children[3].visible = true;
-			model.children[4].visible = true;
-
-		model.scale.set( 0.5, 0.5, 0.5 );
-		model.position.set( 0.0, 0.0, 0.0 );
-		obj.Scene.add(model);
-
-		if (loadHallAni) {
-			obj.Mixer = new THREE.AnimationMixer( gltf.scene );
-			gltf.animations.forEach( (clip) => {
-				obj.Mixer.clipAction(clip).play();
-			});
-
-			obj.Animations = gltf.animations;
-		}
-	});	
-}
-
-// I don't understand any of this, and thus I fear it //////
 // Generates Morph Properties ///////////////////////////////////////////////////////
 function load_morphProperties(geometry) {
 
@@ -178,48 +129,101 @@ function load_morphProperties(geometry) {
 	geometry.morphAttributes.position[ 1 ] = new THREE.Float32BufferAttribute( twistPositions, 3 );		// add the twisted positions as the second morph target
 }
 
+// Generates Cube ///////////////////////////////////////////////////////////////////
+function load_Cube() {
+
+	// Load Textures //
+	const map = new THREE.TextureLoader().load( './mdls/textures/test_diff.png' );
+	const normalMap = new THREE.TextureLoader().load( './mdls/textures/test_nrml.png' );
+	const diffuse = new THREE.MeshStandardMaterial( { map: map } );
+	const normal = new THREE.MeshNormalMaterial( { normalMap } );
+	diffuse.normalMap = normalMap;
+	diffuse.wrapS = THREE.RepeatWrapping;
+	diffuse.wrapT = THREE.RepeatWrapping;
+	map.repeat.set( 0.5, 0.5 );
+	normalMap.normalScale =( 100, 100 );
+
+	const geometry = new THREE.BoxGeometry( 0.7, 0.7, 0.7, 32, 32, 32 ); // Parameters: (boxWidth, boxHeight, boxDepth)
+	load_morphProperties(geometry);
+
+	var cube = obj.Meshes.Cube = new THREE.Mesh(geometry, diffuse);
+	cube.position.set( 0.0, 2.0, 0.0 );
+	obj.Scene.add(cube);
+}
+*/
+
+function load_Hallway() {
+
+	const gltfLoader = new GLTFLoader();
+	gltfLoader.load('models/hallway7.glb', function (gltf) {
+
+		var model = obj.Meshes.Hallway = gltf.scene;
+			model.children[0].visible = true;
+			model.children[1].visible = true;
+			model.children[2].visible = true;
+			model.children[3].visible = true;
+			model.children[4].visible = true;
+
+		model.scale.set( 0.5, 0.5, 0.5 );
+		model.position.set( 0.0, 0.0, 0.0 );
+		obj.Scene.add(model);
+
+		if (loadHallAni) {
+			obj.Mixer = new THREE.AnimationMixer( gltf.scene );
+			gltf.animations.forEach( (clip) => {
+				obj.Mixer.clipAction(clip).play();
+			});
+
+			obj.Animations = gltf.animations;
+		}
+	});	
+}
+
+
+
 // Generate Lights //////////////////////////////////////////////////////////////////
 function load_Lights() {
 	
-	var point = obj.Lights.PointL1 = new THREE.PointLight( 0xff0000, 8.83, 2.88, .23 ); // (colorInteger,intensityFloat,distance,decayFloat)
-		point.position.set( -.97, 2.1, 6.2 ); // Parameters: (x,y,z)
+	var point = obj.Lights.PointL1 = new THREE.PointLight( 0xff0000, 8.83, 2.88, 0.23 ); // (colorInteger,intensityFloat,distance,decayFloat)
+		point.position.set( -0.97, 1.85, 5.90 ); // Parameters: (x,y,z)
 		var pointLightHelper = obj.Meshes.PointLightHelper = new THREE.PointLightHelper( point, 0.5 ) // (pointLight,sphereSizeFloat,colorHex)
 			pointLightHelper.visible = false;
 			obj.Scene.add( point, pointLightHelper );
 			
-	var point = obj.Lights.PointR1 = new THREE.PointLight( 0xff0000, 8.83, 2.88, .23 ); // (colorInteger,intensityFloat,distance,decayFloat)
-		point.position.set( .97, 2.1, 6.2 ); // Parameters: (x,y,z)
+	var point = obj.Lights.PointR1 = new THREE.PointLight( 0xff0000, 8.83, 2.88, 0.23 ); // (colorInteger,intensityFloat,distance,decayFloat)
+		point.position.set( 0.97, 1.85, 5.90 ); // Parameters: (x,y,z)
 		var pointLightHelper = obj.Meshes.PointLightHelper = new THREE.PointLightHelper( point, 0.5 ) // (pointLight,sphereSizeFloat,colorHex)
 			pointLightHelper.visible = false;
 			obj.Scene.add( point, pointLightHelper );
 
-	var point = obj.Lights.PointL2 = new THREE.PointLight( 0x170f02, .4, .89, 4.9 ); // (colorInteger,intensityFloat,distance,decayFloat)
-		point.position.set( -.82, 2, 6.2 ); // Parameters: (x,y,z)
+	var point = obj.Lights.PointL2 = new THREE.PointLight( 0x170f02, 0.4, 0.89, 4.9 ); // (colorInteger,intensityFloat,distance,decayFloat)
+		point.position.set( -0.82, 1.85, 5.90 ); // Parameters: (x,y,z)
 		var pointLightHelper = obj.Meshes.PointLightHelper = new THREE.PointLightHelper( point, 0.5 ) // (pointLight,sphereSizeFloat,colorHex)
 			pointLightHelper.visible = false;
 			obj.Scene.add( point, pointLightHelper );
 			
-	var point = obj.Lights.PointR2 = new THREE.PointLight( 0x170f02, .4, .89, 4.9 ); // (colorInteger,intensityFloat,distance,decayFloat)
-		point.position.set( .82, 2, 6.2 ); // Parameters: (x,y,z)
+	var point = obj.Lights.PointR2 = new THREE.PointLight( 0x170f02, 0.4, 0.89, 4.9 ); // (colorInteger,intensityFloat,distance,decayFloat)
+		point.position.set( 0.82, 1.85, 5.90 ); // Parameters: (x,y,z)
 		var pointLightHelper = obj.Meshes.PointLightHelper = new THREE.PointLightHelper( point, 0.5 ) // (pointLight,sphereSizeFloat,colorHex)
 			pointLightHelper.visible = false;
 			obj.Scene.add( point, pointLightHelper );
-
+	/*
 	var world = obj.Lights.World = new THREE.HemisphereLight( 0x808080, 0x080820, 0 ); // (skyColorInteger,groundColorInteger,intensityFloat)
 		world.position.set( 0.0, 0.0, 0.0 ); // Parameters: (x,y,z)
-		//obj.Scene.add( world );
+		obj.Scene.add( world );
+	*/
 }
 
 function load_Fire() {
 
 	obj.FireA = new Fire();
 	obj.Scene.add( obj.FireA );
-	obj.FireA.scale.set( 0.14, 0.29, 0.15 );
+	obj.FireA.scale.set( 0.13, 0.28, 0.15 );
 	obj.FireA.position.set( -0.89, 1.88, 6.17 );
 
 	obj.FireB = new Fire();
 	obj.Scene.add( obj.FireB );
-	obj.FireB.scale.set( 0.14, 0.29, 0.15 );
+	obj.FireB.scale.set( 0.13, 0.28, 0.15 );
 	obj.FireB.position.set( 0.89, 1.88, 6.17 );
 }
 
@@ -267,9 +271,11 @@ function load_GUI() {
 				lightHelper.add( point2, "distance" ).min(0).max(15).step(0.01);
 				lightHelper.add( point2, "decay" ).min(0).max(15).step(0.01);
 				lightHelper.addColor( point2, 'color' );
+			/*
 			lightHelper.addFolder("World Light");
 				lightHelper.add( world, "intensity" ).min(0).max(10).step(0.001);
 				lightHelper.addColor( world, 'color' );
+			*/
 	}
 
 	const objectHelper = gui.addFolder("Objects");

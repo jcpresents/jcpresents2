@@ -23,10 +23,11 @@ header {
 body {
 	background: black;
 }
+
 section,footer {
 	text-align: center;
 }
-body,p,nav,ul,li,a,footer,#content {
+body,header,article,footer,p,nav,ul,li,a,#content {
 	padding: 0;
 	margin: 0;
 }
@@ -39,6 +40,17 @@ body,p,nav,ul,li,a,footer,#content {
 .fadeIn {
 	-webkit-animation-name: fadeIn;
 	animation-name: fadeIn;
+}
+#video-bg {
+	transform: translate(-50%, -50%);
+	object-fit: cover;
+	overflow: hidden;
+	position: fixed;
+	height: auto;
+	width: 100%;
+	left: 50%;
+	top: 50%;
+	z-index: -2;
 }
 #viewport {
 	top: 0;
@@ -66,7 +78,6 @@ body,p,nav,ul,li,a,footer,#content {
 
 /* Navigation Buttons */
 section {
-	position: fixed;
 	z-index: 1002;
 }
 nav.nav ul {
@@ -88,15 +99,25 @@ nav.nav ul li {
 	height: 75px;
 }
 nav.nav ul li a {
-	display: block;
 	color: inherit;
 	text-decoration: none;
 	height: 100%;
+
+	display: -webkit-box;
+	display: -webkit-flex;
+			display: flex;
 	
-	display: flex;
-	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
+	
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+		flex-direction: column;
+
 	align-content: center;
+	text-align: center;
 }
 nav.nav ul li ul {
 	margin: 0;
@@ -110,23 +131,44 @@ nav.nav ul ul ul {
 	left: 100%;
 	top: 0px;
 }
-nav.nav ul li:hover {
-	box-shadow: 0px 0px 9px rgba(0,0,0,0.75);
+
+@media (hover) {
+	nav.nav ul li:hover {
+		cursor: pointer;
+		box-shadow: 0px 0px 9px rgba(0,0,0,0.75);
+	}
+	nav.nav ul li:hover > ul {
+		cursor: pointer;
+		display: block;
+		position: absolute;
+	}
+	nav.nav ul li:hover > a {
+		cursor: pointer;
+		color: #999999;
+	}
 }
-nav.nav ul li:hover > ul {
-	display: block;
-	position: absolute;
-}
-nav.nav ul li:hover > a {
-	color: #999999;
+
+
+article {
+	display:flex;
+	flex-direction:row;"
+	position: relative;
+	justify-content: center;
+	align-content: center;
+	align-items: flex-start;
 }
 #nav1 {
-	top: 0px;
-	left: 0px;
+	position: sticky;
+	top: 0;
+}
+#content {
+	max-width: 750px;
+	min-width: 750px;
 }
 #nav2 {
-	bottom: 0px;
-	right: 0px;
+	position: sticky;
+	bottom: 0;
+	align-self: flex-end;
 }
 
 
@@ -196,13 +238,14 @@ div.loader span {
 		height:110px;
 	}
 }
-@media screen and (max-device-width: 480px) and (orientation: portrait) {
+
+@media screen and (max-device-width: 720px) and (orientation: portrait) {
 	/* Mobile Styles in Portrait Mode */
 	canvas {
 		background-image: url("../images/hallway_tall.webp");
 	}
 }
-@media screen and (max-device-height: 480px) and (orientation: landscape) {
+@media screen and (max-device-height: 720px) and (orientation: landscape) {
 	/* Mobile Styles in Landscape Mode */
 	canvas {
 		background-image: url("../images/hallway_wide.webp");

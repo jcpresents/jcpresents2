@@ -30,30 +30,36 @@
 
 		<title>The Terrifying challenge</title>
 	</head>
+
 	<body class="animated fadeIn">
-		<canvas id="viewport"></canvas>
 		<header>
-			<section id="nav1"><nav class="nav"><ul>
-				<li>
-					<a>Year</a>
-					<ul>
-						<li><a class="navClick">2017</a></li>
-						<li><a class="navClick">2018</a></li>
-						<li><a class="navClick">2019</a></li>
-						<li><a class="navClick">2020</a></li>
-						<li><a class="navClick">2021</a></li>
-					</ul>
-				</li>
-			</ul></nav></section>
-			<section id="nav2"><nav class="nav"><ul>
-				<li><a href="#" onclick="scroll_AsciiDoc( 'prev' );">⇑</a></li>
-				<li><a href="#" onclick="scroll_AsciiDoc( 'next' );">⇓</a></li>
-			</ul></nav></section>
+			<canvas id="viewport"></canvas>
+			<video id="video-bg" autoplay loop muted playsinline>
+				<source data-src="./videos/hallway_tall_loop.mp4">
+			</video>
 		</header>
 
-		<div id="content"></div>
+		<article>
+			<section style="flex:100%;"></section>
+			<section id="nav1"><nav class="nav"><ul>
+				<li><a>Year</a><ul>
+					<li><a class="navClick">2017</a></li>
+					<li><a class="navClick">2018</a></li>
+					<li><a class="navClick">2019</a></li>
+					<li><a class="navClick">2020</a></li>
+					<li><a class="navClick">2021</a></li>
+				</ul></li>
+			</ul></nav></section>
+			<div id="content"></div>
+			<section id="nav2"><nav class="nav"><ul>
+					<li><a href="#" onclick="scroll_AsciiDoc( 'prev' );">⇑</a></li>
+					<li><a href="#" onclick="scroll_AsciiDoc( 'next' );">⇓</a></li>
+			</ul></nav></section>
+			<section style="flex:100%;"></section>
+		</article>
 
 		<footer>
+			<hr>
 			<p>Authors: Jim Crowly & Fooly Cooly<br>
 			<br>
 		</footer>
