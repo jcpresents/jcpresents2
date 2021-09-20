@@ -4,8 +4,9 @@ window.mobileCheck = function() {
   return check;
 };
 
-if( !window.mobileCheck() )
+if ( !window.mobileCheck() ) {
 	import("./three.init.js");
+}
 else {
 	var video = document.querySelector('video#video-bg'); // Define the video object this source is contained inside
 	var sources = document.querySelectorAll('video#video-bg source');
