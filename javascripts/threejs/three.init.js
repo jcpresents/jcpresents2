@@ -154,14 +154,10 @@ function load_Cube() {
 function load_Hallway() {
 
 	const gltfLoader = new GLTFLoader();
-	gltfLoader.load('models/hallway7.glb', function (gltf) {
+	gltfLoader.load('models/hallway8.glb', function (gltf) {
 
 		var model = obj.Meshes.Hallway = gltf.scene;
-			model.children[0].visible = true;
-			model.children[1].visible = true;
-			model.children[2].visible = true;
-			model.children[3].visible = true;
-			model.children[4].visible = true;
+			
 
 		model.scale.set( 0.5, 0.5, 0.5 );
 		model.position.set( 0.0, 0.0, 0.0 );
@@ -353,6 +349,7 @@ function render(time) {
 		obj.FireB.FireUpdate(performance.now() / 1000);
 	}
 	obj.Renderer.render( obj.Scene, obj.Camera );
+	console.log(obj.Renderer.info.render.calls);
 }
 
 // Resize viewport when size changes ////////////////////////////////////////////////
