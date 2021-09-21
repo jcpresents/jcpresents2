@@ -327,17 +327,14 @@ function load_Logs() {
 // Initiates Rendering of Objects //////////////////////////////////////////////////
 function render( time ) {
 
-	 setTimeout( function() {
-
-        requestAnimationFrame( render );
-    }, 1000 / sceneFPS );
+	setTimeout( function() { requestAnimationFrame( render ); }, 1000 / sceneFPS );
 
 	var delta = obj.Clock.getDelta();
 	if ( loadHallAni && obj.Mixer )
 		obj.Mixer.update(delta);
 
 	if (loadFire) for ( let i = 0; i < obj.Fires.length; i++ )
-		obj.Fires[i].FireUpdate( performance.now() / 1000 );
+		obj.Fires[i].update( performance.now() / 1000 );
 
 	obj.Renderer.render( obj.Scene, obj.Camera );
 }

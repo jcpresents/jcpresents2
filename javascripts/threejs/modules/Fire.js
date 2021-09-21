@@ -141,7 +141,7 @@ const FireShader = {
             "float sum = 0.0;",
             "float freq = 1.0;",
             "float amp = 1.0;",
-            
+
             "for(int i = 0; i < OCTIVES; i++) {",
                 "sum += abs(snoise(p * freq)) * amp;",
                 "freq *= lacunarity;",
@@ -162,7 +162,7 @@ const FireShader = {
             "st.y += sqrt(st.y) * magnitude * turbulence(p);",
 
             "if(st.y <= 0.0 || st.y >= 1.0) return vec4(0.0);",
-           
+
             "return texture2D(fireTex, st);",
         "}",
 
@@ -196,39 +196,39 @@ const FireShader = {
 
 };
 
-class Fire {
+class Fire extends THREE.Mesh {
+
 	constructor() {
-		var color = "";
-		var fireTex = new THREE.TextureLoader().load("javascripts/threejs/modules/Fire.png");
-		var fireMaterial = new THREE.ShaderMaterial( {
-			defines         : FireShader.defines,
-			uniforms        : THREE.UniformsUtils.clone( FireShader.uniforms ),
-			vertexShader    : FireShader.vertexShader,
-			fragmentShader  : FireShader.fragmentShader,
-			transparent     : true,
-			depthWrite      : true,
-			depthTest       : true
+
+		const color = "";
+		const fireTex = new THREE.TextureLoader().load( "javascripts/threejs/modules/Fire.png" );
+		const fireMaterial = new THREE.ShaderMaterial( {
+			  defines         : FireShader.defines,
+			  uniforms        : THREE.UniformsUtils.clone( FireShader.uniforms ),
+			  vertexShader    : FireShader.vertexShader,
+			  fragmentShader  : FireShader.fragmentShader,
+			  transparent     : true,
+			  depthWrite      : true,
+			  depthTest       : true
 		} );
 
-		// initialize uniforms 
-
+		// initialize uniforms
 		fireTex.magFilter = fireTex.minFilter = THREE.LinearFilter;
 		fireTex.wrapS = fireTex.wrapT = THREE.ClampToEdgeWrapping;
-		
+
 		fireMaterial.uniforms.fireTex.value = fireTex;
 		fireMaterial.uniforms.color.value = color || new THREE.Color( 0xeeeeee );
 		fireMaterial.uniforms.invModelMatrix.value = new THREE.Matrix4();
 		fireMaterial.uniforms.scale.value = new THREE.Vector3( 1, 1, 1 );
 		fireMaterial.uniforms.seed.value = Math.random() * 19.19;
 
-		return new THREE.Mesh( new THREE.BoxGeometry( 1.0, 1.0, 1.0 ), fireMaterial );
+		super( new THREE.BoxGeometry( 1.0, 1.0, 1.0 ), fireMaterial );
 	}
-}
 
-THREE.Mesh.prototype.FireUpdate = function ( time ) {
+	update( time ) {
 
-		var Mesh = this;
-		var invModelMatrix = Mesh.material.uniforms.invModelMatrix.value;
+		const Mesh = this;
+		const invModelMatrix = Mesh.material.uniforms.invModelMatrix.value;
 
 		Mesh.updateMatrixWorld();
 		invModelMatrix.copy( Mesh.matrixWorld ).invert();
@@ -239,6 +239,7 @@ THREE.Mesh.prototype.FireUpdate = function ( time ) {
 
 		Mesh.material.uniforms.invModelMatrix.value = invModelMatrix;
 		Mesh.material.uniforms.scale.value = Mesh.scale;
+	}
 }
 
 export { Fire };
