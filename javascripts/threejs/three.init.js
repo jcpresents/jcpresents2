@@ -14,7 +14,7 @@ const loadCube		= false;	// Enable Test Cube
 const loadHallway	= true;		// Enable Hallway
 const loadHallAni	= false;	// Enable Hallway Animations
 const loadLights	= true;		// Enable Lights
-const loadFire		= true;		// Enable Fire
+const loadFire		= false;		// Enable Fire
 const loadGUI		= false;		// Enable GUI
 const loadLogs		= true;		// Enable Log
 
