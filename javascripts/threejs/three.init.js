@@ -154,7 +154,7 @@ function load_Cube() {
 function load_Hallway() {
 
 	const gltfLoader = new GLTFLoader();
-	gltfLoader.load('models/hallway7.glb', function (gltf) {
+	gltfLoader.load('models/hallway8.glb', function (gltf) {
 
 		var model = obj.Meshes.Hallway = gltf.scene;
 			
