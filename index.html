@@ -13,55 +13,46 @@
 			<noscript>Javascript is required for this site. Please enable Javascript.</noscript>
 		</div>
 
+		<script src="javascripts/loadingScreen.js"></script>
 		<script src="javascripts/threejs/three.load.js" type="module"></script>
 		<script src="javascripts/asciidoctor/asciidoctor.js"></script>
 		<script src="javascripts/asciidoctor/asciidoctor.nav.js"></script>
-		<script>
-			const loader = document.querySelector(".loader");
-			window.onload = function(){
-				setTimeout(function(){
-					loader.style.opacity = "0";
-					setTimeout(function(){
-						loader.style.display = "none";
-					}, 500);
-				},3000);
-			}
-		</script>
 
 		<title>The Terrifying challenge</title>
 	</head>
 
-	<body class="animated fadeIn">
-		<header>
-			<canvas id="viewport"></canvas>
-			<video id="video-bg" autoplay loop muted playsinline>
-				<source data-src="./videos/hallway_tall_loop.mp4">
-			</video>
-		</header>
+	<body>
 
-		<article>
-			<section style="flex:100%;"></section>
-			<section id="nav1"><nav class="nav"><ul>
-				<li><a>Year</a><ul>
+		<canvas id="viewport"></canvas>
+		<video id="video-bg" autoplay loop muted playsinline>
+			<source data-src="./videos/hallway_tall_loop.mp4">
+		</video>
+
+		<nav class="nav" id="nav">
+			<ul><li>
+				<a>Year</a>
+				<ul>
 					<li><a class="navClick">2017</a></li>
 					<li><a class="navClick">2018</a></li>
 					<li><a class="navClick">2019</a></li>
 					<li><a class="navClick">2020</a></li>
 					<li><a class="navClick">2021</a></li>
-				</ul></li>
-			</ul></nav></section>
-			<div id="content"></div>
-			<section id="nav2"><nav class="nav"><ul>
-					<li><a href="#" onclick="scroll_AsciiDoc( 'prev' );">⇑</a></li>
-					<li><a href="#" onclick="scroll_AsciiDoc( 'next' );">⇓</a></li>
-			</ul></nav></section>
-			<section style="flex:100%;"></section>
-		</article>
+				</ul>
+			</li></ul>
+		</nav>
 
-		<footer>
-			<hr>
-			<p>Authors: Jim Crowly & Fooly Cooly<br>
-			<br>
-		</footer>
+		<main>
+			<header></header>
+			<article id="content"></article>
+			<footer><hr><p>Authors: Jim Crowly & Fooly Cooly</p><br></footer>
+		</main>
+
+		<nav class="nav" id="nav">
+			<ul>
+				<li><a href="#" onclick="scroll_AsciiDoc( -1 );">⇑</a></li>
+				<li><a href="#" onclick="scroll_AsciiDoc( +1 );">⇓</a></li>
+			</ul>
+		</nav>
+
 	</body>
 </html>

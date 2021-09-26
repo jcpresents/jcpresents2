@@ -1,6 +1,4 @@
 import * as THREE from './three.module.js';
-import * as dat from './modules/dat.gui.module.js'
-import { OrbitControls } from './modules/OrbitControls.js';
 import { GLTFLoader } from './modules/GLTFLoader.js';
 import { RoughnessMipmapper } from './modules/RoughnessMipmapper.js';
 import { Fire } from  "./modules/Fire.js";
@@ -17,7 +15,6 @@ const loadLghtHlprs	= false; 	// Enable Light Helpers
 const loadFire		= true; 	// Enable Fire
 const loadGUI		= false; 	// Enable GUI
 const loadLogs		= false; 	// Enable Log
-
 const obj = { Fires: [], Lights: [], Meshes: [] }; // Object Map //
 
 init();
@@ -35,9 +32,9 @@ function init() {
 
 	// Load Camera //
 	const camera = obj.Camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 0.1, 500 ); // Parameters: (fov, aspect, near, far)
-		if( loadOrbCntrl ) new OrbitControls( camera, obj.Renderer.domElement ).update(); // Set Camera Orbit Controls
+		if ( loadOrbCntrl ) import("./modules/OrbitControls.js").then( ( { OrbitControls } ) => { new OrbitControls( camera, obj.Renderer.domElement ).update(); }); // Set Camera Orbit Controls
 		camera.position.set( 0.00, 1.50, 8.38 ); // ( x, y, z )
-		camera.rotation.set( 0.03, 0.00, 0.00 ); // ( x, y, z ) // Also Resets camera rotation after Orbit controls update
+		camera.rotation.set( 0.03, 0.00, 0.00 ); // ( x, y, z )
 		camera.fov = 35;
 
 	// Adjust camera on window resize //
@@ -135,11 +132,9 @@ function load_Hallway() {
 	gltfLoader.load('models/hallway7.glb', function (gltf) {
 
 		const model = gltf.scene;
-			  model.scale.set( 0.5, 0.5, 0.5 );
-			  model.position.set( 0.0, 0.0, 0.0 );
-			  obj.Scene.add( model );
+			  obj.Meshes[model.name] = model;
 
-		obj.Meshes[model.name] = model;
+		for ( let i = 0; i < 3; i++ ) model.remove( model.children[0] );
 		for ( let i = 0; i < model.children.length; i++ ) {
 
 			const j = obj.Meshes.length;
@@ -152,6 +147,10 @@ function load_Hallway() {
 			gltf.animations.forEach( (clip) => { obj.Mixer.clipAction(clip).play(); });
 			obj.Animations = gltf.animations;
 		}
+
+		model.scale.set( 0.5, 0.5, 0.5 );
+		model.position.set( 0.0, 0.0, 0.0 );
+		obj.Scene.add( model );
 	});
 }
 
@@ -233,8 +232,9 @@ function load_Fire() {
 }
 
 // Overlays GUI for settings tweaks ////////////////////////////////////////////////
-function load_GUI() {
+async function load_GUI() {
 
+	const dat = await import( "./modules/dat.gui.module.js" );
 	const gui = new dat.GUI();
 	const cameraFolder = gui.addFolder("Camera"); {
 
@@ -329,9 +329,10 @@ function render( time ) {
 
 	setTimeout( function() { requestAnimationFrame( render ); }, 1000 / sceneFPS );
 
-	var delta = obj.Clock.getDelta();
-	if ( loadHallAni && obj.Mixer )
+	if ( loadHallAni && obj.Mixer ) {
+		let delta = obj.Clock.getDelta();
 		obj.Mixer.update(delta);
+	}
 
 	if (loadFire) for ( let i = 0; i < obj.Fires.length; i++ )
 		obj.Fires[i].update( performance.now() / 1000 );

@@ -1,10 +1,36 @@
-document.body.onload = setTimeout( init_AsciiDoc, 1000);
-var List = {};
+let List = { };
+let lastScrollTop = 0, isScrolling = false, wasScrolling = false, scriptScroll = false;
+
+document.body.addEventListener( "load", init_AsciiDoc(), false );
+
+/*
+window.addEventListener( "scroll", function( event ) { isScrolling = true; }, false );
+
+setInterval(function() {
+
+	if ( isScrolling ) {
+		isScrolling = false;
+		return;
+	}
+	
+	if ( scriptScroll ) {
+		scriptScroll = false;
+		return;
+	}
+
+	if ( List.oindx != List.index ) {
+		List.oindx = List.index;
+		List[List.index].scrollIntoView( { behavior: 'smooth', block: 'start' } );
+		scriptScroll = true;
+	}
+
+}, 500);
+*/
 
 function init_AsciiDoc() {
 
-	var navButton = document.getElementsByClassName("navClick");
-	for (var i = 0; i < navButton.length; i++)
+	let navButton = document.getElementsByClassName("navClick");
+	for (let i = 0; i < navButton.length; i++)
 		navButton[i].addEventListener("click", load_AsciiDoc);
 
 	load_AsciiDoc( "2018" );
@@ -12,13 +38,13 @@ function init_AsciiDoc() {
 
 function load_AsciiDoc( year ) {
 
-	if(event) year = event.srcElement.innerText;
-	var asciidoctor = Asciidoctor();
-	var file = 'webpages/' + year + '.adoc';
+	if( event ) year = event.srcElement.innerText;
+	let asciidoctor = Asciidoctor();
+	let file = 'webpages/' + year + '.adoc';
 	fetch( file )
 		.then(response => {
 
-		    if (!response.ok && response.status == 404)
+		    if ( !response.ok && response.status == 404 )
 				throw '404 File Not Found "' + year + '.adoc"';
 
 			return response.text()
@@ -28,27 +54,17 @@ function load_AsciiDoc( year ) {
 			let html = asciidoctor.convert( data );
 			document.getElementById('content').innerHTML = html;
 
-			var observer = new IntersectionObserver( function(entries) {
+			let observer = new IntersectionObserver( function( entries ) {
 
-				switch( List.direction ) {
-
-					default:
-						if (entries[0].isIntersecting) {
-							List.index = entries[0].target.name;
-						}
-						break;
-
-					case "next":
-						let y = entries.length == 1 ? 0 : 1; //Avoids a rare error where only 1 section is detected
-						if ( entries[y].isIntersecting ) {
-							List.index = entries[y].target.name;
-						}
-						break;
-				}
-				List.direction = null;
+				entries.forEach( x => {
+					if ( x.isIntersecting ) {
+						List.index = x.target.name;
+					}
+				});
 			}, { threshold: [0.5] });
 
 			List = document.getElementsByClassName("sect1");
+			List.oindx = 0;
 			List.index = 0;
 			for (let i = 0; i < List.length; i++) {
 				List[i].name = i;
@@ -65,23 +81,14 @@ function load_AsciiDoc( year ) {
 
 function scroll_AsciiDoc( IN ) {
 
-	event.preventDefault();
-	List.direction = IN;
+	if ( event ) event.preventDefault();
+	scriptScroll = true;
 
-	switch( IN ) {
-		case "prev":
-			List.index--;
-			break;
-		case "next":
-			List.index++;
-			break;
-	}
-
-	if ( List.index < 0 ) {
+	List.index += IN;
+	if ( List.index < 0 )
 		List.index = List.length-1;
-	}
-	else if ( List.index > List.length-1 ) {
+	else if ( List.index > List.length-1 )
 		List.index = 0;
-	}
-	List[List.index].scrollIntoView( true );
+
+	List[List.index].scrollIntoView( { behavior: 'smooth', block: 'start' } );
 }

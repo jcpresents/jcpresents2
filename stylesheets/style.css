@@ -1,45 +1,38 @@
 /* Main Page Content */
-canvas {
-	width: 100%;
-	height: 100%;
-	display: block;
-	background-color: black;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	background-position: center;
-}
-header {
-	width:		100%;
-	height:		400px;
-	max-width:	1920px;
-	max-height: 660px;
-	margin:		0px auto 0px auto;
-	padding:	0;
-
-	background-position:center;
-	background-repeat:	no-repeat;
-	background-size:	auto 100%;
-}
 body {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+	align-items: flex-start;
 	background: black;
-}
-
-section,footer {
-	text-align: center;
-}
-body,header,article,footer,p,nav,ul,li,a,#content {
-	padding: 0;
-	margin: 0;
-}
-.animated {
+	
 	-webkit-animation-duration: 5s;
 	animation-duration: 5s;
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
-}
-.fadeIn {
+	
 	-webkit-animation-name: fadeIn;
 	animation-name: fadeIn;
+}
+canvas {
+	width: 100%;
+	height: 100%;
+	display: block;
+	background: url("../images/hallway_tall.webp") no-repeat center center;
+	background-size: cover;
+}
+footer {
+	text-align: center;
+}
+main,header,article,footer {
+	flex-basis: 750px;
+	max-width: 750px;
+	min-width: 750px;
+}
+body,header,article,footer,p,nav,ul,li,a {
+	padding: 0;
+	margin: 0;
 }
 #video-bg {
 	transform: translate(-50%, -50%);
@@ -90,8 +83,7 @@ nav.nav ul ul {
 	display: none;
 }
 nav.nav ul li {
-	background-position: center;
-	background-image: url("../images/button.webp");
+	background: url("../images/button.webp") no-repeat center center;
 	background-size: 100% 100%;
 	color: #ffffff;
 	font: bold normal normal 30px/normal dungeon;
@@ -141,6 +133,7 @@ nav.nav ul ul ul {
 		cursor: pointer;
 		display: block;
 		position: absolute;
+		bottom: 100%;
 	}
 	nav.nav ul li:hover > a {
 		cursor: pointer;
@@ -148,27 +141,11 @@ nav.nav ul ul ul {
 	}
 }
 
-
-article {
-	display:flex;
-	flex-direction:row;"
-	position: relative;
-	justify-content: center;
-	align-content: center;
-	align-items: flex-start;
-}
-#nav1 {
-	position: sticky;
-	top: 0;
-}
-#content {
-	max-width: 750px;
-	min-width: 750px;
-}
-#nav2 {
+#nav {
 	position: sticky;
 	bottom: 0;
 	align-self: flex-end;
+	height: 100%;
 }
 
 
@@ -189,9 +166,7 @@ div.loader div.logo {
 	width: 100%;
 	height: 0;
 	padding-top: 39.94%;
-	background-position:center;
-	background-repeat:	no-repeat;
-	background-image:	url("../images/banner.webp");
+	background: url("../images/banner.webp") no-repeat center center;
 }
 div.loader div.ring {
 	align-items: center;
@@ -241,13 +216,7 @@ div.loader span {
 
 @media screen and (max-device-width: 720px) and (orientation: portrait) {
 	/* Mobile Styles in Portrait Mode */
-	canvas {
-		background-image: url("../images/hallway_tall.webp");
-	}
 }
 @media screen and (max-device-height: 720px) and (orientation: landscape) {
 	/* Mobile Styles in Landscape Mode */
-	canvas {
-		background-image: url("../images/hallway_wide.webp");
-	}
 }
