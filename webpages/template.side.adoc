@@ -1,0 +1,446 @@
+= 20XX
+:doctype: article
+:imagesdir: ./images
+
+== Welcome!
+Enter, if you dare, into the world of *The Fucking Terrifying Challenge!*
+ +
+ +
+Within the hallowed halls of these interwebs rests a cinematic monstrosity umatched in the modern era!
+Can you withstand the onslaught?
+Do you have the sanity to survive?
+Would you willingly look into the darkness?
+ +
+ +
+Halloween is (obviously) the best holiday. But what if I told you it could be even *better*? All it takes is little time.
+The question is: *Can you do it*?
+ +
+ +
+*The Challenge* is simple. Pick a few movies off the list and mix them into your Halloween season. Then rank yourself on the following chart: +
+
+[.text-center]
+image:skull20.webp[] [underline]#The Zombie# image:skull20.webp[] +
+Watch three movies
+ +
+ +
+image:skull20.webp[] [underline]#The Ghoul# image:skull20.webp[] +
+Watch six movies, then one Mystery Movie
+ +
+ +
+image:skull20.webp[] [underline]#The Vampire# image:skull20.webp[] +
+Watch nine movies, then two Mystery Movies
+ +
+ +
+image:skull20.webp[] [underline]#The Fiend# image:skull20.webp[] +
+Watch EVERY SINGLE movie on the list
+ +
+ +
+
+Below you will find the Entries for each list movie. Each entry will offer a peek into the dangers that await you.
+The Title of the entry links to the film's IMDB page, and the Poster will link to a stream where you can watch it.
+But take care; streaming websites are often loaded with spyware. The most terrifying thing of all is the internet itself!
+(Also some of these streams suck; you may want to try and find your own.)
+ +
+ +
+At the bottom of the page you will find the entries for the Mystery Movies.
+These films are too horrific for just any day of the month.
+As such, I'll be revealing them on October 28th... just in time for Halloween!!
+ +
+ +
+And now, prepare yourself for...
+
+'''
+
+[.text-center]
++++<h2><u>The Fucking Terrifying Challenge 20XX</u></h2>+++
+
+'''
+
+== [underline hide]#Movie Name#
+image:posters/default.webp[,225,,role="poster"]
++++<h2><u>Movie Name</u></h2>+++
+[.overflow-hidden]
+*Genre: ?* +
+*Year: ?* +
+Rating: image:skull20.webp[] +
+Rating: image:skull20.webp[]
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+[underline]#*How to Watch*:# +
+PARAGRAPH
+
+'''
+
+== [underline hide]#Movie Name#
+image:posters/default.webp[,225,,role="poster"]
++++<h2><u>Movie Name</u></h2>+++
+[.overflow-hidden]
+*Genre: ?* +
+*Year: ?* +
+Rating: image:skull20.webp[] +
+Rating: image:skull20.webp[]
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+[underline]#*How to Watch*:# +
+PARAGRAPH
+
+'''
+
+== [underline hide]#Movie Name#
+image:posters/default.webp[,225,,role="poster"]
++++<h2><u>Movie Name</u></h2>+++
+[.overflow-hidden]
+*Genre: ?* +
+*Year: ?* +
+Rating: image:skull20.webp[] +
+Rating: image:skull20.webp[]
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+[underline]#*How to Watch*:# +
+PARAGRAPH
+
+'''
+
+== [underline hide]#Movie Name#
+image:posters/default.webp[,225,,role="poster"]
++++<h2><u>Movie Name</u></h2>+++
+[.overflow-hidden]
+*Genre: ?* +
+*Year: ?* +
+Rating: image:skull20.webp[] +
+Rating: image:skull20.webp[]
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+[underline]#*How to Watch*:# +
+PARAGRAPH
+
+'''
+
+== [underline hide]#Movie Name#
+image:posters/default.webp[,225,,role="poster"]
++++<h2><u>Movie Name</u></h2>+++
+[.overflow-hidden]
+*Genre: ?* +
+*Year: ?* +
+Rating: image:skull20.webp[] +
+Rating: image:skull20.webp[]
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+[underline]#*How to Watch*:# +
+PARAGRAPH
+
+'''
+
+== [underline hide]#Movie Name#
+image:posters/default.webp[,225,,role="poster"]
++++<h2><u>Movie Name</u></h2>+++
+[.overflow-hidden]
+*Genre: ?* +
+*Year: ?* +
+Rating: image:skull20.webp[] +
+Rating: image:skull20.webp[]
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+[underline]#*How to Watch*:# +
+PARAGRAPH
+
+'''
+
+== [underline hide]#Movie Name#
+image:posters/default.webp[,225,,role="poster"]
++++<h2><u>Movie Name</u></h2>+++
+[.overflow-hidden]
+*Genre: ?* +
+*Year: ?* +
+Rating: image:skull20.webp[] +
+Rating: image:skull20.webp[]
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+[underline]#*How to Watch*:# +
+PARAGRAPH
+
+'''
+
+== [underline hide]#Movie Name#
+image:posters/default.webp[,225,,role="poster"]
++++<h2><u>Movie Name</u></h2>+++
+[.overflow-hidden]
+*Genre: ?* +
+*Year: ?* +
+Rating: image:skull20.webp[] +
+Rating: image:skull20.webp[]
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+[underline]#*How to Watch*:# +
+PARAGRAPH
+
+'''
+
+== [underline hide]#Movie Name#
+image:posters/default.webp[,225,,role="poster"]
++++<h2><u>Movie Name</u></h2>+++
+[.overflow-hidden]
+*Genre: ?* +
+*Year: ?* +
+Rating: image:skull20.webp[] +
+Rating: image:skull20.webp[]
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+[underline]#*How to Watch*:# +
+PARAGRAPH
+
+'''
+
+== [underline hide]#Movie Name#
+image:posters/default.webp[,225,,role="poster"]
++++<h2><u>Movie Name</u></h2>+++
+[.overflow-hidden]
+*Genre: ?* +
+*Year: ?* +
+Rating: image:skull20.webp[] +
+Rating: image:skull20.webp[]
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+[underline]#*How to Watch*:# +
+PARAGRAPH
+
+'''
+
+== [underline hide]#Movie Name#
+image:posters/default.webp[,225,,role="poster"]
++++<h2><u>Movie Name</u></h2>+++
+[.overflow-hidden]
+*Genre: ?* +
+*Year: ?* +
+Rating: image:skull20.webp[] +
+Rating: image:skull20.webp[]
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+[underline]#*How to Watch*:# +
+PARAGRAPH
+
+'''
+
+== [underline hide]#Movie Name#
+image:posters/default.webp[,225,,role="poster"]
++++<h2><u>Movie Name</u></h2>+++
+[.overflow-hidden]
+*Genre: ?* +
+*Year: ?* +
+Rating: image:skull20.webp[] +
+Rating: image:skull20.webp[]
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+[underline]#*How to Watch*:# +
+PARAGRAPH
+
+'''
+
+== [underline hide]#Movie Name#
+image:posters/default.webp[,225,,role="poster"]
++++<h2><u>Movie Name</u></h2>+++
+[.overflow-hidden]
+*Genre: ?* +
+*Year: ?* +
+Rating: image:skull20.webp[] +
+Rating: image:skull20.webp[]
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+[underline]#*How to Watch*:# +
+PARAGRAPH
+
+'''
+
+[discrete][.text-center]
+== [underline]#Mystery Movies#
+
+'''
+
+== [underline hide]#Movie Name#
+image:posters/default.webp[,225,,role="poster"]
++++<h2><u>Movie Name</u></h2>+++
+[.overflow-hidden]
+*Genre: ?* +
+*Year: ?* +
+Rating: image:skull20.webp[]+
+Rating: image:skull20.webp[]
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+[underline]#*How to Watch*:# +
+PARAGRAPH
+
+'''
+
+== [underline hide]#Movie Name#
+image:posters/default.webp[,225,,role="poster"]
++++<h2><u>Movie Name</u></h2>+++
+[.overflow-hidden]
+*Genre: ?* +
+*Year: ?* +
+Rating: image:skull20.webp[] +
+Rating: image:skull20.webp[]
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+[underline]#*How to Watch*:# +
+PARAGRAPH
+
+'''
+
+== [underline hide]#Movie Name#
+image:posters/default.webp[,225,,role="poster"]
++++<h2><u>Movie Name</u></h2>+++
+[.overflow-hidden]
+*Genre: ?* +
+*Year: ?* +
+Rating: image:skull20.webp[] +
+Rating: image:skull20.webp[]
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+PARAGRAPH
+ +
+ +
+[underline]#*How to Watch*:# +
+PARAGRAPH
+
+'''

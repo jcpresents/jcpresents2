@@ -15,17 +15,19 @@
 
 	/* Font Settings */
 	div,p,td.hdlist1 {
-		color: red;
-		font-size: 20px;
-		font-weight: 500;
 		font-family: Helvetica, sans-serif;
 		text-shadow: 2px 2px #000000;
 		line-height: 1.2;
+		font-weight: 500;
+		font-size: 20px;
+		color: red;
 	}
 	h1,h2,h3 {
-		color: red;
+		letter-spacing: 2px;
+		font-family: dungeon;
 		font-weight: bold;
 		text-align: center;
+		color: red;
 	}
 
 
@@ -48,15 +50,22 @@
 
 
 	/* Movie Info Settings */
-	div.hdlist {
-		/* Table Parent Containers */
+	div.movie div.paragraph img {
+		/* Movie Poster */
+		border: 2px solid grey;
+	}
+	div.hdlist { /* Table Parent Containers */
+		white-space: nowrap;
 		text-align: left;
+		font-size: 20vh;
+		/*width: 320px;*/
 	}
 	div.hdlist div.title h2 {
 		/* Table Titles */
+		border-bottom: 0px dotted;
 		margin: 0px 10px;
 		text-align: left;
-		border-bottom: 0px dotted;
+		font-size: 40px;
 	}
 	div.hdlist table {
 		/* Tables */
