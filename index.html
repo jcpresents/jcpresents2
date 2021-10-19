@@ -4,212 +4,274 @@
 		<meta charset="UTF-8">
 		
 		<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css" media="screen">
-		<link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="screen">
-		<canvas id="viewportA"></canvas>
-		<canvas id="viewportB"></canvas>
-		<canvas id="viewportC"></canvas>
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="screen">		
 		<script type="module" src="javascripts\bootstrap\bootstrap.bundle.min.js" type="text/javascript"></script>
-	<!--	<script type="module" src="javascripts/threejs/three.init.fg.js" type="text/javascript"></script>		
-		<script type="module" src="javascripts/threejs/three.init.fire.js" type="text/javascript"></script>		
-		<script type="module" src="javascripts/threejs/three.init.bg.js" type="text/javascript"></script> 
-	-->
-
-
-		<script type="text/javascript">			
-			function ScrollPage(ID) {
-				document.getElementById(ID).scrollIntoView(false);
+		<script type="module" src="javascripts/threejs/three.load.js" type="text/javascript"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script src="javascripts/loadingScreen.js"></script>
+		<script src="javascripts/js.js"></script>
+		<canvas id="viewport"></canvas>
+		<meta name="viewport" content="width=device-width, initial-scale=0.5">
+		
+		<style type="text/css">
+			@import url("https://fast.fonts.net/lt/1.css?apiType=css&c=b842f945-9607-4447-8f38-322590814954&fontids=743416");
+			@font-face{
+				font-family:"Chiller W02";
+				src:url("Fonts/743416/d16bd4f0-fa51-451d-a5d1-ab722641aafd.woff2") format("woff2"),url("Fonts/743416/7c473e54-a744-4c59-b26d-d4327c227465.woff") format("woff");
 			}
-		</script>
+		</style>             
 
-		<script>
-			document.addEventListener("DOMContentLoaded", function(){
-			var myOffcanvas = document.getElementById('offcanvasNavigator');
-			var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas);
-			document.getElementById("OpenMenu").addEventListener('click',function (e){
-				e.preventDefault();
-				e.stopPropagation();
-				bsOffcanvas.toggle();
-			});
-			});
-		</script>
-
-		<script>
-			function topFunction() {
-			document.body.scrollTop = 0;
-			document.documentElement.scrollTop = 0;
-			}
-		</script>
+		<div class="loader">
+			<div class="logo"></div>
+			<div class="ring"></div>
+			<noscript>Javascript is required for this site. Please enable Javascript.</noscript>
+		</div>
 
 		<title>The Terrifying challenge</title>
 	</head>
 	
 	<body class="animated fadeIn">
 
-		<!-- Navbar Header -->
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-2"></div>
+		<!-- Offcanvas Navigator -->
+		<div class="col-3 text-end">
 
-				<div class="col-xl-4 col-md-12 text-center">
-					<img class="image-fluid" src="images/logo.png" height="130" id="scrollspyHeading0">					
-				</div>
+			<div>
+				<button class="btn btn-outline-danger btn-sticky" id="OpenMenu" data-bs-target="#offcanvasNavigator" role="button" aria-controls="offcanvasNavigator">
+					<img class="skulls" src="images/assets/skull40.webp">
+				</button>
+			</div>	
 
-				<div class="col-xl-3 col-md-12 align-self-center text-center">	
-							
-					<div class="btn-group btn-group-lg" role="group">
-						<a href="/index17.html" class="btn btn btn-outline-secondary" onClick="topFunction()">2017</a>
-						<a href="/index18.html" class="btn btn-outline-secondary" onClick="topFunction()">2018</a>
-						<a href="/index19.html" class="btn btn-outline-secondary" onClick="topFunction()">2019</a>
-						<a href="/index20.html" class="btn btn-outline-secondary" onClick="topFunction()">2020</a>
-						<a href="/index.html" class="btn btn-danger" onClick="topFunction()">2021</a>
-					</div>																																
-				</div>
-				
-				<!-- Offcanvas Navigator -->
-				<div class="col-3 text-end">
-
-					<div>
-						<button class="btn btn-dark btn-sticky" id="OpenMenu" data-bs-target="#offcanvasNavigator" role="button" aria-controls="offcanvasNavigator">
-							<svg xmlns="http://www.w3.org/2000/svg" height="23" width="23" fill="currentColor" class="bi bi-bookmarks my-2" viewBox="0 0 16 16">
-								<path d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4zm2-1a1 1 0 0 0-1 1v10.566l3.723-2.482a.5.5 0 0 1 .554 0L11 14.566V4a1 1 0 0 0-1-1H4z"/>
-								<path d="M4.268 1H12a1 1 0 0 1 1 1v11.768l.223.148A.5.5 0 0 0 14 13.5V2a2 2 0 0 0-2-2H6a2 2 0 0 0-1.732 1z"/>
-							</svg>
-						</button>
-					</div>	
-
-					<div class="offcanvas offcanvas-end offcanvas-collapse" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasNavigator" aria-labelledby="navigation">
-						<button type="button" class="btn btn-dark btn-sticky" data-bs-dismiss="offcanvas" aria-label="Close">
-							<svg xmlns="http://www.w3.org/2000/svg" height="23" width="23" fill="currentColor" class="bi bi-bookmarks my-2" viewBox="0 0 16 16">
-								<path d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4zm2-1a1 1 0 0 0-1 1v10.566l3.723-2.482a.5.5 0 0 1 .554 0L11 14.566V4a1 1 0 0 0-1-1H4z"/>
-								<path d="M4.268 1H12a1 1 0 0 1 1 1v11.768l.223.148A.5.5 0 0 0 14 13.5V2a2 2 0 0 0-2-2H6a2 2 0 0 0-1.732 1z"/>
-							</svg>
-						</button>
-						<div class="offcanvas-header"><br><br></div>
-							<div class="offcanvas-body">
-								<nav id="navbar" class="navbar navbar px-3">
-									<a class="navbar-brand" href="#"></a>
-									<ul class="nav text-center">
-										<li class="nav-item w-100">
-											<a class="btn btn-lg-nav btn-outline-danger content-button" href="#scrollspyHeading0">Home</a>
-										</li>
-										<li class="nav-item w-100">
-											<a class="btn btn-lg-nav btn-outline-danger content-button" href="#scrollspyHeading1">One</a>
-										</li>
-										<li class="nav-item w-100">
-											<a class="btn btn-lg-nav btn-outline-danger content-button" href="#scrollspyHeading2">Two</a>
-										</li>
-										<li class="nav-item w-100">
-											<a class="btn btn-lg-nav btn-outline-danger content-button" href="#scrollspyHeading3">Three</a>
-										</li>
-										<li class="nav-item w-100">
-											<a class="btn btn-lg-nav btn-outline-danger content-button" href="#scrollspyHeading4">Four</a>
-										</li>
-										<li class="nav-item w-100">
-											<a class="btn btn-lg-nav btn-outline-danger content-button" href="#scrollspyHeading5">Five</a>
-										</li>
-										<li class="nav-item w-100">
-											<a class="btn btn-lg-nav btn-outline-danger content-button" href="#scrollspyHeading6">Six</a>
-										</li>
-										<li class="nav-item w-100">
-											<a class="btn btn-lg-nav btn-outline-danger content-button" href="#scrollspyHeading7">Seven</a>
-										</li>
-										<li class="nav-item w-100">
-											<a class="btn btn-lg-nav btn-outline-danger content-button" href="#scrollspyHeading8">Eight</a>
-										</li>
-										<li class="nav-item w-100">
-											<a class="btn btn-lg-nav btn-outline-danger content-button" href="#scrollspyHeading9">Nine</a>
-										</li>
-										<li class="nav-item w-100">
-											<a class="btn btn-lg-nav btn-outline-danger content-button" href="#scrollspyHeading10">Ten</a>
-										</li>
-										<li class="nav-item w-100">
-											<a class="btn btn-lg-nav btn-outline-danger content-button" href="#scrollspyHeading11">Eleven</a>
-										</li>
-										<li class="nav-item w-100">
-											<a class="btn btn-lg-nav btn-outline-danger content-button" href="#scrollspyHeading12">Twelve</a>
-										</li>
-										<li class="nav-item w-100">
-											<a class="btn btn-lg-nav btn-outline-danger content-button" href="#scrollspyHeading13">Thirteen</a>
-										</li>
-									</ul>
-								</nav>
-							</div>						
-						</div>
-					</div>
+			<div class="offcanvas offcanvas-end offcanvas-collapse" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasNavigator" aria-labelledby="navigation">
+				<button type="button" class="btn btn-danger btn-sticky" data-bs-dismiss="offcanvas" aria-label="Close">
+					<img class="skulls" src="images/assets/skull40.webp">
+				</button>
+				<div class="offcanvas-header"><br><br></div>
+					<div class="offcanvas-body">
+						<nav id="navbar" class="navbar navbar">
+							<ul class="nav text-start">
+								<li class="nav-item w-100">
+									<a class="btn btn-lg-nav btn-outline-danger content-button" href="#top">Top</a>
+								</li>
+								<li class="nav-item w-100">
+									<a class="btn btn-lg-nav btn-outline-danger content-button" href="#first">First</a>
+								</li>
+								<li class="nav-item w-100">
+									<a class="btn btn-lg-nav btn-outline-danger content-button" href="#second">Second</a>
+								</li>
+								<li class="nav-item w-100">
+									<a class="btn btn-lg-nav btn-outline-danger content-button" href="#third">Third</a>
+								</li>
+								<li class="nav-item w-100">
+									<a class="btn btn-lg-nav btn-outline-danger content-button" href="#fourth">Fourth</a>
+								</li>
+								<li class="nav-item w-100">
+									<a class="btn btn-lg-nav btn-outline-danger content-button" href="#fifth">Fifth</a>
+								</li>
+								<li class="nav-item w-100">
+									<a class="btn btn-lg-nav btn-outline-danger content-button" href="#sixth">Sixth</a>
+								</li>
+								<li class="nav-item w-100">
+									<a class="btn btn-lg-nav btn-outline-danger content-button" href="#seventh">Seventh</a>
+								</li>
+								<li class="nav-item w-100">
+									<a class="btn btn-lg-nav btn-outline-danger content-button" href="#eighth">Eighth</a>
+								</li>
+								<li class="nav-item w-100">
+									<a class="btn btn-lg-nav btn-outline-danger content-button" href="#ninth">Ninth</a>
+								</li>
+								<li class="nav-item w-100">
+									<a class="btn btn-lg-nav btn-outline-danger content-button" href="#tenth">Tenth</a>
+								</li>
+								<li class="nav-item w-100">
+									<a class="btn btn-lg-nav btn-outline-danger content-button" href="#eleventh">Eleventh</a>
+								</li>
+								<li class="nav-item w-100">
+									<a class="btn btn-lg-nav btn-outline-danger content-button" href="#twelfth">Twelfth</a>
+								</li>
+								<li class="nav-item w-100">
+									<a class="btn btn-lg-nav btn-outline-danger content-button" href="#13">13th</a>
+								</li>
+								<li class="nav-item w-100">
+									<a class="btn btn-lg-nav btn-outline-danger content-button" href="#secret">Secret</a>
+								</li>
+							</ul>
+						</nav>
+					</div>						
 				</div>
 			</div>
 		</div>
+
+		
 		
 		<main id="swup" class="transition-fade">
-									
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col"></div>
-					<div class="col">
-						<img class="fluid portrait" src="images\gifs\demon.gif">
-					</div>			
-					<div class="col"></div>													
-				</div>	
-			</div>
-		
-			<div class="container-fluid content">			
-				<div class="row">
-					<div class="col"></div>
-					<div class="text-start col-8 col-md-8 col-lg-6">
 
-						<p> 
-							<h1 class="text-center">Welcome.</h1><br>
-							Enter, if you dare, into the world of <b><u>The Terrifying Challenge!</u></b><br><br> Within the hallowed halls of these interwebs rests a cinematic monstrosity umatched in the modern era! Can you withstand the onslaught? Do you have the sanity to survive? Would you willingly look into the darkness?<br><br>
-							Halloween is (obviously) the best holiday. But what if I told you it could be even <b>better</b>? All it takes is a little time. The question is: <b>Can you do it?</b> <br><br>
-							<b><u>The Challenge</u></b> is simple. Pick a few movies off the list and mix them into your Halloween season. Then rank yourself on the following chart:</p>						
-							
-							<br><br><br>
-							<div class="text-center">
-								<img class="skulls" src="images/skull20.webp"><U>The Zombie:</u><img class="skulls" src="images/skull20.webp"><br>
-								Watch three movies
-								<br><br><br><br>
-								<img class="skulls" src="images/skull20.webp"><U>The Ghoul:</u><img class="skulls" src="images/skull20.webp"><br>
-								Watch six movies,
-								then one "Mystery Movie" 
-								<br><br><br><br>
-								<img class="skulls" src="images/skull20.webp"><U>The Vampire:</u><img class="skulls" src="images/skull20.webp"><br>
-								Watch nine movies, then two "Mystery Movies"
-								<br><br><br><br>
-								<img class="skulls" src="images/skull20.webp"><U>The Fiend:</u><img class="skulls" src="images/skull20.webp"><br>
-								Watch EVERY SINGLE movie on the list
-								<br><br><br>
-							</div>
-						</p>
-							
-						<p>
-							Below you will find the <b>Entries</b> for each list movie. Each entry will offer a peek into the dangers that await you. The <b>Title</b> of the entry links to the film's IMDB page, and the <b>Poster</b> will link to a stream where you can watch it. But take care; streaming websites are often loaded with spyware. The most terrifying thing of all is <b>the internet itself</b>! (Also some of these streams suck; you may want to try and find your own.)<br><br>
-							At the bottom of the page you will find the entries for the <b>Mystery Movies</b>. These films are too horrific for just any day of the month. As such, I'll be revealing them on October 28th... just in time for Halloween!! <br><br>
-							And now, prepare yourself for the...<br><br>
-						</p>
+			<div id="top">
+				<!-- Navbar Header -->
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-2"></div>
 
-						<!-- This logo is a placeholder. I'll get rid of it at some point.-->
-						<div class="container-fluid">
-							<div class="row">
-								<div class="col-12">
-									<img class="img-fluid" src="images/logo.png">
-								</div>															
-							</div>	
+						<div class="col-xl-4 col-md-12 text-md-center text-sm-center text-xl-start text-xxl-center">
+							<img class="image-fluid" src="images/logo.webp" height="130">					
 						</div>
-										
+
+						<div class="col-xl-3 col-md-12 align-self-center text-center">	
+									
+							<div class="btn-group btn-group-lg" role="group">
+								<a href="/2017.html" class="btn btn-outline-secondary" onClick="topFunction()">2017</a>
+								<a href="/2018.html" class="btn btn-outline-secondary" onClick="topFunction()">2018</a>
+								<a href="/2019.html" class="btn btn-outline-secondary" onClick="topFunction()">2019</a>
+								<a href="/2020.html" class="btn btn-outline-secondary" onClick="topFunction()">2020</a>
+								<a href="/home.html" class="btn btn-danger" onClick="topFunction()">2021</a>
+							</div>																																
+						</div>
+						
+						
 					</div>
-					<div class="col"></div>
-				</div>			
+				</div>
+										
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col"></div>
+						<div class="col">
+							<img class="fluid portrait" src="images\gifs\inferno2.gif">
+						</div>			
+						<div class="col"></div>													
+					</div>	
+				</div>
+			
+				<div class="container-fluid content">			
+
+					<div class="row">
+						<div class="col"></div>
+						<div class="text-start col-8 col-md-8 col-lg-6">
+
+							<p> 
+								<h1 class="text-center">Welcome.</h1><br>
+								
+								<p>
+									Are you ready to binge watch an unhealthy amount of horror this Halloween season? If so, then I propose a game. It's called the <b class="chiller">Terrifying Challenge</b>. The rules are simple: pick a few movies off the <a href="#title">list</a> below and watch them during month of October.
+									The game ends on the conclusion of Halloween night, at which point you claim your score as follows:
+								</p>					
+								
+								<br><br><br>
+								<div class="text-center">
+									<h2><img class="skulls px-2" src="images/assets/skull40.webp">Zombie<img class="skulls px-2" src="images/assets/skull40.webp"></h2>
+									Watch three movies
+									<br><br><br><br>
+									<h2><img class="skulls px-2" src="images/assets/skull40.webp">Ghoul<img class="skulls px-2" src="images/assets/skull40.webp"></h2>
+									Watch six movies,
+									then one "<a href="#secret">Secret Film</a>"
+									<br><br><br><br>
+									<h2><img class="skulls px-2" src="images/assets/skull40.webp">Vampire<img class="skulls px-2" src="images/assets/skull40.webp"></h2>
+									Watch nine movies, then two "<a href="#secret">Secret Films</a>"
+									<br><br><br><br>
+									<h2><img class="skulls px-2" src="images/assets/skull40.webp">Fiend<img class="skulls px-2" src="images/assets/skull40.webp"></h2>
+									Watch EVERY SINGLE movie on the list
+									<br><br><br><br>
+									<button type="button" class="btn btn-dark chiller-button py-0" data-bs-toggle="modal" data-bs-target="#advancedRules">
+										Advanced Rulesets
+									</button>
+									<div class="modal fade" id="advancedRules" tabindex="-1">
+										<div class="modal-dialog modal-dialog-centered">
+											<div class="modal-content dark">
+												<div class="modal-header">
+													<h5 class="modal-title">Advanced Rulesets</h5>
+													<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+												</div>
+												<div class="modal-body text-start">
+													<div class="row">
+														<div class="col-12">
+															These are extra rules you can use to modify the way the game is played. You may choose <b>up to two</b> of the following:
+														</div>
+														<div class="col-12">
+															<ul class="nav justify-content-center content">
+																<li class="nav-item">
+																  <a class="nav-link chiller btn" data-bs-toggle="collapse" data-bs-target="#laxRule" aria-expanded="false" aria-controls="laxRule">Lax</a>
+																</li>
+																<li class="nav-item">
+																	<a class="nav-link chiller btn" data-bs-toggle="collapse" data-bs-target="#retroRule" aria-expanded="false" aria-controls="retroRule">Retro</a>
+																</li>
+																<li class="nav-item">
+																	<a class="nav-link chiller btn" data-bs-toggle="collapse" data-bs-target="#curatorRule" aria-expanded="false" aria-controls="curatorRule">Curator</a>
+																</li>
+																<li class="nav-item">
+																	<a class="nav-link chiller btn" data-bs-toggle="collapse" data-bs-target="#intelRule" aria-expanded="false" aria-controls="intelRule">Intel</a>
+																</li>
+															</ul>
+														</div>
+														<div class="col-12">
+															<div class="collapse multi-collapse" id="laxRule">
+																<div class="card card-body">
+																	<h2 class="card-title">Lax</h2>
+																	If you've seen any list movie(s) within the last calendar year, you may count them as watched. Additionally with this ruleset, 
+																	you may perform the <b class="chiller">Terrifying Challenge</b> during any 30-day period (except the month of May).
+																</div>
+															</div>
+														</div>
+														<div class="col-12">
+															<div class="collapse multi-collapse" id="retroRule">
+																<div class="card card-body">
+																	<h2 class="card-title">Retro</h2>
+																	Any of the past years' lists may be played as normal--but any Secret Film revealed before Oct. 28th does not count.
+																</div>
+															</div>
+														</div>
+														<div class="col-12">
+															<div class="collapse multi-collapse" id="curatorRule">
+																<div class="card card-body">
+																	<h2 class="card-title">Curator</h2>
+																	All movies from all years count as current list movies: assemble your own <b class="chiller">Terrifying Challenge</b> this year, or use for simple substitution. Previous years'
+																	Secret Films count as standard list items for the purposes of this ruleset. 
+																</div>
+															</div>
+														</div>
+														<div class="col-12">
+															<div class="collapse multi-collapse" id="intelRule">
+																<div class="card card-body">
+																	<h2 class="card-title">Intel</h2>
+																	If you can guess any of the Secret Films before their revelation date, you may watch and count them ahead of time. Revealing the titles to anyone else voids this ruleset.
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<br><br><br><br>
+								</div>
+							</p>
+								
+							<p>
+								<h1 class="text-center">But Beware...</h1><br>
+								The <b class="chiller">Terrifying Challenge</b> is a test of sanity and endurance. It is not suitable for children, your mother-in-law, or any other frail and distractible individual.
+								Only the strongest will survive...
+							</p>
+							<br><br><br><br>
+							<div class="container-fluid">
+								<div class="row">
+									<div id='title' class="col-12 text-center">
+										<h1 style="white-space:nowrap;">The Terrifying Challenge<br>2021: Return to Hell</h1><br><br>
+									</div>															
+								</div>	
+							</div>
+											
+						</div>
+						<div class="col"></div>
+					</div>			
+				</div>
 			</div>
 
 			<div class="container-fluid">
 				<div class="row text-center">
 					<div class="col-12">
 						<div class="btn-group btn-group-lg" role="group">
-							<a href="/index17.html" class="btn btn btn-outline-secondary" onClick="topFunction()">2017</a>
-							<a href="/index18.html" class="btn btn-outline-secondary" onClick="topFunction()">2018</a>
-							<a href="/index19.html" class="btn btn-outline-secondary" onClick="topFunction()">2019</a>
-							<a href="/index20.html" class="btn btn-outline-secondary" onClick="topFunction()">2020</a>
-							<a href="/index.html" class="btn btn-secondary" onClick="topFunction()">2021</a>
+							<a href="/2017.html" class="btn btn-outline-secondary" onClick="topFunction()">2017</a>
+							<a href="/2018.html" class="btn btn-outline-secondary" onClick="topFunction()">2018</a>
+							<a href="/2019.html" class="btn btn-outline-secondary" onClick="topFunction()">2019</a>
+							<a href="/2020.html" class="btn btn-outline-secondary" onClick="topFunction()">2020</a>
+							<a href="/home.html" class="btn btn-danger" onClick="topFunction()">2021</a>
 						</div>
 					</div>															
 				</div>	
@@ -225,7 +287,7 @@
 
 							<div class="col-md-6 text-center">
 								<div>
-									<img class="img-fluid poster" id="scrollspyHeading1" src="images/posters/twilight.jpg"></a>
+									<img class="img-fluid poster" id="first" src="images/posters/drag-me-to-hell.webp"></a>
 								</div>
 							</div>
 
@@ -234,53 +296,50 @@
 								<div class="entry">
 
 									<h1>
-									Twilight Zone: the Movie
+									Drag Me to Hell
 									</h1>
 									<br><b>
-									Genre: Sci-Fi (Vignette)
+									Genre: Horror									
 									</b>
 									<br><b>
-									Year: 1983
+									Year: 2009
 									</b>
 									<br><b>
-									Length:
-									</b><br>																														
+									Length: 1h39m
+									</b><br>																													
 									
 									<div class="ratings">
 								
-										All Over the Place:
-										<img class="skulls" src="images/skull20.webp">
-										<img class="skulls" src="images/skull20.webp">
-										<img class="skulls" src="images/skull20.webp">
-										<img class="skulls" src="images/skull20.webp">
-										<img class="skulls" src="images/skull20.webp">
+										Intense:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
 										<br>
 										
-										Batshit:
-										<img class="skulls" src="images/skull20.webp">
-										<img class="skulls" src="images/skull20.webp">
-										<img class="skulls" src="images/skull20.webp">
-										<img class="skulls" src="images/skull20.webp">
-										<img class="skulls" src="images/skull20.webp">					
+										Zany:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">				
 										<br>									
 									</div>
+
+									<a target="_blank" rel="noopener noreferrer" href="https://www.imdb.com/title/tt1127180/?ref_=nv_sr_srsg_0 "><img src="images/assets/imdb.webp"></a>
 								</div>
 							</div>
 
 							<div class="col-12 py-3">
 
 								<p>
-									We've all heard of the original <i>Twilight Zone</i> television series, and probably seen some, too. It's a real classic of the T.V. world... but it's old as hell. Sure, it's genius, but watching a show from the 50's is pretty hard on a modern audience. And that's where <i>Twilight Zone: the Movie</i> comes in.<br><br>
+									As always, this year's 5th anniversary <b class="chiller">Challenge</b> hits the ground running with a modern classic: <i>Drag Me to Hell</i>. If you're looking for a fun, solid horror that's the perfect blend of casual and relentless--this is the one.<br><br> 
 
-									This may be the weirdest movie on this year's <u>Challenge</u> (and that's a competitive category). But it's weird in the best possible way. <br><br>
+									What a piece. Director Sam Raimi returns to horror nearly thirty years after his seminal <i>The Evil Dead</i>, and manages to once again spin in just the right amount of comedy to keep things fun. This movie comes at you with tongue in cheek... but still delivers on some surprisingly dark themes and a sinister-ass monster. <br><br>
+
+									We've got thrills, and chills, gross-outs and jumpscares, great writing, an original(ish) story... it's a wild ride. There's not much dry and slow-moving drama here to distract from the mania. This movie has a deadline, and every scene whips the story forward towards its brutal conclusion. <br><br>
 									
-									First thing to mention is that it's a vignette, which is to say that it's basically four tiny movies stuck together with a common theme. Each of these mini-movies has its own director, actors, and plot. So the variety of content here is really wild. <br><br>
-									
-									It's also patently obvious that great care was taken in the making of this film. The "vibe" of the original series is replicated almost perfectly intact--which of course means this movie is super weird. It's going to show you some real shit.
-									</p>
-									<br>
-									<p> <u>How to Watch: </u><br>
-									The most important suggestion I can give is this: FINISH IT. Watch the whole damn thing. While the first two sequences are great, the real meat is at the end. Trust me, watch the whole thing.
+									<b><u class="chiller">Beware:</u></b><br>
+									Nothing much to worry about with this one. <i>Drag Me to Hell</i> is an easy watch, and plays pretty well in a group setting. Some of the effects are a little dated, but that really only adds to the fun. Oh, and it gets pretty loud. Strap in.
 								</p>
 								<br><br><br><br>
 							</div>
@@ -293,67 +352,289 @@
 				
 			<div class="container-fluid content">
 				<div class="row justify-content-center">			
-					<div class="col-lg-6 col-sm-8 col-xsm-12">					
+					<div class="col-8 col-lg-6 col-sm-8">					
 						<div class="row">
 
-							<div class="col-md-6 col-xsm-12 text-center">
+							<div class="col-md-6 text-center">
 								<div>
-									<img class="img-fluid poster" id="scrollspyHeading2" src="images/posters/twilight.jpg"></a>
+									<img class="img-fluid poster" id="second" src="images/posters/it-follows.webp"></a>
 								</div>
 							</div>
 
-							<div class="col-md-6 col-xsm-12 gy-2">
+							<div class="col-md-6 gy-2">
 
 								<div class="entry">
 
 									<h1>
-									Twilight Zone: the Movie
+									It Follows
 									</h1>
 									<br><b>
-									Genre: Sci-Fi (Vignette)
+									Genre: Monster Movie
 									</b>
 									<br><b>
-									Year: 1983
+									Year: 2014
 									</b>
 									<br><b>
-									Length:
-									</b><br>																														
+									Length: 1h40m
+									</b><br>																															
 									
 									<div class="ratings">
 								
-										All Over the Place:
-										<img class="skulls" src="images/skull20.webp">
-										<img class="skulls" src="images/skull20.webp">
-										<img class="skulls" src="images/skull20.webp">
-										<img class="skulls" src="images/skull20.webp">
-										<img class="skulls" src="images/skull20.webp">
+										Calm:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
 										<br>
 										
-										Batshit:
-										<img class="skulls" src="images/skull20.webp">
-										<img class="skulls" src="images/skull20.webp">
-										<img class="skulls" src="images/skull20.webp">
-										<img class="skulls" src="images/skull20.webp">
-										<img class="skulls" src="images/skull20.webp">					
+										Creepy:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">					
 										<br>									
 									</div>
+
+									<a target="_blank" rel="noopener noreferrer" href="https://www.imdb.com/title/tt3235888/?ref_=nv_sr_srsg_0"><img src="images/assets/imdb.webp"></a>
 								</div>
 							</div>
 
 							<div class="col-12 py-3">
 
 								<p>
-									We've all heard of the original <i>Twilight Zone</i> television series, and probably seen some, too. It's a real classic of the T.V. world... but it's old as hell. Sure, it's genius, but watching a show from the 50's is pretty hard on a modern audience. And that's where <i>Twilight Zone: the Movie</i> comes in.<br><br>
+									Man, I love this movie. It's got the chill sensibilities of a 70s horror and the slick, focused spookiness of a modern horror. <i>It Follows</i> is an artist's vision and a breath of fresh air. <br><br>
 
-									This may be the weirdest movie on this year's <u>Challenge</u> (and that's a competitive category). But it's weird in the best possible way. <br><br>
-									
-									First thing to mention is that it's a vignette, which is to say that it's basically four tiny movies stuck together with a common theme. Each of these mini-movies has its own director, actors, and plot. So the variety of content here is really wild. <br><br>
-									
-									It's also patently obvious that great care was taken in the making of this film. The "vibe" of the original series is replicated almost perfectly intact--which of course means this movie is super weird. It's going to show you some real shit.
+									In the era of jumpscares it's hard to imagine how a movie like this one got made. <i>It Follows</i> is all about atmosphere, tone, and style... and none of those things operate exactly the way you'd expect from a horror movie. Hell, a lot of it takes place in broad daylight. But that doesn't stop it from keeping you under constant pressure. <br><br>
+
+									Everything in this movie is beautiful in a very specific way. <i>It Follows</i> has its own voice, which is something you don't see much anymore. 
 									</p>
-									<br>
-									<p> <u>How to Watch: </u><br>
-									The most important suggestion I can give is this: FINISH IT. Watch the whole damn thing. While the first two sequences are great, the real meat is at the end. Trust me, watch the whole thing.
+									
+									<br><b><u class="chiller">Beware:</u></b><br>
+										This is a slow, tense movie, punctuated by moments of panic. There's a lot of character stuff where you're just hanging out with the gang while they investigate, so prepare for some classic suburban hijinks with <i>It Follows</i>.								</p>
+								<br><br><br><br>
+							</div>
+						</div>
+					</div>				
+				</div>				
+			</div>
+
+
+
+			<div class="container-fluid content">
+				<div class="row justify-content-center">			
+					<div class="col-8 col-lg-6 col-sm-8">					
+						<div class="row">
+
+							<div class="col-md-6 text-center">
+								<div>
+									<img class="img-fluid poster" id="third" src="images/posters/an-american-werewolf-in-london.webp"></a>
+								</div>
+							</div>
+
+							<div class="col-md-6 gy-2">
+
+								<div class="entry">
+
+									<h1 class="longtitle">
+									An American <br>Werewolf in London
+									</h1>
+									<br><b>
+									Genre: Horror / Comedy
+									</b>
+									<br><b>
+									Year: 1981
+									</b>
+									<br><b>
+									Length: 1h37m
+									</b><br>																														
+									
+									<div class="ratings">
+								
+										Practical Effects:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<br>
+										
+										Violence:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">					
+										<br>									
+									</div>
+
+									<a target="_blank" rel="noopener noreferrer" href="https://www.imdb.com/title/tt0082010/?ref_=nv_sr_srsg_0"><img src="images/assets/imdb.webp"></a>
+								</div>
+							</div>
+
+							<div class="col-12 py-3">
+
+								<p>
+									Believe it or not this is the <b class="chiller">Challenge</b>'s very first werewolf movie, and it's a fairly unique take on that trope. You see this one listed as a horror-comedy, but the humor is subtle enough that it plays just fine as a straight horror. As funny as it is, <i>American Werewolf</i> isn't afraid to get vicious on you. <br><br>
+
+									When you hear people talk about this movie, they're typically talking about the special effects, and rightfully so. This movie features an infamous scene that's one of the better werewolf moments ever put to film. It's also got some truly awesome setpieces that do a great job in capturing the abject chaos of a werewolf attack. Overall it's a fun and masterfully-executed take on a trope that's usually pretty predictable.<br><br> 
+									
+									<i>An American Werewolf in London</i> has a lot to offer. Not too challenging, strange-but-good pacing, unique werewolf lore, and great filmmaking to tie it all together. 	
+									</p>
+									
+									<br><b><u class="chiller">Beware:</u></b><br>
+										Don't expect the <i>Underworld</i> series here; like most great films, <i>American Werewolf</i> takes its time in setting up the conflict. Grab a beer and let your guard down.								</p>
+								<br><br><br><br>
+							</div>
+						</div>
+					</div>				
+				</div>				
+			</div>
+
+
+
+			<div class="container-fluid content">
+				<div class="row justify-content-center">			
+					<div class="col-8 col-lg-6 col-sm-8">					
+						<div class="row">
+
+							<div class="col-md-6 text-center">
+								<div>
+									<img class="img-fluid poster" id="fourth" src="images/posters/the-blob.webp"></a>
+								</div>
+							</div>
+
+							<div class="col-md-6 gy-2">
+
+								<div class="entry">
+
+									<h1>
+									The Blob
+									</h1>
+									<br><b>
+									Genre: Horror
+									</b>
+									<br><b>
+									Year: 1988
+									</b>
+									<br><b>
+									Length: 1h35m
+									</b><br>																														
+									
+									<div class="ratings">
+								
+										Gross:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<br>
+
+										Great Remake:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<br>									
+									</div>
+
+									<a target="_blank" rel="noopener noreferrer" href="https://www.imdb.com/title/tt0094761/?ref_=nv_sr_srsg_0"><img src="images/assets/imdb.webp"></a>
+								</div>
+							</div>
+
+							<div class="col-12 py-3">
+
+								<p>
+									Every now and then I put a movie on the list that I haven't seen yet, and the 1988 remake of the horror classic <i>The Blob</i> is one such movie. Everything about it leads me to believe that it's a hidden gem--and I'm psyched to watch it with you this year. <br><br>
+
+									So this one falls into that wonderful family of films that I'd call "80s top-tier practical effects extravaganzas." We've seen others in this class, like <i>The Thing</i> and <i>The Fly</i> (all remakes, weirdly enough). And like the others, <i>The Blob</i> has more than just special effects.<br><br>
+
+									This movie was written by Frank Darabont, the guy who wrote and directed <i>The Shawshank Redemption</i> and <i>The Green Mile</i>, and also has managed <i>The Walking Dead</i> for over a decade now. It's a strange lineage for a remake of a shitty 50s drive-in horror, but a good indication of the kind of quality you can look forward to.<br>
+										
+										</p>
+										
+										<br><b><u class="chiller">Beware:</u></b><br>
+											I'm genuinely not sure what to expect here. So let's do some predictions: I bet <i>The Blob</i> is surprisingly gory. I bet the characters are simple, but strong. I bet it'll be captivating all the way through--and I expect it to be a real stick-with-you kind of movie. 								</p>
+								<br>
+								<button class="btn btn-dark chiller" type="button" data-bs-toggle="collapse" data-bs-target="#secondLookBlob" aria-expanded="false" aria-controls="secondLookBlob">
+									<b>Second Look</b>
+								</button>
+								<div class="collapse" id="secondLookBlob">
+									<div class="card card-body">
+										Little did I expect <i>The Blob</i> to be this year's masterwork, but it genuinely is. In terms of pure filmmaking it's
+										 not entirely unlike an <i>Exorcist</i> or a <i>Shining</i>. The main difference being that <i>The Blob</i>--much like the blob itself--moves way faster than those other two. 
+										A great-ass film, perfect for group viewing. If you have to pick just one this year, you might seriously consider this one.
+									    <br><br>
+										Oh, and my predictions from earlier? They were all correct, but underestimated. It's all that, times ten, <b>and more</b>.
+									</div>
+								</div>
+								<br><br><br><br>
+							</div>
+						</div>
+					</div>				
+				</div>				
+			</div>
+
+
+
+			<div class="container-fluid content">
+				<div class="row justify-content-center">			
+					<div class="col-8 col-lg-6 col-sm-8">					
+						<div class="row">
+
+							<div class="col-md-6 text-center">
+								<div>
+									<img class="img-fluid poster" id="fifth" src="images/posters/cape-fear.webp"></a>
+								</div>
+							</div>
+
+							<div class="col-md-6 gy-2">
+
+								<div class="entry">
+
+									<h1>
+									Cape Fear
+									</h1>
+									<br><b>
+									Genre: Thriller
+									</b>
+									<br><b>
+									Year: 1991
+									</b>
+									<br><b>
+									Length: 2h8m
+									</b><br>																														
+									
+									<div class="ratings">
+								
+										Tense:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<br>
+
+										Great Remake:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<br>								
+									</div>
+
+									<a target="_blank" rel="noopener noreferrer" href="https://www.imdb.com/title/tt0101540/?ref_=nv_sr_srsg_0"><img src="images/assets/imdb.webp"></a>
+								</div>
+							</div>
+
+							<div class="col-12 py-3">
+
+								<p>
+									Did you know that in the 90s, Martin Scorsese made a Hitchcock movie, that was also a remake of a non-Hitchcock movie? It's called <i>Cape Fear</i> and it's fucking  nuts.<br><br>
+
+									What a weird twisted tale this one is. It actually sticks fairly close to the original <i>Cape Fear</i> (1962) in story terms. It hits all the same beats and has a similar cast of characters. But everything is taken up a notch: the violence, the fear, and especially the threatening-ass antagonist played by Robert DeNiro. At a certain point <i>Cape Fear</i> essentially becomes a full-blown monster movie, and it's fascinating to watch and see how it gets to that point. <br><br>
+									
+									I love this film, and personally think this is one's of Scorses' most underrated works. It's certainly a weird movie and full of crazy shit--but it's also a one-of-a-kind movie, which is hard to accomplish with a remake.<br>
+									</p>
+
+									<br><b><u class="chiller">Beware:</u></b><br>
+										This one doesn't pull any punches. <i>Cape Fear</i> goes to some really dark and sinister places and it gets there in a hurry. Prepare for a moderately uncomfortable (and long) viewing.
 								</p>
 								<br><br><br><br>
 							</div>
@@ -366,79 +647,843 @@
 
 			<div class="container-fluid content">
 				<div class="row justify-content-center">			
-					<div class="col-lg-6 col-sm-8 col-xsm-12">					
+					<div class="col-8 col-lg-6 col-sm-8">					
 						<div class="row">
 
-							<div class="col-md-6 col-xsm-12 text-center">
+							<div class="col-md-6 text-center">
 								<div>
-									<img class="img-fluid poster" id="scrollspyHeading3" src="images/posters/twilight.jpg"></a>
+									<img class="img-fluid poster" id="sixth" src="images/posters/in-the-mouth-of-madness.webp"></a>
 								</div>
 							</div>
 
-							<div class="col-md-6 col-xsm-12 gy-2">
+							<div class="col-md-6 gy-2">
 
 								<div class="entry">
 
 									<h1>
-									Twilight Zone: the Movie
+									In the Mouth of Madness
 									</h1>
 									<br><b>
-									Genre: Sci-Fi (Vignette)
+									Genre: Lovecraftian Horror
 									</b>
 									<br><b>
-									Year: 1983
+									Year: 1994
 									</b>
 									<br><b>
-									Length:
-									</b><br>																														
+									Length: 1h35m
+									</b><br>	 																													
 									
 									<div class="ratings">
 								
-										All Over the Place:
-										<img class="skulls" src="images/skull20.webp">
-										<img class="skulls" src="images/skull20.webp">
-										<img class="skulls" src="images/skull20.webp">
-										<img class="skulls" src="images/skull20.webp">
-										<img class="skulls" src="images/skull20.webp">
+										Cosmic Horror:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
 										<br>
-										
-										Batshit:
-										<img class="skulls" src="images/skull20.webp">
-										<img class="skulls" src="images/skull20.webp">
-										<img class="skulls" src="images/skull20.webp">
-										<img class="skulls" src="images/skull20.webp">
-										<img class="skulls" src="images/skull20.webp">					
+
+										Mindfuck:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
 										<br>									
 									</div>
+
+									<a target="_blank" rel="noopener noreferrer" href="https://www.imdb.com/title/tt0113409/?ref_=nv_sr_srsg_0"><img src="images/assets/imdb.webp"></a>
 								</div>
 							</div>
 
 							<div class="col-12 py-3">
 
 								<p>
-									We've all heard of the original <i>Twilight Zone</i> television series, and probably seen some, too. It's a real classic of the T.V. world... but it's old as hell. Sure, it's genius, but watching a show from the 50's is pretty hard on a modern audience. And that's where <i>Twilight Zone: the Movie</i> comes in.<br><br>
+									We've had a good handful of so-called "Lovecraftian" horrors on the list over the years, a few of which have been direct adaptations. But this one is near the top in terms of enjoyability: <i>In the Mouth of Madness</i> really captures the spirit of Lovecraft in a way that's both fun and modern. Can't recommend it enough. <br><br>
 
-									This may be the weirdest movie on this year's <u>Challenge</u> (and that's a competitive category). But it's weird in the best possible way. <br><br>
+									Here's a fun bit of trivia: this movie is actually the third in an unofficial trilogy known as the "John Carpenter's Apocalypse Trilogy." <i>In the Mouth of Madness</i> is therefore a sister film to <i>The Thing</i> (and also another one which we haven't covered yet [but probably will]). And although it's a very different movie, it shares a lot of common themes with <i>The Thing</i>--isolation, madness, distrust, alien monsters and more. <br><br>
 									
-									First thing to mention is that it's a vignette, which is to say that it's basically four tiny movies stuck together with a common theme. Each of these mini-movies has its own director, actors, and plot. So the variety of content here is really wild. <br><br>
+									Charlton Heston is in this movie, that's pretty cool. Also Sam Neil, who appeared on the list in <i>Event Horizon</i> a couple of years ago. Check it out, it's a fun little "going crazy" kind of movie that's got some very creepy stuff in it. <br>
 									
-									It's also patently obvious that great care was taken in the making of this film. The "vibe" of the original series is replicated almost perfectly intact--which of course means this movie is super weird. It's going to show you some real shit.
-									</p>
-									<br>
-									<p> <u>How to Watch: </u><br>
-									The most important suggestion I can give is this: FINISH IT. Watch the whole damn thing. While the first two sequences are great, the real meat is at the end. Trust me, watch the whole thing.
-								</p>
+
+									<br><b><u class="chiller">Beware:</u></b><br>
+										Nothing too difficult in this one. I wouldn't put it on at a party, it's a little too subdued for that. Take your time and immerse yourself in the spooky world of <i>In the Mouth of Madness</i>.								</p>
 								<br><br><br><br>
 							</div>
 						</div>
 					</div>				
 				</div>				
 			</div>
-		
-		
 
-		
 
+
+			<div class="container-fluid content">
+				<div class="row justify-content-center">			
+					<div class="col-8 col-lg-6 col-sm-8">					
+						<div class="row">
+
+							<div class="col-md-6 text-center">
+								<div>
+									<img class="img-fluid poster" id="seventh" src="images/posters/ringu.webp"></a>
+								</div>
+							</div>
+
+							<div class="col-md-6 gy-2">
+
+								<div class="entry">
+
+									<h1>
+									Ringu
+									</h1>
+									<br><b>
+									Genre: Horror
+									</b>
+									<br><b>
+									Year: 1995
+									</b>
+									<br><b>
+									Length: 1h35m
+									</b><br>																														
+									
+									<div class="ratings">
+								
+										Influential:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<br>
+
+										Slow Burn:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<br>									
+									</div>
+
+									<a target="_blank" rel="noopener noreferrer" href="https://www.imdb.com/title/tt0235133/?ref_=nv_sr_srsg_6"><img src="images/assets/imdb.webp"></a>
+								</div>
+							</div>
+
+							<div class="col-12 py-3">
+
+								<p>
+									American audiences are familiar with <i>our</i> version of <i>The Ring</i>, made back in 2002. But the original Japanese version, <i>Ringu</i>, is my favorite of the two. Talk about a spooky-ass movie. <br><br>
+
+									<i>Ringu</i> has arguably one of the best "ticking clock" elements in all cinema. There's this constant tension hanging over every scene, because you know these characters are running out of time. Even the quiet conversation scenes are tense--and make no mistake, there are lots of quiet conversation scenes. <i>Ringu</i> is a slow and deliberate film that ironically doesn't rush anything. <br><br>
+									
+									It's also worth mentioning that the film is shot beautifully. Wonderful framing of shots, spooky shadows, and really nice locations all around. The perfect setting for a creepy unseen predator to lurk. <br>
+										</p>
+										
+										<br><b><u class="chiller">Beware:</u></b><br>
+											This one's slow. Also I recommend subtitles, but if you prefer (and can find) a dubbed version that's fine too. And make sure you find a quiet place to watch this one. 								</p>
+								<br><br><br><br>
+							</div>
+						</div>
+					</div>				
+				</div>				
+			</div>
+
+
+
+			<div class="container-fluid content">
+				<div class="row justify-content-center">			
+					<div class="col-8 col-lg-6 col-sm-8">					
+						<div class="row">
+
+							<div class="col-md-6 text-center">
+								<div>
+									<img class="img-fluid poster" id="eighth" src="images/posters/petey-wheatstraw.webp"></a>
+								</div>
+							</div>
+
+							<div class="col-md-6 gy-2">
+
+								<div class="entry">
+
+									<h1 class="longtitle">
+									Petey Wheatstraw:<br>
+									</h1>
+									<h2 class="longtitle">
+									The Devil's Son-in-Law
+									</h2>
+									<br><b>
+									Genre: Comedy / Action / Horror / Drama
+									</b>
+									<br><b>
+									Year: 1977
+									</b>
+									<br><b>
+									Length: 1h34m
+									</b><br>																														
+									
+									<div class="ratings">
+								
+										Comical:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<br>
+
+										Bizarre:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<br>									
+									</div>
+
+									<a target="_blank" rel="noopener noreferrer" href="https://www.imdb.com/title/tt0078078/?ref_=nv_sr_srsg_0"><img src="images/assets/imdb.webp"></a>
+								</div>
+							</div>
+
+							<div class="col-12 py-3">
+
+								<p>
+									Alright, hear me out. This movie is about a folk-hero paladin in the 70s who makes a deal with the devil. It's also a brilliant satire made by visionary independent filmmaker Rudy Ray Moore. It's also a raunchy blaxploitation B-movie. And, it's also got everything you could want in a movie: constant comedy, high drama, karate fight scenes and a strong dash of horror for flavor. <br><br>
+
+									It feels weird to say this one became an instant favorite of mine, but it really did (sort of like <i>Tommy</i>). I was familiar with the character already--without realizing it--because he essentially appears in the movie/TV series <i>Black Dynamite</i>. But man, nothing beats the original. <br><br>
+									
+									<i>Petey Wheastraw</i> is wholly unique. Even among R.R. Moore's other films, this one stands out. If you can immerse yourself in the world, and Moore's vision, it's a riot of a film. And I think it's a great palate cleanser for the tribulations coming up on the <b class="chiller">Challenge</b>. <br>
+										
+										<br><b><u class="chiller">Beware:</u></b><br>
+											If you can make it through the first five minutes, you're golden. Come at it with an open mind. 								</p>
+								<br><br><br><br>
+							</div>
+						</div>
+					</div>				
+				</div>				
+			</div>
+
+
+
+			<div class="container-fluid content">
+				<div class="row justify-content-center">			
+					<div class="col-8 col-lg-6 col-sm-8">					
+						<div class="row">
+
+							<div class="col-md-6 text-center">
+								<div>
+									<img class="img-fluid poster" id="ninth" src="images/posters/day-of-the-dead.webp"></a>
+								</div>
+							</div>
+
+							<div class="col-md-6 gy-2">
+
+								<div class="entry">
+
+									<h1>
+									Day of the Dead
+									</h1>
+									<br><b>
+									Genre: Horror
+									</b>
+									<br><b>
+									Year: 1985
+									</b>
+									<br><b>
+									Length: 1h41m
+									</b><br>																														
+									
+									<div class="ratings">
+								
+										Iconic:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<br>
+
+										Dismal:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<br>									
+									</div>
+
+									<a target="_blank" rel="noopener noreferrer" href="https://www.imdb.com/title/tt0088993/?ref_=nv_sr_srsg_6"><img src="images/assets/imdb.webp"></a>
+								</div>
+							</div>
+
+							<div class="col-12 py-3">
+
+								<p>
+									And with this, the second full trilogy on the <b class="chiller">Terrifying Challenge</b> comes to a close. It's one of George Romero's great masterpieces: the horrible, grisly, bleak-ass <i>Day of the Dead</i>. <br><br>
+
+									 If you've been following along through the years, you've already seen <i>Night of the Living Dead</i> and <i>Dawn of the Dead</i>; this one is my favorite of the three. The zombies look the best in <i>Day of the Dead</i>, first off. And they finally landed on maybe the most interesting set of characters for the "of the Dead" premise. The setting is awesome, super cramped and creepy, all the acting is great, practical effects are perfect. And it's <u>dark</u>. <br><br>
+									
+									Now, it's a little dry. If you're looking for intense zombie action <i>28 Days Later</i> will be more your speed. <i>Day of the Dead</i> is an endurance contest. It's about pressure, tension, stress, and ultimately panic. Great film, especially on first viewing. <br>										
+										</p>
+										
+										<br><b><u class="chiller">Beware:</u></b><br>
+											This one's tough. It's not a "fun" movie, more like grueling and unpleasant. Doesn't pair super well with alcohol. 								</p>
+								<br><br><br><br>
+							</div>
+						</div>
+					</div>				
+				</div>				
+			</div>
+
+
+
+			<div class="container-fluid content">
+				<div class="row justify-content-center">			
+					<div class="col-8 col-lg-6 col-sm-8">					
+						<div class="row">
+
+							<div class="col-md-6 text-center">
+								<div>
+									<img class="img-fluid poster" id="tenth" src="images/posters/insidious.webp"></a>
+								</div>
+							</div>
+
+							<div class="col-md-6 gy-2">
+
+								<div class="entry">
+
+									<h1>
+									Insidious
+									</h1>
+									<br><b>
+									Genre: Horror
+									</b>
+									<br><b>
+									Year: 2010
+									</b>
+									<br><b>
+									Length: 1h43m
+									</b><br>																														
+									
+									<div class="ratings">
+								
+										Cool Concept:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<br>
+
+										Unique:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<br>									
+									</div>
+
+									<a target="_blank" rel="noopener noreferrer" href="https://www.imdb.com/title/tt1591095/?ref_=nv_sr_srsg_0"><img src="images/assets/imdb.webp"></a>
+								</div>
+							</div>
+
+							<div class="col-12 py-3">
+
+								<p>
+									Right around the same time that this list is coming out, director James Wan put out a movie called <i>Malignant</i>. If you haven't seen it, I highly recommend it, it's a genuine masterpiece. But we're not watching that for <i>this</i> year's list--instead we're going to watch an earlier James Wan film, <i>Insidious</i>.  <br><br>
+
+									<i>Insidious</i> is a lot of fun. It was sort of an early standout among that first big wave of jumpscare movies coming out around that time; and that's with good reason, because it's very well-made. The look of this film is very distinct, from the camera work to the moodily-lit sets. And the story is just batshit. It has many of the recognizable tropes, but there's also a handful of unique ideas and twists that keep it surprisingly fresh. <br><br>
+									
+									That being said, it's not a perfect film for me. By the end it starts coming undone a bit and loses any pretext of subtlety. But I find that interesting in its own right, seeing where an otherwise good film could've been improved. And those are nitpicks anyway, because overall <i>Insidious</i> is a strong showing.<br>										 </p>
+										
+										<br><b><u class="chiller">Beware:</u></b><br>
+											This is probably the easiest movie on this year's <b class="chiller">Challenge</b>, so enjoy it while you can. The next three are really going to separate the vampires from the fiends.								</p>
+								<br><br><br><br>
+							</div>
+						</div>
+					</div>				
+				</div>				
+			</div>
+
+
+
+			<div class="container-fluid content">
+				<div class="row justify-content-center">			
+					<div class="col-8 col-lg-6 col-sm-8">					
+						<div class="row">
+
+							<div class="col-md-6 text-center">
+								<div>
+									<img class="img-fluid poster" id="eleventh" src="images/posters/beyond-the-black-rainbow.webp"></a>
+								</div>
+							</div>
+
+							<div class="col-md-6 gy-2">
+
+								<div class="entry">
+
+									<h1>
+									Beyond the Black Rainbow
+									</h1>
+									<br><b>
+									Genre: Panos Cosmatos
+									</b>
+									<br><b>
+									Year: 2010
+									</b>
+									<br><b>
+									Length: 1h50m
+									</b><br>																														
+									
+									<div class="ratings">
+								
+										Sinister:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<br>
+
+										Unique:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<br>									
+									</div>
+
+									<a target="_blank" rel="noopener noreferrer" href="https://www.imdb.com/title/tt1534085/?ref_=nv_sr_srsg_0"><img src="images/assets/imdb.webp"></a>
+								</div>
+							</div>
+
+							<div class="col-12 py-3">
+
+								<p>
+									This one is something else. From Panos Cosmatos, director of <i>Mandy</i>, comes another nightmarish film that's visually gorgeous but very hard to describe. It's slow, and brutal to watch, and I wouldn't recommend it to everyone. But I am going to recommend it to you. <br><br>
+
+									<i>Beyond the Black Rainbow</i> is one of the more quiet films I can remember seeing recently. Everyone speaks in a mumble, and there's long stretches where almost nothing is said. Much of the soundtrack is just droning noise. But in a movie like this one, that's not a bad thing. The story fits nicely into the Cosmatos universe, and all the grotesque horror themes are present: drug use, fucked up semi-human entities, good versus evil. <br><br>
+									
+									But the real takeaway from <i>Beyond the Black Rainbow</i> is that insane visual style. I'd call it one of the more visually beautiful films I've ever seen. Top-tier. And all of its elements are blended perfectly to create a totally unique vision. This one's tough, but I'd say it's one of the better entries this year.<br>										</p>
+										
+										<br><b><u class="chiller">Beware:</u></b><br>
+											This one is tough. It will absolutely test your understanding of what it means for a movie to be "slow." But trust me, it all comes together about halfway through.								</p>
+								<br><br><br><br>
+							</div>
+						</div>
+					</div>				
+				</div>				
+			</div>
+
+
+
+			<div class="container-fluid content">
+				<div class="row justify-content-center">			
+					<div class="col-8 col-lg-6 col-sm-8">					
+						<div class="row">
+
+							<div class="col-md-6 text-center">
+								<div>
+									<img class="img-fluid poster" id="twelfth" src="images/posters/the-night-ill-possess-your-corpse.webp"></a>
+								</div>
+							</div>
+
+							<div class="col-md-6 gy-2">
+
+								<div class="entry">
+
+									<h1 class="longtitle">
+									This Night I'll <br>Possess Your Corpse
+									</h1>
+									<br><b>
+									Genre: Arthouse Horror
+									</b>
+									<br><b>
+									Year: 1967
+									</b>
+									<br><b>
+									Length: 1h48m
+									</b><br>																														
+									
+									<div class="ratings">
+								
+										Old:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<br>
+
+										Demented:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+
+										<br>								
+									</div>
+
+									<a target="_blank" rel="noopener noreferrer" href="https://www.imdb.com/title/tt0060380/"><img src="images/assets/imdb.webp"></a>
+								</div>
+							</div>
+
+							<div class="col-12 py-3">
+
+								<p>
+									<i>This Night I'll Possess Your Corpse</i> is one of my all-time favorite movies. It's also probably the most challenging of the <b class="chiller">Challenge</b> movies this year. It is truly a bizarre film. <br><br>
+
+										First off, <i>This Night</i> has the aesthetic and pacing of a movie from the 30s, like a <i>Frankenstein</i> or <i>Dracula</i>. But its horror sensibilities are more closely aligned with the decade of its creation. It's Brazilian, of all things, making it our second foreign film this year. And the story is fucking <b>insane</b>. It's way, way more brutal than it has any right to be coming out of the 60s. <br><br>
+										
+										It's black-and-white, and most likely you'll end up seeing it subtitled. Hell, it might even be tough to find a stream (it is on YouTube, but trust me: get the highest-quality stream that you can). But if you can get past all the roadblocks... you'll have seen it, at least. I can't promise you're going to like it, but I doubt you'll forget it anytime soon. <br>										
+										</p>
+										
+										<br><b><u class="chiller">Beware:</u></b><br>
+											Biggest piece of advice: no spoilers. Try and go in completely cold, if you can. Technically, this movie is part of a series, but not having seen the first doesn't really make any difference. Oh, and don't put it on at a party.								</p>
+								<br>
+								<button class="btn btn-dark chiller" type="button" data-bs-toggle="collapse" data-bs-target="#secondLookCorpse" aria-expanded="false" aria-controls="secondLookCorpse">
+									<b>Second Look</b>
+								</button>
+								<div class="collapse" id="secondLookCorpse">
+									<div class="card card-body">
+										Well, alright. So the thing is that <i>This Night</i> turned out to be even harder to find than I thought. There are a few different ones on Youtube but they're mostly subtitled in portuguese.
+										One of them had auto-translate but it was terrible (a shame, because it's a very nice blu-ray transfer). 
+										And then there was one that was subbed in english, but it had a director commentary track that couldn't be turned off. So we ended up muting the english sub stream and then playing the audio from a 
+										different video in another tab--and yes, that is the best version I could turn up. <br><br>
+										That may seem like a lot of trouble to go through for such a fucking weirdo movie... but on this year's viewing, I still feel the same way I ever did. <i>This Night</i> is some sort of masterpiece and 
+										worth every bit of trouble. I just wish more people knew, so it could get a little love from Big Media. 
+									</div>
+								</div>
+								<br><br><br><br>
+							</div>
+						</div>
+					</div>				
+				</div>				
+			</div>
+
+
+
+			<div class="container-fluid content">
+				<div class="row justify-content-center">			
+					<div class="col-8 col-lg-6 col-sm-8">					
+						<div class="row">
+
+							<div class="col-md-6 text-center">
+								<div>
+									<img class="img-fluid poster" id="13" src="images/posters/candyman.webp"></a>
+								</div>
+							</div>
+
+							<div class="col-md-6 gy-2">
+
+								<div class="entry">
+
+									<h1>
+									Candyman
+									</h1>
+									<br><b>
+									Genre: Horror
+									</b>
+									<br><b>
+									Year: 1992
+									</b>
+									<br><b>
+									Length: 1h39m
+									</b><br>																														
+									
+									<div class="ratings">
+								
+										Hardcore:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+
+										<br>
+
+										Unique:
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<img class="skulls" src="images/assets/skull20.webp">
+										<br>									
+									</div>
+
+									<a target="_blank" rel="noopener noreferrer" href="https://www.imdb.com/title/tt0103919/?ref_=nv_sr_srsg_3"><img src="images/assets/imdb.webp"></a>
+								</div>
+							</div>
+
+							<div class="col-12 py-3">
+
+								<p>
+									And to round out the list proper this year, we have another brutal and unpleasant film: <i>Candyman</i>. It's a masterfully-made horror movie from beginning to end, with lots of little surprises along the way. Can't think of a better way to lead into Halloween.<br><br>
+
+									I think this is one of those movies that most people have at least heard of, but not nearly as many people have seen. It's notorious like that, kind of the same way that <i>Texas Chainsaw Massacre</i> is. And I can see why. It's dark, and nasty, and very strange. There's barely any established horror tropes in this movie; it really operates by its own set of rules, which gives it an uncanny sense of unfamiliarity. At most points during <i>Candyman</i>, I genuinely couldn't figure out where it was going (in a good way).<br><br>
+									
+									Everything else about it is way above-average as well. Shotwork is great, the setting is unique and very distinct, characters are interesting. It's an impressive film, and criminally underrated. <br>										</p>
+										
+										<br><b><u class="chiller">Beware:</u></b><br>
+											This one takes a little time to really get going. Prepare for a strange and wild ride with <i>Candyman</i>. 								</p>
+								<br><br><br><br>
+							</div>
+						</div>
+					</div>				
+				</div>				
+			</div>
+
+
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12 text-center content">
+						<h1 id="secret" style="white-space:nowrap;">Secret Films</h1><br>
+						
+					</div>
+					<div class="col-2"></div>
+					<div class="col-8 text-center content">
+						The Secret Films are <b>extra</b> special movies, not suitable for just any day of the month.<br> They will be revealed on October 28th... just in time for the big night.
+						<br><br><br>
+					</div>															
+					<div class="col-2"></div>
+				</div>	
+			</div>
+
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col"></div>
+					<div class="col-8">
+						<div class="accordion" id="mystery accordion">
+							<div class="accordion-item bg-dark">
+							  <h2 class="accordion-header" id="headingOne">
+								<button class="accordion-button bg-dark collapsed chiller-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+								  Secret 1
+								</button>
+							  	</h2>
+							  	<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#mystery accordion">
+									<div class="accordion-body bg-dark">
+
+										<div class="row">
+
+											<div class="col-md-6 text-center">
+												<div>
+													<img class="img-fluid poster" src="images/posters/mystery1.webp"></a>
+												</div>
+											</div>
+				
+											<div class="col-md-6 gy-2">
+				
+												<div class="entry content">
+				
+													<h1>
+													???
+													</h1>
+													<br><b>
+													Genre: Horror
+													</b>
+													<br><b>
+													Year: <b class="chiller">???</b>
+													</b>
+													<br><b>
+													Length: <b class="chiller">???</b>
+													</b><br>																														
+													
+													<div class="ratings">
+												
+														High Strangeness:
+														<img class="skulls" src="images/assets/skull20.webp">
+														<img class="skulls" src="images/assets/skull20.webp">
+														<img class="skulls" src="images/assets/skull20.webp">
+														<img class="skulls" src="images/assets/skull20.webp">
+														<img class="skulls" src="images/assets/skull20.webp">
+														<br>
+														
+														Badass:
+														<img class="skulls" src="images/assets/skull20.webp">
+														<img class="skulls" src="images/assets/skull20.webp">
+														<img class="skulls" src="images/assets/skull20.webp">
+														<img class="skulls" src="images/assets/skull20.webp">					
+														<br>									
+													</div>
+				
+													<img src="images/assets/imdb.webp"></a>
+												</div>
+											</div>
+				
+											<div class="col-12 py-3 content">
+				
+												<p>
+												Ah, now this is a movie. You take a handful of fresh and awesome ideas, and you tie the whole thing together with classic and familiar tropes. This year's first Secret Film is goddam amazing for any number of reasons. Let me count some of them out. <br><br>
+												
+												First off, the soundtrack is killer. The practical effects too. It's filmed in a beautiful location, so everything that happens is framed on a scenic-ass background. It's got plenty of kills, some of which are genuinely great. And, it has one big quality (no spoilers) that I've never seen a movie pull off quite as well. It's incredible. <br><br>
+
+												...Now for the hints. This film is directed by an auteur, and one that we've seen on a previous year of the list. It was made in the 80s, but feels more like something out of the 90s. And last up, the protagonist is a female. 
+													</p>
+													
+													<br><b><u class="chiller">Beware:</u></b><br>
+													This movie kicks ass. The biggest hurdle you'll have to deal with is trying to follow the story, because it goes to some pretty weird places. 
+												</p>
+											</div>
+										</div>
+
+									</div>
+							  </div>
+							</div>
+							<div class="accordion-item bg-dark">
+							  <h2 class="accordion-header" id="headingTwo">
+								<button class="accordion-button bg-dark collapsed chiller-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								  Secret 2
+								</button>
+							  </h2>
+							  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#mystery accordion">
+								<div class="accordion-body bg-dark">
+
+									<div class="row">
+
+										<div class="col-md-6 text-center">
+											<div>
+												<img class="img-fluid poster" src="images/posters/mystery2.webp"></a>
+											</div>
+										</div>
+			
+										<div class="col-md-6 gy-2">
+			
+											<div class="entry content">
+			
+												<h1>
+												???
+												</h1>
+												<br><b>
+												Genre: Sci-Fi / Horror
+												</b>
+												<br><b>
+												Year: <b class="chiller">???</b>
+												</b>
+												<br><b>
+												Length: <b class="chiller">???</b>
+												</b><br>																														
+												
+												<div class="ratings">
+											
+													Badass:
+													<img class="skulls" src="images/assets/skull20.webp">
+													<img class="skulls" src="images/assets/skull20.webp">
+													<img class="skulls" src="images/assets/skull20.webp">
+													<img class="skulls" src="images/assets/skull20.webp">
+													<img class="skulls" src="images/assets/skull20.webp">
+													<br>
+													
+													Iconic:
+													<img class="skulls" src="images/assets/skull20.webp">
+													<img class="skulls" src="images/assets/skull20.webp">
+													<img class="skulls" src="images/assets/skull20.webp">
+													<img class="skulls" src="images/assets/skull20.webp">
+													<img class="skulls" src="images/assets/skull20.webp">					
+													<br>									
+												</div>
+			
+												<img src="images/assets/imdb.webp"></a>
+											</div>
+										</div>
+			
+										<div class="col-12 py-3 content">
+			
+											<p>
+												This movie is bananas. I'm not sure if I've ever seen it all the way through before this year, and I'm so glad I've finally seen it now. It really does live up to the hype.<br><br>
+												
+												Sci-Fi and Horror have always made a great pair, but this film is a particular standout in both those genres. It actually has way better sci-fi elements than I was expecting, which is always a nice surprise. But don't worry: the horror is on point as well. <br><br>
+
+												Like the first Secret Film, this one has a female protagonist. However, we've never had one of <i>this</i> director's films on the list before. And your last hint is: you already know this one's name.
+													<br><br><b><u class="chiller">Beware:</u></b><br>
+												This movie is great. It has just about everything you could want in a sci-fi/horror. Rowdy fun, all the way through.	
+											</p>
+										</div>
+									</div>
+
+								</div>
+							  </div>
+							</div>
+							<div class="accordion-item bg-dark">
+							  <h2 class="accordion-header" id="headingThree">
+								<button class="accordion-button bg-dark collapsed chiller-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+								  Secret 3
+								</button>
+							  </h2>
+							  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#mystery accordion">
+								<div class="accordion-body bg-dark">
+
+									<div class="row">
+
+										<div class="col-md-6 text-center">
+											<div>
+												<img class="img-fluid poster" src="images/posters/mystery3.webp"></a>
+											</div>
+										</div>
+			
+										<div class="col-md-6 gy-2">
+			
+											<div class="entry content">
+			
+												<h1>
+												???
+												</h1>
+												<br><b>
+												Genre: Horror
+												</b>
+												<br><b>
+												Year: <b class="chiller">???</b>
+												</b>
+												<br><b>
+												Length: <b class="chiller">???</b>
+												</b><br>																														
+												
+												<div class="ratings">
+											
+													Masterpiece:
+													<img class="skulls" src="images/assets/skull20.webp">
+													<img class="skulls" src="images/assets/skull20.webp">
+													<img class="skulls" src="images/assets/skull20.webp">
+													<img class="skulls" src="images/assets/skull20.webp">
+													<img class="skulls" src="images/assets/skull20.webp">
+													<br>
+													
+													Spooky:
+													<img class="skulls" src="images/assets/skull20.webp">
+													<img class="skulls" src="images/assets/skull20.webp">
+													<img class="skulls" src="images/assets/skull20.webp">
+													<img class="skulls" src="images/assets/skull20.webp">
+													<img class="skulls" src="images/assets/skull20.webp">				
+													<br>									
+												</div>
+			
+												<img src="images/assets/imdb.webp"></a>
+											</div>
+										</div>
+			
+										<div class="col-12 py-3 content">
+			
+											<p>
+											If you want to talk about atmosphere, this is the one. This movie builds a world so real and at the same time so unbelievable; it's like nothing I've ever seen. And even though it's very simple in construction, it feels like a horror epic.<br><br>
+											
+											This Secret Film is shockingly beautiful, despite being shot in a fairly unremarkable place. The acting is incredible, despite the fact that not much really happens (for most of it). Most inexplicable of all, I love this movie--despite it being made fairly recently.<br><br>
+
+											You may be surprised to hear this first hint: but this Secret Film has a female protagonist. It has a very small cast, and many of them are very young. Finally, it deals with one of my favorite (criminally under-utilized) horror tropes... one which we've seen on the list a few times now.
+													 </p>
+													
+													<br><b><u class="chiller">Beware:</u></b><br>
+													This one is very slow, very dry. But if you can handle it this one will show you some wonderful things.
+											</p>
+										</div>
+									</div>
+
+								</div>
+							  </div>
+							</div>
+						  </div>
+					</div>			
+					<div class="col"></div>													
+				</div>
+				<br><br><br>	
+			</div>
+			
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12 text-center content">
+						<h1 style="white-space:nowrap;">Good Luck...</h1><br><br>
+					</div>															
+				</div>
+				<br><br>	
+			</div>
+			
 
 			
 		</main>
@@ -457,6 +1502,8 @@
 		</script>
 
 	</body>
+	<footer>
+	</footer>
 </html>
 
 
